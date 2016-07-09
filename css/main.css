@@ -1,0 +1,94 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+h2 {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}
+
+.col-md-6 {
+  margin: 0 0 30px;
+}
+
+.banner {
+  height: 500px;
+  background: url("../imgs/shutterstock_151137392.jpg") center fixed;
+  background-size: cover;
+  margin-top: 10px;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.banner .slogan {
+  position: absolute;
+  border: 4px solid black;
+  top: 200px;
+  left: 25%;
+  width: 50%;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.banner .slogan span {
+  font-size: 24px;
+  line-height: 200px;
+  color: #000000;
+}
+
+
+
+#nav_bg {
+  background-color:rgba(255, 255, 255, 0.5);
+
+}
+
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
