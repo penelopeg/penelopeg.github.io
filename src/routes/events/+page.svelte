@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<div class="events-content">
+<!-- <div class="events-content">
   <div class="container">
     <div class="events-grid">
       {#each events as event}
@@ -75,7 +75,7 @@
       {/each}
     </div>
   </div>
-</div>
+</div> -->
 
 <style>
   .events-hero {

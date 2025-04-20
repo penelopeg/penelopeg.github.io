@@ -8,56 +8,56 @@
       title: 'Contentserv',
       description: 'Leading a development team for a next-gen PIM software',
       tags: ['tech', 'business'],
-      image: '/images/portfolio/contentserv.jpg',
+      image: base + '/images/portfolio/contentserv.jpg',
       url: 'https://contentserv.com'
     },
     {
       title: 'Local Foundation',
       description: 'Platform helping community builders connect and grow together',
       tags: ['tech', 'business', 'events'],
-      image: '/images/portfolio/local-foundation-website.png',
+      image: base + '/images/portfolio/local-foundation-website.png',
       url: 'https://local.foundation'
     },
     {
       title: 'Digital Art',
       description: 'Me dabbling through the arts, mostly digitally',
       tags: ['art'],
-      image: '/images/portfolio/art.png',
+      image: base + '/images/portfolio/art.png',
       url: 'https://instagram.com/lepsies_art'
     },
     {
       title: 'Geek Sessions',
       description: '15 y/o tech community in the Algarve',
       tags: ['community', 'events', 'tech'],
-      image: '/images/portfolio/geeksessionsbanner.jpg',
+      image: base + '/images/portfolio/geeksessionsbanner.jpg',
       url: 'https://zez.am/GeekSessionsFaro'
     },
     {
       title: 'Event Organizer',
       description: 'Whenever there\'s a problem that needs solving, I help find the solution in an event format',
       tags: ['tech', 'events', 'community'],
-      image: '/images/portfolio/facilitator.jpg',
+      image: base + '/images/portfolio/facilitator.jpg',
     //   url: '/events'
     },
     {
       title: 'Chaos Theory Blog',
       description: 'Personal blog exploring life and creativity',
       tags: ['writing'],
-      image: '/images/portfolio/blog.jpg',
+      image: base + '/images/portfolio/blog.jpg',
       url: 'https://lepsies.substack.com/'
     },
     {
       title: 'Speaker/host',
       description: 'Sharing insights and experiences by yapping a considerate amount',
       tags: ['tech', 'events', 'community'],
-      image: '/images/portfolio/speaker.jpg',
+      image: base + '/images/portfolio/speaker.jpg',
     //   url: '/talks'
     },
     {
       title: 'Fiction Writing',
       description: 'I\'m working on my first fiction book! (For 10 years now, shhh...)',
       tags: ['writing'],
-      image: '/images/portfolio/writing-art.png'
+      image: base + '/images/portfolio/writing-art.png'
     }
   ];
 
@@ -123,7 +123,7 @@
             <div class="title-row">
               <h3>{item.title}</h3>
               <svg class="external-link" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1-2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
