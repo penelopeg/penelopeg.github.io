@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import '../app.css';
+  import Seo from '$lib/components/Seo.svelte';
   
   let isMenuOpen = false;
   
@@ -8,11 +9,15 @@
     isMenuOpen = !isMenuOpen;
   }
 </script>
-  
-  <div class="app">
+
+<Seo />
+
+<div class="app">
   <nav class="nav">
     <div class="container nav-container">
-    <a href="{base}/" class="nav-brand">Penélope</a>
+    <a href="{base}/" class="nav-brand">
+      <img src="{base}/images/logo.png" alt="PG Logo" />
+    </a>
     
     <!-- Desktop Navigation -->
     <div class="nav-links">
@@ -80,9 +85,9 @@
     </div>
     </div>
   </footer>
-  </div>
+</div>
   
-  <style>
+<style>
   .app {
     min-height: 100vh;
     display: flex;
@@ -94,11 +99,15 @@
   }
   
   .nav-brand {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
     color: var(--color-primary);
     text-decoration: none;
+  }
+  
+  .nav-brand img {
+    height: 32px;
+    width: auto;
   }
   
   .menu-button {
@@ -181,4 +190,4 @@
   .social-link:hover {
     color: white;
   }
-  </style>
+</style>
