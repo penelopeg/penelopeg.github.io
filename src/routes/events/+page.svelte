@@ -6,7 +6,7 @@
       description: 'A problem-solving event where volunteers collaborate to devise and implement TECH solutions for local not-for-profit organizations. First edition partnership with AIPAR for foster care families.',
       date: 'Sep 2024',
       type: 'hackathon',
-      image: '/images/events/impact-hackers.jpg',
+      image: '{base}/images/events/impact-hackers.jpg',
       url: 'https://impacthackerscommunity.com'
     },
     {
@@ -14,7 +14,7 @@
       description: 'A full day of tech talks and workshops bringing together the Algarve tech community',
       date: 'Oct 2023',
       type: 'conference',
-      image: '/images/events/gsconf.jpg',
+      image: '{base}/images/events/gsconf.jpg',
       url: 'https://geeksessionsconf.pt'
     },
     {
@@ -22,7 +22,7 @@
       description: '54 hours to learn how to build a startup, from ideation to pitch',
       date: '2023',
       type: 'workshop',
-      image: '/images/events/startup-weekend.jpg',
+      image: '{base}/images/events/startup-weekend.jpg',
       url: 'https://techstars.com'
     }
   ];
