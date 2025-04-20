@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   const events = [
     {
       title: 'Impact Hackers - Social Hackathon',

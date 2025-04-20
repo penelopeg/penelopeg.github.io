@@ -1,9 +1,13 @@
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <div class="about-hero">
   <div class="container">
     <h1>About Me</h1>
     <p class="lead">Tech lead, community builder, and creative explorer on a mission to make the most with whatever we have.</p>
     <div class="hero-actions">
-      <a href="/portfolio" class="button button-secondary">What?</a>
+      <a href="{base}/portfolio" class="button button-secondary">What?</a>
     </div>
   </div>
 </div>
@@ -54,7 +58,7 @@
     <div class="about-sidebar">
       <div class="profile-card card">
       <div class="profile-image">
-        <img src="/images/profile/penelope.jpeg" alt="Penelope" />
+        <img src="{base}/images/profile/penelope.jpeg" alt="Penelope" />
         </div>			  
       <div class="profile-info">
         <h3>Quick Facts</h3>

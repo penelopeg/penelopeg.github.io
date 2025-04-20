@@ -5,7 +5,7 @@
 <main class="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
 	<div class="mx-auto max-w-2xl p-8">
 		<a
-			href="/blog"
+			href="{base}/blog"
 			class="inline-block rounded-lg bg-emerald-500 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-emerald-600 hover:shadow-lg"
 		>
 			&larr; Back to Blog

@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   const roles = [
     {
       title: 'Tech Lead',
@@ -51,8 +52,8 @@
       </p>
       <p class="hero-subtitle">agent of (good) chaos</p>
       <div class="hero-actions">
-        <a href="/about" class="button button-primary">Who?</a>
-        <a href="/portfolio" class="button button-secondary">What?</a>
+        <a href="{base}/about" class="button button-primary">Who?</a>
+        <a href="{base}/portfolio" class="button button-secondary">What?</a>
       </div>
     </div>
   </div>

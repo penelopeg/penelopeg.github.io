@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   const tags = ['tech', 'art', 'writing', 'events', 'business', 'community'];
   let selectedTag = '';
 
@@ -93,7 +94,7 @@
     <h1>Portfolio</h1>
     <p class="lead">Exploring the intersection of technology, art, and community</p>
     <div class="hero-actions">
-        <a href="/about" class="button button-primary">Who?</a>
+        <a href="{base}/about" class="button button-primary">Who?</a>
     </div>
   </div>
 </div>

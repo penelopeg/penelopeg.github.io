@@ -1,24 +1,26 @@
 <script>
+  import { base } from '$app/paths';
   import '../app.css';
+  
   let isMenuOpen = false;
   
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }
-  </script>
+</script>
   
   <div class="app">
   <nav class="nav">
     <div class="container nav-container">
-    <a href="/" class="nav-brand">Penélope</a>
+    <a href="{base}/" class="nav-brand">Penélope</a>
     
     <!-- Desktop Navigation -->
     <div class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="/about" class="nav-link">About</a>
-      <a href="/portfolio" class="nav-link">Portfolio</a>
-      <!-- <a href="/events" class="nav-link">Events</a> -->
-      <!-- <a href="/cv" class="nav-link">CV</a> -->
+      <a href="{base}/" class="nav-link">Home</a>
+      <a href="{base}/about" class="nav-link">About</a>
+      <a href="{base}/portfolio" class="nav-link">Portfolio</a>
+      <!-- <a href="{base}/events" class="nav-link">Events</a> -->
+      <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
     </div>
     
     <!-- Mobile Menu Button -->
@@ -40,9 +42,9 @@
     <!-- Mobile Navigation -->
     {#if isMenuOpen}
     <div class="mobile-nav animate-fade-in">
-      <a href="/" class="mobile-nav-link">Home</a>
-      <a href="/about" class="mobile-nav-link">About</a>
-      <a href="/portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="{base}/" class="mobile-nav-link">Home</a>
+      <a href="{base}/about" class="mobile-nav-link">About</a>
+      <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
     </div>
     {/if}
   </nav>

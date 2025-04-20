@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
     import { slide } from 'svelte/transition';
 
     const experience = [
