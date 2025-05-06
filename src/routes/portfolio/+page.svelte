@@ -37,7 +37,7 @@
       description: 'Whenever there\'s a problem that needs solving, I help find the solution in an event format',
       tags: ['tech', 'events', 'community'],
       image: base + '/images/portfolio/facilitator.jpg',
-    //   url: '/events'
+      url: base + '/events'
     },
     {
       title: 'Chaos Theory Blog',

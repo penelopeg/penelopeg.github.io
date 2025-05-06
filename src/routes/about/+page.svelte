@@ -48,13 +48,13 @@
       </p>
       <ul class="focus-list">
       <li>Leading my team to innovate in the PIM software space</li>
-      <li>Building solutions for community builders</li>
-      <li>Growing the tech community in the Algarve</li>
-      <li>Organizing events</li>
-      <li>Writing a fiction book, a poetry book, and a non-fiction book</li>
+      <li>Building a platform in local.foundation for community builders</li>
+      <li>Prepping a TedX talk about informal communities</li>
+      <li>Brainstorming an RPG framework for Impact Hackers</li>
+      <li>Creating a wheel app for neurodivergent folk</li>
+      <li>Finishing my first draft for a space opera book</li>
       </ul>
     </div>
-  
     <div class="about-sidebar">
       <div class="profile-card card">
       <div class="profile-image">
