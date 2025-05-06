@@ -1,6 +1,18 @@
 <script>
   import { base } from '$app/paths';
+  import FilterTags from '$lib/components/FilterTags.svelte';
+  import { getTagStyle } from '$lib/utils/tagStyles';
   
+  const tagColors = {
+    'conference': { bg: '#ff66b3', text: 'white' },
+    'hackathon': { bg: '#7c3aed', text: 'white' },
+    'talk': { bg: '#06b6d4', text: 'white' },
+    'workshop': { bg: '#f59e0b', text: 'white' },
+    'community': { bg: '#10b981', text: 'white' },
+    'fireside chat': { bg: '#3b82f6', text: 'white' },
+    'lan party': { bg: '#ef4444', text: 'white' }
+  };
+
   const events = [
     {
       title: 'Geek Sessions Conf',
@@ -72,37 +84,11 @@
     }
   ];
 
-  // Get unique event types
   const types = [...new Set(events.flatMap(event => 
     Array.isArray(event.type) ? event.type : [event.type]
   ))].sort();
   
   let selectedType = '';
-
-  const typeColors = {
-    'conference': { bg: '#7c3aed', text: 'white' },
-    'hackathon': { bg: '#ff66b3', text: 'white' },
-    'workshop': { bg: '#06b6d4', text: 'white' },
-    'community': { bg: '#10b981', text: 'white' },
-    'talk': { bg: '#f59e0b', text: 'white' },
-    'fireside chat': { bg: '#ef4444', text: 'white' },
-    'contest': { bg: '#8b5cf6', text: 'white' },
-    'lan party': { bg: '#6366f1', text: 'white' }
-  };
-
-  function getTypeStyle(type) {
-    const color = typeColors[type] || { bg: '#9ca3af', text: 'white' }; // Fallback color
-    return `background-color: ${color.bg}; color: ${color.text};`;
-  }
-
-  function getTypeClass(type) {
-    const baseClass = 'tag';
-    return selectedType === type ? `${baseClass} active` : baseClass;
-  }
-
-  function filterByType(type) {
-    selectedType = selectedType === type ? '' : type;
-  }
 
   $: filteredEvents = selectedType 
     ? events.filter(event => {
@@ -113,6 +99,10 @@
 
   function normalizeEventTypes(event) {
     return Array.isArray(event.type) ? event.type : [event.type];
+  }
+
+  function getEventTagStyle(tag) {
+    return getTagStyle(tag, tagColors);
   }
 </script>
 
@@ -125,17 +115,11 @@
 
 <div class="events-content">
   <div class="container">
-    <div class="filter-tags">
-      {#each types as type}
-        <button 
-          class={getTypeClass(type)}
-          style={getTypeStyle(type)}
-          on:click={() => filterByType(type)}
-        >
-          {type}
-        </button>
-      {/each}
-    </div>
+    <FilterTags 
+      items={types}
+      colors={tagColors}
+      bind:selected={selectedType}
+    />
 
     <div class="events-grid">
       {#each filteredEvents as event}
@@ -145,7 +129,7 @@
               <img src={event.image} alt={event.title} />
             </div>
           {:else}
-            <div class="event-placeholder" style={getTypeStyle(event.type)}>
+            <div class="event-placeholder" style={getEventTagStyle(event.type)}>
               <span>{event.type}</span>
             </div>
           {/if}
@@ -166,7 +150,7 @@
               <span class="event-date">{event.date}</span>
               <div class="event-types">
                 {#each normalizeEventTypes(event) as type}
-                  <span class="event-type" style={getTypeStyle(type)}>{type}</span>
+                  <span class="event-type" style={getEventTagStyle(type)}>{type}</span>
                 {/each}
               </div>
             </div>
@@ -200,37 +184,6 @@
 
   .events-content {
     padding: var(--spacing-16) 0;
-  }
-
-  .filter-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
-    margin-bottom: var(--spacing-8);
-    justify-content: center;
-  }
-
-  .tag {
-    padding: var(--spacing-2) var(--spacing-4);
-    border-radius: 999px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-    border: none;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .tag:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .tag.active {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateY(1px);
-    filter: brightness(85%);
   }
 
   .events-grid {

@@ -1,5 +1,8 @@
 <script>
   import { base } from '$app/paths';
+  import FilterTags from '$lib/components/FilterTags.svelte';
+  import { getTagStyle } from '$lib/utils/tagStyles';
+  
   const tags = ['tech', 'art', 'writing', 'events', 'business', 'community'];
   let selectedTag = '';
 
@@ -70,22 +73,12 @@
     'community': { bg: '#3b82f6', text: 'white' }
   };
 
-  function getTagStyle(tag) {
-    const color = tagColors[tag];
-    return `background-color: ${color.bg}; color: ${color.text};`;
-  }
-
   $: filteredItems = selectedTag 
     ? portfolioItems.filter(item => item.tags.includes(selectedTag))
     : portfolioItems;
 
-  function filterByTag(tag) {
-    selectedTag = selectedTag === tag ? '' : tag;
-  }
-
-  function getTagClass(tag) {
-    const baseClass = 'tag';
-    return selectedTag === tag ? `${baseClass} active` : baseClass;
+  function getPortfolioTagStyle(tag) {
+    return getTagStyle(tag, tagColors);
   }
 </script>
 
@@ -101,17 +94,11 @@
 
 <div class="portfolio-content">
   <div class="container">
-    <div class="filter-tags">
-      {#each tags as tag}
-        <button 
-          class={getTagClass(tag)}
-          style={getTagStyle(tag)}
-          on:click={() => filterByTag(tag)}
-        >
-          {tag}
-        </button>
-      {/each}
-    </div>
+    <FilterTags 
+      items={tags}
+      colors={tagColors}
+      bind:selected={selectedTag}
+    />
 
     <div class="portfolio-grid">
       {#each filteredItems as item}
@@ -131,7 +118,7 @@
             <p>{item.description}</p>
             <div class="item-tags">
               {#each item.tags as tag}
-                <span class="tag small" style={getTagStyle(tag)}>{tag}</span>
+                <span class="tag small" style={getPortfolioTagStyle(tag)}>{tag}</span>
               {/each}
             </div>
           </div>
@@ -160,44 +147,6 @@
 
   .portfolio-content {
     padding: var(--spacing-16) 0;
-  }
-
-  .filter-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-2);
-    margin-bottom: var(--spacing-8);
-    justify-content: center;
-  }
-
-  .tag {
-    padding: var(--spacing-2) var(--spacing-4);
-    border-radius: 999px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: capitalize;
-    border: none;
-    font-weight: 500;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .tag:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .tag.active {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-    transform: translateY(1px);
-    filter: brightness(85%);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-  }
-
-  .tag.small {
-    padding: var(--spacing-1) var(--spacing-3);
-    font-size: 0.75rem;
-    cursor: default;
   }
 
   .portfolio-grid {
@@ -277,5 +226,17 @@
     color: var(--color-text-light);
     opacity: 0;
     transition: opacity 0.3s ease;
+  }
+
+  .tag {
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: 999px;
+    font-size: 0.875rem;
+    text-transform: capitalize;
+  }
+
+  .tag.small {
+    font-size: 0.75rem;
+    padding: var(--spacing-1) var(--spacing-2);
   }
 </style>
