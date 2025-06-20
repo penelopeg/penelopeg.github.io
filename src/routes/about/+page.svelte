@@ -49,9 +49,10 @@
       <ul class="focus-list">
       <li>Leading my team to innovate in the PIM software space</li>
       <li>Building a platform in local.foundation for community builders</li>
-      <li>Prepping a TedX talk about informal communities</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
       <li>Creating a wheel app for neurodivergent folk</li>
+      <li>Prepping a gamejam</li>
+      <li>Coding an AI assistant</li>
       <li>Finishing my first draft for a space opera book</li>
       </ul>
     </div>
@@ -93,7 +94,7 @@
         <!-- <a href="mailto:penelope@duck.com" class="button button-primary">
         Send Email
         </a> -->
-        <a href="https://zez.am/lepsie" class="button button-secondary">
+        <a href="https://zez.am/lepsies" class="button button-secondary">
         Connect Online
         </a>
       </div>
