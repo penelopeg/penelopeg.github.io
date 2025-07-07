@@ -16,10 +16,10 @@
   <div class="container">
     <div class="about-grid">
     <div class="about-text">
-      <h2>My Story</h2>
-      <p>Hey there! I'm a curious soul who loves figuring out what makes communities tick. When I'm not leading a team of awesome developers at Contentserv (where we make PIM software actually fun), I'm probably cooking up some chaos at local.foundation - our attempt at helping other community builders avoid the mistakes we made!</p>
-      <p>You'll find me bouncing around the Algarve tech scene, mostly through Geek Sessions Faro where we bring together people who love tech as much as they love beer. After hopping between different Portuguese cities and working with teams from all over, I've learned that the magic happens when you throw different people into a room and let them solve problems together.</p>
-      <p>Think of me as a walking contradiction - I've got the somewhat a brain of a software engineer but the restless heart of an artist (minus the natural talent). I can't seem to stick to just one thing (why would anyone?), so I'm constantly jumping between writing, drawing, organizing events, and somehow ending up with an absolutely unreasonable number of Spotify playlists (80+ and counting... send help!).</p>
+      <h2>Who the hell is she?</h2>
+      <p>I'm someone who gets genuinely excited about what makes communities work. By day, I lead a development team at Contentserv, building PIM software that brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform to help other community builders learn from our mistakes without having to make them all over again.</p>
+      <p>You'll find me bouncing around (sometimes literally) the Algarve tech scene, mostly through Geek Sessions Faro where we bring together people who love tech as much as they love beer (or water, we don't judge). After hopping between different Portuguese cities and working with teams from all over, I've learned that the magic happens when you throw different people into a room and let them solve problems together.</p>
+      <p>I've got the somewhat a brain of a software engineer but the restless heart of an artist (minus the natural talent). I can't seem to stick to just one thing (why would anyone?), so I'm constantly jumping between writing, drawing, organizing events, and somehow ending up with an absolutely unreasonable number of Spotify playlists (80+ and counting... send help!).</p>
       <p>When I'm not accidentally starting new projects, you might catch me running around organizing events and various hackathons. I haven't learned that sleep is important yet!</p>
       
       <h2>What Drives Me</h2>
