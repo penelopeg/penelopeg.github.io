@@ -21,9 +21,12 @@
     
     <!-- Desktop Navigation -->
     <div class="nav-links">
-      <a href="{base}/" class="nav-link">Home</a>
-      <a href="{base}/about" class="nav-link">About</a>
-      <a href="{base}/portfolio" class="nav-link">Portfolio</a>
+      <a href="{base}/" class="nav-link chaos-rotate-1">Home</a>
+      <a href="{base}/about" class="nav-link chaos-rotate-2">About</a>
+      <a href="{base}/portfolio" class="nav-link chaos-rotate-3">Portfolio</a>
+      <div class="handwritten" style="position: absolute; top: -10px; right: -20px; font-size: 0.8rem; z-index: 100;">
+        navigate me!
+      </div>
       <!-- <a href="{base}/events" class="nav-link">Events</a> -->
       <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
     </div>

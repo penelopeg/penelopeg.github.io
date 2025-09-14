@@ -4,10 +4,16 @@
 
 <div class="about-hero">
   <div class="container">
-    <h1>About Me</h1>
-    <p class="lead">Tech lead, community builder, and creative explorer on a mission to make the most with whatever we have.</p>
-    <div class="hero-actions">
-      <a href="{base}/portfolio" class="button button-secondary">What?</a>
+    <h1 class="chaos-rotate-1">About Me</h1>
+    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; color: white; z-index: 100;">
+      that's me!
+    </div>
+    <p class="lead chaos-spacing">Creative explorer on a mission to make the most with whatever we have.</p>
+    <div class="hero-actions" style="position: relative;">
+      <a href="{base}/portfolio" class="button button-secondary chaos-rotate-2">What?</a>
+      <div class="handwritten" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: white; z-index: 100;">
+        see my stuff!
+      </div>
     </div>
   </div>
 </div>
@@ -16,38 +22,44 @@
   <div class="container">
     <div class="about-grid">
     <div class="about-text">
-      <h2>Who the hell is she?</h2>
+      <h2 class="chaos-rotate-3">Who the hell is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know? <svg style="display: inline; width: 16px; height: 16px; margin-left: 5px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span></h2>
       <p>I'm someone who gets genuinely excited about what makes communities tick.</p>
       <p>By day, I lead a development team at Contentserv, building PIM software that actually brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform helping other community builders organize and get insights about their community.</p>
       <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional, passion required). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
       <p>I've got the brain of a software engineer but the restless heart of an artist. I can't stick to just one thing. And honestly, why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
       <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
       
-      <h2>What Drives Me</h2>
+      <h2 class="chaos-rotate-1">What Drives Me</h2>
+      <div class="handwritten" style="position: absolute; margin-top: -10px; margin-left: 200px; z-index: 100;">
+        my core values ↓
+      </div>
       <div class="values-grid">
-      <div class="value-card">
-        <h3>Permission to Be Messy</h3>
+      <div class="wonky-border value-card chaos-rotate-1">
+        <h3 class="scribble-underline">Permission to Be Messy</h3>
         <p>Helping people embrace their full, chaotic, multi-passionate selves instead of forcing themselves into neat boxes</p>
       </div>
-      <div class="value-card">
-        <h3>Movement & Connection</h3>
+      <div class="wonky-border value-card chaos-rotate-2">
+        <h3 class="scribble-underline">Movement & Connection</h3>
         <p>Creating spaces where different kinds of people can solve problems together and find their humanity in each other</p>
       </div>
-      <div class="value-card">
-        <h3>Controlled Chaos</h3>
+      <div class="wonky-border value-card chaos-rotate-3">
+        <h3 class="scribble-underline">Controlled Chaos</h3>
         <p>Proving that you can be organized in the chaos. Planning creates the container, but magic happens in the spontaneous moments</p>
+        <div class="handwritten" style="position: absolute; bottom: -20px; right: -25px; z-index: 100;">
+          this one!
+        </div>
       </div>
-      <div class="value-card">
-        <h3>The Joy of Trying</h3>
+      <div class="wonky-border value-card chaos-rotate-4">
+        <h3 class="scribble-underline">The Joy of Trying</h3>
         <p>Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe</p>
       </div>
       </div>
   
-      <h2>Current Focus</h2>
-      <p>
-      I'm currently focused on:
-      </p>
-      <ul class="focus-list">
+      <h2 class="chaos-rotate-2">Current Focus</h2>
+      <div class="handwritten" style="position: absolute; margin-top: -15px; margin-left: 180px; z-index: 100;">
+        what I'm up to
+      </div>
+      <ul class="focus-list chaos-spacing">
       <li>Developing a mobile app to make networking meaningful</li>
       <li>Building a platform in local.foundation for community builders</li>
       <li>Leading my team to innovate in the PIM software space</li>
@@ -58,13 +70,16 @@
       <li>Finishing my first draft for a space opera book</li>
       </ul>
     </div>
-    <div class="about-sidebar">
-      <div class="profile-card card">
+    <div class="about-sidebar chaos-spacing">
+      <div class="profile-card wonky-border chaos-rotate-1">
       <div class="profile-image">
         <img src="{base}/images/profile/me_alternative.jpg" alt="Penelope" />
+        </div>
+        <div class="handwritten" style="position: absolute; top: -20px; right: -25px; z-index: 100;">
+          that's me!
         </div>			  
       <div class="profile-info">
-        <h3>Quick Facts</h3>
+        <h3 class="scribble-underline">Quick Facts</h3>
         <ul class="quick-facts">
         <li>
           <strong>Location: </strong>
@@ -90,13 +105,16 @@
       </div>
       </div>
   
-      <div class="contact-card card">
-      <h3>Get in Touch</h3>
+      <div class="contact-card wonky-border chaos-rotate-3">
+      <h3 class="scribble-underline">Get in Touch</h3>
+      <div class="handwritten" style="position: absolute; top: -15px; left: -25px; z-index: 100;">
+        say hi!
+      </div>
       <div class="contact-links">
         <!-- <a href="mailto:penelope@duck.com" class="button button-primary">
         Send Email
         </a> -->
-        <a href="https://zez.am/lepsies" class="button button-secondary">
+        <a href="https://zez.am/lepsies" class="button button-secondary chaos-rotate-1">
         Connect Online
         </a>
       </div>
@@ -112,6 +130,9 @@
     color: white;
     padding: var(--spacing-16) 0;
     text-align: center;
+    transform: rotate(0.8deg);
+    transform-origin: center center;
+    position: relative;
   }
   
   .about-hero h1 {
@@ -127,6 +148,9 @@
   
   .about-content {
     padding: var(--spacing-16) 0;
+    transform: rotate(-0.2deg);
+    transform-origin: center center;
+    position: relative;
   }
   
   .about-grid {
@@ -158,8 +182,14 @@
   
   @media (min-width: 640px) {
     .values-grid {
-    grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
     }
+    
+    .values-grid .value-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .values-grid .value-card:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .values-grid .value-card:nth-child(3) { grid-column: 1; grid-row: 2; }
+    .values-grid .value-card:nth-child(4) { grid-column: 2; grid-row: 2; }
   }
   
   .value-card {
@@ -198,8 +228,9 @@
     left: 0;
     top: 1rem;
     width: var(--spacing-4);
-    height: 2px;
-    background-color: var(--color-primary);
+    height: 3px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 4'%3E%3Cpath d='M0,2 Q4,0 8,2 T16,2' stroke='%230891b2' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat;
+    background-size: 100% 100%;
   }
   
   .profile-card {

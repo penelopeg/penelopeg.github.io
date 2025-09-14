@@ -20,16 +20,16 @@
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
     },
     {
-      title: 'Writer',
-      description: 'Legendary google keep notes writer, a thousand fiction projects to publish, posting the occasional diary entry @ substack',
-      color: '#06b6d4',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`
-    },
-    {
       title: 'Speaker',
       description: 'Sharing insights and experiences by yapping a considerate amount',
       color: '#ff66b3',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`
+    },
+    {
+      title: 'Writer',
+      description: 'Legendary google keep notes writer, a thousand fiction projects to publish, posting the occasional diary entry @ substack',
+      color: '#06b6d4',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`
     },
     {
       title: 'Artist',
@@ -44,16 +44,22 @@
   <div class="container">
     <div class="hero-content">
       <h1>Olá, I'm Penélope, and I'm a</h1>
-      <p class="hero-subtitle">
+      <p class="hero-subtitle chaos-spacing">
         {#each roles as role}
           <span class="strikethrough" style="--role-color: {role.color}">{role.title.toLowerCase()}</span>
           {#if role !== roles[roles.length - 1]} / {/if}
         {/each}
       </p>
-      <p class="hero-subtitle">agent of (good) chaos</p>
-      <div class="hero-actions">
-        <a href="{base}/about" class="button button-primary">Who?</a>
-        <a href="{base}/portfolio" class="button button-secondary">What?</a>
+      <p class="hero-subtitle escape-container">agent of (good) chaos</p>
+      <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+        (this is me!)
+      </div>
+      <div class="hero-actions chaos-spacing">
+        <a href="{base}/about" class="button button-primary chaos-rotate-1">Who?</a>
+        <a href="{base}/portfolio" class="button button-secondary chaos-rotate-3">What?</a>
+        <div class="handwritten" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); color: white; z-index: 100;">
+          click these!
+        </div>
       </div>
     </div>
   </div>
@@ -61,15 +67,30 @@
   
 <section class="roles-section">
   <div class="container">
-    <h2 class="text-center">What do you do again?</h2>
-    <div class="roles-grid">
-      {#each roles as role}
-        <div class="card role-card">
+    <h2 class="text-center chaos-rotate-2">What do you do again? <span class="handwritten" style="font-size: 0.8em; margin-left: 10px;"><svg style="display: inline; width: 25px; height: 15px; margin-right: 5px;" viewBox="0 0 40 15" fill="none"><path d="M2,7 Q8,3 16,9 Q24,13 32,5 Q36,3 35,7" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M35,7 L39,5 L39,9 Z" fill="currentColor"/></svg> good question tbh</span></h2>
+    <div class="chaos-grid">
+      {#each roles as role, i}
+        <div class="wonky-border role-card chaos-rotate-{(i % 4) + 1}">
           <div class="role-icon" style="--role-color: {role.color}">
             {@html role.icon}
           </div>
-          <h3>{role.title}</h3>
+          <h3 class="scribble-underline">{role.title}</h3>
           <p>{role.description}</p>
+          {#if i === 0}
+            <div class="handwritten" style="position: absolute; top: -30px; right: -15px; z-index: 100;">
+              start here!
+            </div>
+          {/if}
+          {#if i === 2}
+            <div class="handwritten" style="position: absolute; top: -15px; right: -25px; z-index: 100;">
+              (day job)
+            </div>
+          {/if}
+          {#if role.title === 'Writer'}
+            <div class="handwritten mobile-note-writer" style="position: absolute; bottom: -20px; left: -25px; z-index: 100;">
+              wannabe
+            </div>
+          {/if}
         </div>
       {/each}
     </div>
@@ -82,12 +103,15 @@
     color: white;
     padding: var(--spacing-8) 0;
     text-align: center;
+    transform: rotate(0.4deg);
+    transform-origin: center center;
   }
   
   .hero-content {
     max-width: 100rem;
     margin: 0 auto;
     padding: 0 var(--spacing-4);
+    position: relative;
   }
   
   .hero h1 {
@@ -133,12 +157,15 @@
   }
   
   .roles-section {
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-8) 0;
     background-color: var(--color-background);
+    position: relative;
+    transform: rotate(-0.4deg);
+    transform-origin: center center;
   }
   
   .roles-section h2 {
-    margin-bottom: var(--spacing-12);
+    margin-bottom: var(--spacing-6);
   }
   
   .roles-grid {

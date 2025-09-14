@@ -47,7 +47,7 @@
       description: 'Sharing insights and experiences by yapping a considerate amount',
       tags: ['tech', 'events', 'community'],
       image: base + '/images/portfolio/speaker.jpg',
-    //   url: '/talks'
+      url: base + '/speaker'
     },
     {
       title: 'Fiction Writing',
@@ -92,7 +92,7 @@
 <div class="portfolio-hero">
   <div class="container">
     <h1>Portfolio</h1>
-    <p class="lead">Exploring the intersection of technology, art, and community</p>
+    <p class="lead"><span class="scribble-underline">Exploring the intersection of technology, art, and community</span></p>
     <div class="hero-actions">
         <a href="{base}/about" class="button button-primary">Who?</a>
     </div>
@@ -101,15 +101,20 @@
 
 <div class="portfolio-content">
   <div class="container">
-    <FilterTags 
-      items={tags}
-      colors={tagColors}
-      bind:selected={selectedTag}
-    />
+    <div style="position: relative;">
+      <FilterTags 
+        items={tags}
+        colors={tagColors}
+        bind:selected={selectedTag}
+      />
+      <div class="handwritten" style="position: absolute; top: -10px; right: 20px; z-index: 100;">
+        pick one!
+      </div>
+    </div>
 
     <div class="portfolio-grid">
-      {#each filteredItems as item}
-        <a href={item.url} class="portfolio-card card" target="_blank" rel="noopener noreferrer">
+      {#each filteredItems as item, i}
+        <a href={item.url} class="portfolio-card wonky-border chaos-rotate-{(i % 4) + 1}" target="_blank" rel="noopener noreferrer">
           <div class="portfolio-image">
             <img src={item.image} alt={item.title} />
           </div>
@@ -129,6 +134,26 @@
               {/each}
             </div>
           </div>
+          {#if item.title === 'Local Foundation'}
+            <div class="handwritten" style="position: absolute; top: -15px; right: -30px; z-index: 100;">
+              personal fav
+            </div>
+          {/if}
+          {#if item.title === 'Digital Art'}
+            <div class="handwritten" style="position: absolute; bottom: -20px; left: -25px; z-index: 100;">
+              messy but fun
+            </div>
+          {/if}
+          {#if item.title === 'Contentserv'}
+            <div class="handwritten" style="position: absolute; top: -15px; left: -20px; z-index: 100;">
+              day job
+            </div>
+          {/if}
+          {#if item.title === 'Fiction Writing'}
+            <div class="handwritten" style="position: absolute; bottom: -20px; right: -25px; z-index: 100;">
+              ongoing...
+            </div>
+          {/if}
         </a>
       {/each}
     </div>
@@ -141,6 +166,8 @@
     color: white;
     padding: var(--spacing-16) 0;
     text-align: center;
+    transform: rotate(-0.6deg);
+    transform-origin: center center;
   }
 
   .portfolio-hero h1 {
@@ -154,6 +181,9 @@
 
   .portfolio-content {
     padding: var(--spacing-16) 0;
+    transform: rotate(0.4deg);
+    transform-origin: center center;
+    position: relative;
   }
 
   .portfolio-grid {
