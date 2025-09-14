@@ -8,25 +8,11 @@
 
   const portfolioItems = [
     {
-      title: 'Contentserv',
-      description: 'Leading a development team for a next-gen PIM software',
-      tags: ['tech', 'business'],
-      image: base + '/images/portfolio/contentserv.jpg',
-      url: 'https://contentserv.com'
-    },
-    {
       title: 'Local Foundation',
       description: 'Platform helping community builders connect and grow together',
       tags: ['tech', 'business', 'events'],
       image: base + '/images/portfolio/local-foundation-website.png',
       url: 'https://local.foundation'
-    },
-    {
-      title: 'Digital Art',
-      description: 'Me dabbling through the arts, mostly digitally',
-      tags: ['art'],
-      image: base + '/images/portfolio/art.png',
-      url: 'https://instagram.com/lepsies_art'
     },
     {
       title: 'Geek Sessions',
@@ -36,18 +22,25 @@
       url: 'https://zez.am/GeekSessionsFaro'
     },
     {
-      title: 'Event Organizer',
-      description: 'Whenever there\'s a problem that needs solving, I help find the solution in an event format',
-      tags: ['tech', 'events', 'community'],
-      image: base + '/images/portfolio/facilitator.jpg',
-      url: base + '/events'
-    },
-    {
       title: 'Chaos Theory Blog',
       description: 'Personal blog exploring life and creativity',
       tags: ['writing'],
       image: base + '/images/portfolio/blog.jpg',
       url: 'https://lepsies.substack.com/'
+    },
+    {
+      title: 'Contentserv',
+      description: 'Leading a development team for a next-gen PIM software',
+      tags: ['tech', 'business'],
+      image: base + '/images/portfolio/contentserv.jpg',
+      url: 'https://contentserv.com'
+    },
+    {
+      title: 'Event Organizer',
+      description: 'Whenever there\'s a problem that needs solving, I help find the solution in an event format',
+      tags: ['tech', 'events', 'community'],
+      image: base + '/images/portfolio/facilitator.jpg',
+      url: base + '/events'
     },
     {
       title: 'Speaker/host',
@@ -61,6 +54,20 @@
       description: 'I\'m working on my first fiction book! (For 10 years now, shhh...)',
       tags: ['writing'],
       image: base + '/images/portfolio/writing-art.png'
+    },
+    {
+      title: 'Impact Hackers',
+      description: 'Building a community for hackers who want to create positive impact through technology',
+      tags: ['community', 'tech', 'events'],
+      image: base + '/images/portfolio/impact-hackers.jpg',
+      url: 'https://impacthackerscommunity.com'
+    },
+    {
+      title: 'Digital Art',
+      description: 'Me dabbling through the arts, mostly digitally',
+      tags: ['art'],
+      image: base + '/images/portfolio/art.png',
+      url: 'https://instagram.com/lepsies_art'
     }
   ];
 

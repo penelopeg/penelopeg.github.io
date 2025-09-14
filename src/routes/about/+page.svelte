@@ -17,28 +17,29 @@
     <div class="about-grid">
     <div class="about-text">
       <h2>Who the hell is she?</h2>
-      <p>I'm someone who gets genuinely excited about what makes communities work. By day, I lead a development team at Contentserv, building PIM software that brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform to help other community builders learn from our mistakes without having to make them all over again.</p>
-      <p>You'll find me bouncing around (sometimes literally) the Algarve tech scene, mostly through Geek Sessions Faro where we bring together people who love tech as much as they love beer (or water, we don't judge). After hopping between different Portuguese cities and working with teams from all over, I've learned that the magic happens when you throw different people into a room and let them solve problems together.</p>
-      <p>I've got the somewhat a brain of a software engineer but the restless heart of an artist (minus the natural talent). I can't seem to stick to just one thing (why would anyone?), so I'm constantly jumping between writing, drawing, organizing events, and somehow ending up with an absolutely unreasonable number of Spotify playlists (80+ and counting... send help!).</p>
-      <p>When I'm not accidentally starting new projects, you might catch me running around organizing events and various hackathons. I haven't learned that sleep is important yet!</p>
+      <p>I'm someone who gets genuinely excited about what makes communities tick.</p>
+      <p>By day, I lead a development team at Contentserv, building PIM software that actually brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform helping other community builders organize and get insights about their community.</p>
+      <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional, passion required). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
+      <p>I've got the brain of a software engineer but the restless heart of an artist. I can't stick to just one thing. And honestly, why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
+      <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
       
       <h2>What Drives Me</h2>
       <div class="values-grid">
       <div class="value-card">
-        <h3>Innovation</h3>
-        <p>Chasing what new ways we can create and connect tech and creativity</p>
+        <h3>Permission to Be Messy</h3>
+        <p>Helping people embrace their full, chaotic, multi-passionate selves instead of forcing themselves into neat boxes</p>
       </div>
       <div class="value-card">
-        <h3>Community</h3>
-        <p>Building spaces where people can learn, grow, and have fun together</p>
+        <h3>Movement & Connection</h3>
+        <p>Creating spaces where different kinds of people can solve problems together and find their humanity in each other</p>
       </div>
       <div class="value-card">
-        <h3>Impact</h3>
-        <p>Creating solutions that make a real difference in people's lives</p>
+        <h3>Controlled Chaos</h3>
+        <p>Proving that you can be organized in the chaos. Planning creates the container, but magic happens in the spontaneous moments</p>
       </div>
       <div class="value-card">
-        <h3>Creativity</h3>
-        <p>Life's not that serious... Having fun and trying is the way to go</p>
+        <h3>The Joy of Trying</h3>
+        <p>Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe</p>
       </div>
       </div>
   
@@ -47,19 +48,20 @@
       I'm currently focused on:
       </p>
       <ul class="focus-list">
-      <li>Leading my team to innovate in the PIM software space</li>
+      <li>Developing a mobile app to make networking meaningful</li>
       <li>Building a platform in local.foundation for community builders</li>
+      <li>Leading my team to innovate in the PIM software space</li>
+      <li>Volunteering at 351 to make Portugal Tech Week a blast</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
       <li>Creating a wheel app for neurodivergent folk</li>
       <li>Prepping a gamejam</li>
-      <li>Coding an AI assistant</li>
       <li>Finishing my first draft for a space opera book</li>
       </ul>
     </div>
     <div class="about-sidebar">
       <div class="profile-card card">
       <div class="profile-image">
-        <img src="{base}/images/profile/penelope.jpeg" alt="Penelope" />
+        <img src="{base}/images/profile/me_alternative.jpg" alt="Penelope" />
         </div>			  
       <div class="profile-info">
         <h3>Quick Facts</h3>

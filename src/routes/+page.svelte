@@ -2,12 +2,6 @@
   import { base } from '$app/paths';
   const roles = [
     {
-      title: 'Tech Lead',
-      description: 'Leading an engineering team to deliver high-quality software solutions @ Contentserv',
-      color: '#7c3aed',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
-    },
-    {
       title: 'Community Builder',
       description: 'Creating communities that want to create a positive impact @ Geek Sessions, Impact Hackers, and more',
       color: '#3b82f6',
@@ -18,6 +12,12 @@
       description: 'Solving the problem of loneliness in community building @ local.foundation',
       color: '#10b981',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
+    },
+    {
+      title: 'Tech Lead',
+      description: 'Leading an engineering team to deliver high-quality software solutions @ Contentserv',
+      color: '#7c3aed',
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
     },
     {
       title: 'Writer',

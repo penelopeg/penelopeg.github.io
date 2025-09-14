@@ -63,7 +63,7 @@
     <div class="footer-content">
       <div class="footer-info">
       <h3 class="footer-title">Penélope</h3>
-      <p class="footer-subtitle">Agent of (good) chaos</p>
+      <p class="footer-subtitle">Community builder / founder / tech lead / agent of (good) chaos</p>
       <p class="footer-copyright">© {new Date().getFullYear()} Penélope. All rights reserved.</p>
       </div>
       <div class="footer-social">
