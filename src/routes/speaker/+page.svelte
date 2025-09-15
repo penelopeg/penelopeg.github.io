@@ -17,12 +17,39 @@
     {
       title: 'How to Build Communities that Actually Matter',
       description: 'A TEDx talk exploring the principles behind building meaningful communities that create genuine impact and connection.',
-      location: 'TEDxUAlg',
+      location: 'Lagos',
+      event: 'TedXPraça Gil Eanes',
       date: 'June 2024',
       type: 'tedx',
       url: 'https://www.youtube.com/watch?v=ntKrac2ySy8',
       duration: '15 min',
       language: 'English'
+    },
+    {
+      title: 'The Power of Community',
+      description: 'Closing Keynote in Geek Sessions Conf 2025. Some of the Org members come to stage to talk about the 15 years of GeekSessions and the road that led to the conference through the power of community.',
+      location: 'Geek Sessions Conf',
+      event: 'Geek Sessions Conf',
+      date: 'February 2025',
+      type: ['keynote', 'conference'],
+      url: 'https://www.youtube.com/watch?v=yAP5cPrmO-I',
+    },
+    {
+      title: 'Fireside chat - Remote work and how it\'s changing',
+      description: 'We sat 5 people around a coffee table and had a relaxed chat about remote work.',
+      location: 'Gimnasio Clube de Faro',
+      event: 'Geek Sessions',
+      date: 'November 2022',
+      type: 'fireside chat',
+      url: 'https://www.youtube.com/watch?v=xgZSvVOZhoM',
+    },
+    {
+      title: 'Get hooked on React: How to use React Hooks',
+      description: 'Get immersed into a cheeky explanation of how react hooks work, including how to code a booty counter if you\'re Captain Hook',
+      location: 'Gimnasio Clube de Faro',
+      event: 'Geek Girls Portugal',
+      date: 'February 2020',
+      type: 'meetup',
     }
   ];
 
@@ -101,6 +128,9 @@
             </div>
             <p>{talk.description}</p>
             <div class="talk-details">
+              {#if talk.event}
+                <span class="detail-tag">{talk.event}</span>
+              {/if}
               {#if talk.location}
                 <span class="detail-tag">{talk.location}</span>
               {/if}
