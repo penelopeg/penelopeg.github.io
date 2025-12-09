@@ -15,15 +15,24 @@
 
   const talks = [
     {
-      title: 'How to Build Communities that Actually Matter',
-      description: 'A TEDx talk exploring the principles behind building meaningful communities that create genuine impact and connection.',
+      title: 'Informal Communities Will Save Humanity',
+      description: 'A TEDx talk sharing a vision for how everyday individuals can create real impact through small intentional actions, simply by connecting and collaborating in informal communities.',
       location: 'Lagos',
       event: 'TedXPraça Gil Eanes',
-      date: 'June 2024',
+      date: 'May 2025',
       type: 'tedx',
       url: 'https://www.youtube.com/watch?v=ntKrac2ySy8',
       duration: '15 min',
       language: 'English'
+    },
+    {
+      title: 'Women of Impact - Community Driven Leadership',
+      description: 'Women of Impact panel discussion on building and leading communities with purpose and authenticity.',
+      location: 'Online',
+      event: 'Women of Impact',
+      date: 'November 2025',
+      type: 'fireside chat',
+      url: 'https://www.youtube.com/watch?v=FYHDGzG_rdE',
     },
     {
       title: 'The Power of Community',

@@ -15,6 +15,35 @@
 
   const events = [
     {
+      title: 'Portugal Tech Week Palace',
+      description: 'National tech event showcasing innovation and technology across Portugal.',
+      locations: ['Lisbon'],
+      date: 'November 2025',
+      type: 'conference',
+      url: 'https://portugaltechweek.com'
+    },
+    {
+      title: 'Eléctrico Pitch',
+      description: 'Startup pitch competition taking place in Lisbon\'s iconic trams.',
+      locations: ['Lisbon'],
+      date: 'November 2025',
+      type: 'conference'
+    },
+    {
+      title: 'Geek Sessions x LOFT Summer Party',
+      description: 'Summer tech and networking party by Geek Sessions and LOFT.',
+      locations: ['Faro'],
+      date: 'August 2025',
+      type: 'community'
+    },
+    {
+      title: 'Algarve Buildathon',
+      description: 'Building solutions for the Algarve region using No-Code and AI technologies',
+      locations: ['Algarve'],
+      date: 'November 2025',
+      type: 'hackathon'
+    },
+    {
       title: 'Geek Sessions Conf',
       description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
       locations: ['Faro'],
@@ -35,7 +64,7 @@
     {
       title: 'Techstars Startup Weekend',
       description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
-      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora'],
+      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos'],
       date: '2023 - Present',
       type: 'hackathon',
       // image: '{base}/images/events/startup-weekend.jpg',
