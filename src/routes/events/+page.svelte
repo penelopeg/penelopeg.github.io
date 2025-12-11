@@ -299,10 +299,27 @@
   }
 
   .event-type {
-    padding: var(--spacing-1) var(--spacing-2);
-    border-radius: 999px;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: 0;
     font-size: 0.75rem;
-    text-transform: capitalize;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .event-type:nth-child(odd) {
+    transform: rotate(-0.5deg);
+  }
+
+  .event-type:nth-child(even) {
+    transform: rotate(0.5deg);
+  }
+
+  .event-type:nth-child(3n) {
+    transform: rotate(0deg) translateY(-1px);
   }
 
   .event-date {
@@ -325,11 +342,23 @@
   }
 
   .location-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: var(--spacing-1) var(--spacing-2);
     background: var(--color-background);
-    border: 1px solid var(--color-text-light);
-    border-radius: 999px;
+    border: 2px solid var(--color-text-light);
+    border-radius: 0;
     color: var(--color-text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .location-tag:nth-child(odd) {
+    transform: rotate(-0.3deg);
+  }
+
+  .location-tag:nth-child(even) {
+    transform: rotate(0.3deg);
   }
 </style>

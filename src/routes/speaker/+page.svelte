@@ -260,10 +260,27 @@
   }
 
   .talk-type {
-    padding: var(--spacing-1) var(--spacing-2);
-    border-radius: 999px;
+    padding: var(--spacing-1) var(--spacing-3);
+    border-radius: 0;
     font-size: 0.75rem;
-    text-transform: capitalize;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .talk-type:nth-child(odd) {
+    transform: rotate(-0.5deg);
+  }
+
+  .talk-type:nth-child(even) {
+    transform: rotate(0.5deg);
+  }
+
+  .talk-type:nth-child(3n) {
+    transform: rotate(0deg) translateY(-1px);
   }
 
   .talk-date {
@@ -286,12 +303,24 @@
   }
 
   .detail-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     padding: var(--spacing-1) var(--spacing-2);
     background: var(--color-background);
-    border: 1px solid var(--color-text-light);
-    border-radius: 999px;
+    border: 2px solid var(--color-text-light);
+    border-radius: 0;
     color: var(--color-text-light);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .detail-tag:nth-child(odd) {
+    transform: rotate(-0.3deg);
+  }
+
+  .detail-tag:nth-child(even) {
+    transform: rotate(0.3deg);
   }
 
   .hero-actions {
@@ -300,5 +329,35 @@
     justify-content: center;
     margin-top: var(--spacing-6);
     position: relative;
+  }
+
+  /* Anti-Design Button Overrides */
+  .hero-actions .button {
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    padding: var(--spacing-3) var(--spacing-6);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s ease;
+    position: relative;
+  }
+
+  .hero-actions .button::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+  }
+
+  .hero-actions .button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
   }
 </style>
