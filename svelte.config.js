@@ -1,8 +1,10 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+    extensions: ['.svelte', '.md'],
     kit: {
         adapter: adapter({
             pages: 'build',
@@ -15,7 +17,15 @@ const config = {
             base: process.env.NODE_ENV === 'production' ? '/penelopeg.github.io' : ''
         }
     },
-    preprocess: vitePreprocess()
+    preprocess: [
+        vitePreprocess(),
+        mdsvex({
+            extensions: ['.md'],
+            layout: {
+                blog: './src/lib/components/BlogLayout.svelte'
+            }
+        })
+    ]
 };
 
 export default config;

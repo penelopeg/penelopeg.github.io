@@ -24,6 +24,7 @@
       <a href="{base}/" class="nav-link chaos-rotate-1">Home</a>
       <a href="{base}/about" class="nav-link chaos-rotate-2">About</a>
       <a href="{base}/portfolio" class="nav-link chaos-rotate-3">Portfolio</a>
+      <a href="{base}/blog" class="nav-link chaos-rotate-4">Blog</a>
       <div class="handwritten" style="position: absolute; top: -10px; right: -20px; font-size: 0.8rem; z-index: 100;">
         navigate me!
       </div>
@@ -53,6 +54,7 @@
       <a href="{base}/" class="mobile-nav-link">Home</a>
       <a href="{base}/about" class="mobile-nav-link">About</a>
       <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
+      <a href="{base}/blog" class="mobile-nav-link">Blog</a>
     </div>
     {/if}
   </nav>
