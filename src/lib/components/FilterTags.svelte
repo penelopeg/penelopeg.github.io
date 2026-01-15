@@ -41,55 +41,37 @@
 
   .tag {
     padding: var(--spacing-2) var(--spacing-4);
-    border-radius: 0;
+    border-radius: var(--border-radius-sticker);
     color: white;
     cursor: pointer;
-    transition: transform 0.15s ease;
-    text-transform: uppercase;
-    border: 3px solid rgba(0, 0, 0, 0.6);
-    font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: 0.3px;
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
   }
 
-  .tag::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    bottom: -2px;
-    left: -2px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    pointer-events: none;
-  }
-
   .tag:nth-child(odd) {
-    transform: rotate(-0.8deg);
+    transform: rotate(-2deg);
   }
 
   .tag:nth-child(even) {
-    transform: rotate(0.8deg);
+    transform: rotate(2deg);
   }
 
   .tag:nth-child(3n) {
-    transform: rotate(0deg);
+    transform: rotate(1deg);
   }
 
   .tag:hover {
-    transform: translate(1px, 1px) rotate(0deg);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px) rotate(0deg);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
   }
 
   .tag.active {
     background: rgba(0, 0, 0, 0.9) !important;
-    border-color: currentColor;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-    transform: rotate(0deg) translate(2px, 2px);
-  }
-
-  .tag.active::before {
-    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-4px) rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 </style>

@@ -12,7 +12,7 @@
     {
       slug: 'drive-30',
       title: 'Learning how to drive at 30',
-      description: 'On learning to drive at 30, facing fears, and how avoiding things doesn't make them go away.',
+      description: 'On learning to drive at 30, facing fears, and how avoiding things doesn\'t make them go away.',
       date: '2025-05-25',
       tags: ['personal', 'growth', 'community']
     },

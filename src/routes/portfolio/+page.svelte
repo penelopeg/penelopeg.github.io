@@ -294,33 +294,14 @@
     padding: var(--spacing-1) var(--spacing-2);
   }
 
-  /* Anti-Design Button Overrides */
+  /* Sticker-style Button Overrides */
   .hero-actions .button {
-    border: 3px solid rgba(255, 255, 255, 0.9);
-    border-radius: 0;
-    padding: var(--spacing-3) var(--spacing-6);
-    font-size: 0.95rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
-    transition: transform 0.15s ease;
-    position: relative;
-  }
-
-  .hero-actions .button::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    bottom: -2px;
-    left: -2px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    pointer-events: none;
+    font-size: 1rem;
+    transform: rotate(-1.5deg);
+    --hover-rotate: -1.5deg;
   }
 
   .hero-actions .button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px) rotate(calc(var(--hover-rotate) * 1.5));
   }
 </style>
