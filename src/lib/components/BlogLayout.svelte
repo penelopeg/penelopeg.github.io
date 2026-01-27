@@ -18,7 +18,6 @@
     { slug: 'reason-365-consistency', title: 'Reason #365 why you shouldn\'t care about consistency', date: '2025-04-13' },
     { slug: 'thoughts-on-decaf', title: 'Thoughts on decaf', date: '2025-03-29' },
     { slug: 'untitled', title: 'Untitled', date: '2025-03-09' },
-    { slug: 'hello-world', title: 'Hello World: First Post', date: '2025-01-15' }
   ];
 
   $: currentSlug = $page.url.pathname.split('/').filter(Boolean).pop();
