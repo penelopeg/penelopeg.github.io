@@ -29,7 +29,9 @@ tags: ["personal", "writing", "productivity"]
 
 Maybe this isn’t a random list. It's looking too much like a mirror.
 
-*chuckles* I’m in trouble
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffdfba79c-b48f-4350-a3cb-5965754a5c33_1281x871.png" alt="picture of color coded calendar" class="img-large center-image" />
+
+_**chuckles** I’m in trouble_
 
 Holy shit, am I predictable.
 
@@ -40,6 +42,8 @@ This is why plans and routines are overrated. Think about the Portugal/Spain ele
 I plan everything, but I rarely practice. In fact, the more I try to practice the worse I get, as if any slight mistake gets blown out of proportion. But if I don't, then I get excruciating pain in my chest and stomach because I'm not ready. I'll never be ready.
 
 And that’s the whole point. You need to act before you feel ready, because staying still for too long is gonna scramble your brain in a way that takes way longer to put back together.
+
+<img src="https://images.unsplash.com/photo-1467139840664-96b244a66825?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHw1MXx8cmFuZG9tfGVufDB8fHx8MTc0NjIyOTU2N3ww&ixlib=rb-4.0.3&q=80&w=1080" alt="Lots of tools" class="img-large center-image" />
 
 *Photo by Ashim D'Silva on Unsplash*
 

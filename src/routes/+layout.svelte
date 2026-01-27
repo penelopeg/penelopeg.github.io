@@ -26,7 +26,7 @@
       <a href="{base}/portfolio" class="nav-link chaos-rotate-3">Portfolio</a>
       <a href="{base}/blog" class="nav-link chaos-rotate-4">Blog</a>
       <div class="handwritten" style="position: absolute; top: -10px; right: -20px; font-size: 0.8rem; z-index: 100;">
-        navigate me!
+        chaos theory!
       </div>
       <!-- <a href="{base}/events" class="nav-link">Events</a> -->
       <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
@@ -85,9 +85,16 @@
         </svg>
         </a>
         <a href="https://zez.am/lepsies" class="social-link" aria-label="All Links">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        </a>
+        <a href="{base}/blog/rss.xml" class="social-link" aria-label="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 11a9 9 0 0 1 9 9"></path>
+          <path d="M4 4a16 16 0 0 1 16 16"></path>
+          <circle cx="5" cy="19" r="1"></circle>
         </svg>
         </a>
       </div>

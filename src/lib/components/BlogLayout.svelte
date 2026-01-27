@@ -1,11 +1,30 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
 
   export let title = '';
   export let subtitle = '';
   export let date = '';
   export let description = '';
   export let tags = [];
+
+  // Posts array (keep in sync with blog listing)
+  const posts = [
+    { slug: 'resolutions-fail-copycat', title: 'Your resolutions fail because you\'re being a copycat', date: '2026-01-09' },
+    { slug: 'in-defense-of-goblin-mode', title: 'In defense of Goblin Mode', date: '2025-12-21' },
+    { slug: 'recognition-paradox', title: 'The Recognition Paradox', date: '2025-09-24' },
+    { slug: 'drive-30', title: 'Learning how to drive at 30', date: '2025-05-25' },
+    { slug: 'things-doomscrolling', title: 'Things to do instead of doomscrolling', date: '2025-05-03' },
+    { slug: 'reason-365-consistency', title: 'Reason #365 why you shouldn\'t care about consistency', date: '2025-04-13' },
+    { slug: 'thoughts-on-decaf', title: 'Thoughts on decaf', date: '2025-03-29' },
+    { slug: 'untitled', title: 'Untitled', date: '2025-03-09' },
+    { slug: 'hello-world', title: 'Hello World: First Post', date: '2025-01-15' }
+  ];
+
+  $: currentSlug = $page.url.pathname.split('/').filter(Boolean).pop();
+  $: currentIndex = posts.findIndex(p => p.slug === currentSlug);
+  $: previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  $: nextPost = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 </script>
 
 <div class="blog-post">
@@ -36,6 +55,38 @@
       <div class="prose">
         <slot />
       </div>
+
+      <!-- Blog Navigation - Music Player Style -->
+      <nav class="blog-navigation">
+        <a
+          href={previousPost ? `${base}/blog/${previousPost.slug}` : '#'}
+          class="nav-button nav-prev"
+          class:disabled={!previousPost}
+          aria-label={previousPost ? `Previous: ${previousPost.title}` : 'No previous post'}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 19 2 12 11 5 11 19"></polygon>
+            <polygon points="22 19 13 12 22 5 22 19"></polygon>
+          </svg>
+        </a>
+
+        <div class="nav-current">
+          <div class="current-indicator"></div>
+          <span class="current-title">{title}</span>
+        </div>
+
+        <a
+          href={nextPost ? `${base}/blog/${nextPost.slug}` : '#'}
+          class="nav-button nav-next"
+          class:disabled={!nextPost}
+          aria-label={nextPost ? `Next: ${nextPost.title}` : 'No next post'}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 19 22 12 13 5 13 19"></polygon>
+            <polygon points="2 19 11 12 2 5 2 19"></polygon>
+          </svg>
+        </a>
+      </nav>
     </article>
   </div>
 </div>
@@ -253,6 +304,23 @@
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 
+  /* Image size classes */
+  .prose :global(.img-small) {
+    max-width: 300px;
+  }
+
+  .prose :global(.img-medium) {
+    max-width: 500px;
+  }
+
+  .prose :global(.img-large) {
+    max-width: 700px;
+  }
+
+  .prose :global(.img-full) {
+    max-width: 100%;
+  }
+
   .prose :global(hr) {
     border: none;
     border-top: 2px solid var(--color-primary);
@@ -272,6 +340,160 @@
 
     .prose :global(h3) {
       font-size: 1.25rem;
+    }
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: var(--spacing-8) 0;
+    border-radius: 16px;
+    border: 5px solid white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  /* Large video that breaks out of content width */
+  .prose :global(.video-wrapper-large) {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: var(--spacing-12) calc(-1 * var(--spacing-8));
+    border-radius: 16px;
+    border: 5px solid white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .prose :global(.video-wrapper-large iframe) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+
+  /* Centering utilities */
+  .prose :global(.center-text) {
+    text-align: center;
+  }
+
+  .prose :global(.center-image) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .prose :global(.center) {
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .prose :global(.video-wrapper-large) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  /* Blog Navigation - Music Player Style */
+  .blog-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-16);
+    padding: var(--spacing-6);
+    background: white;
+    border-radius: 20px;
+    border: 4px solid var(--color-primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform: rotate(-0.5deg);
+  }
+
+  .nav-button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-4);
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    min-width: 48px;
+    justify-content: center;
+  }
+
+  .nav-button:hover:not(.disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    background: var(--color-primary-light);
+  }
+
+  .nav-button.disabled {
+    background: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .nav-current {
+    flex: 1;
+    text-align: center;
+    padding: 0 var(--spacing-4);
+  }
+
+  .current-indicator {
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-2);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+  }
+
+  .current-title {
+    display: block;
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  @media (max-width: 640px) {
+    .nav-current {
+      padding: var(--spacing-2) 0;
+    }
+
+    .current-title {
+      font-size: 0.75rem;
     }
   }
 </style>

@@ -60,11 +60,37 @@ The blog supports:
 - **Blockquotes**: `> quote text`
 - **Lists**: Ordered and unordered lists
 
+5. Update `/src/routes/blog/rss.xml/+server.js` to add your post to the RSS feed:
+
+```javascript
+const posts = [
+  {
+    slug: 'your-post-slug',
+    title: 'Your Post Title',
+    description: 'A brief description',
+    date: 'YYYY-MM-DD',
+    tags: ['tag1', 'tag2']
+  },
+  // ... existing posts
+];
+```
+
+## RSS Feed
+
+The blog has an RSS feed that automatically includes all posts:
+
+- **Feed URL**: `/blog/rss.xml`
+- **Auto-discovery**: Meta tag in `<head>` for RSS readers
+- **Format**: RSS 2.0 with proper XML structure
+- **Updates**: Regenerated on each deployment
+
+To test the feed locally: `http://localhost:5173/penelopeg.github.io/blog/rss.xml`
+
 ## Styling
 
-The blog uses the anti-design aesthetic matching the rest of the site:
-- Sharp edges (no border-radius)
-- Hard shadows
-- Asymmetric rotations
-- Uppercase typography for tags
-- Primary color accents
+The blog uses the tumblr 2012 sticker aesthetic matching the rest of the site:
+- **Rounded corners**: 12-20px border radius
+- **Soft shadows**: Blur shadows with depth
+- **Sticker elements**: White borders, lift animations
+- **Playful rotations**: 1-3° asymmetric tilts
+- **Primary color accents**: Cyan/teal for links and highlights

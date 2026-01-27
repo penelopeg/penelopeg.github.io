@@ -13,6 +13,8 @@ Of course they’re half right, and I’m half right too for not having taken it
 
 I used to be obsessed with the Fast & Furious franchise (don’t you dare speak badly about Tokyo Drift in my presence), the edge between the speed and the loyalty of people speaking to me as much as a Philip Pullman book about being a rebel kid and fighting the church. Ironic to be a lover of fast cars, and not having the guts to go 50 km/h on the street.
 
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6c9ed3e3-c5b3-4e14-b391-8217e58c535c_695x425.png" alt="photo of Suki from 2 fast 2 furious" class="img-medium center-image" />
+
 *I hated pink when I was young (cringe) but once I saw 2 Fast 2 Furious I wanted to be HER*
 
 There’s a point when I finally decide it’s time to put my gears to the track and do it anyway. Now I get to pay a thousand euros more than it would’ve cost in Lisbon, but hey! I can actually barely afford it now. I get my driving license after a year of ping-pong through theorical and practical classes, anxiety gnawing at my insides each time I enter the car, but the journey becoming easier step by step.
@@ -23,11 +25,14 @@ A friend has an old car with a big history parked; he doesn’t use it because h
 
 Sometimes the Universe might seem mean, but I could’ve been driving back and having a mild panic attack. Instead, it fed me.
 
-I hope all my Fast&Furious obsession helps me drive safely in my dusty borrowed beautiful car.
+
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5a9c3e33-1b72-440c-87c5-ba7fda3c2923_3072x2639.jpeg" alt="dashboard of a car" class="img-large center-image" />
+
+*I hope all my Fast&Furious obsession helps me drive safely in my dusty borrowed beautiful car.*
 
 Last week I went on a TEDx stage in Portugal and talked about the importance of informal communities. Let me rant about this real quick: communities are not goddamn startups or companies. I would know, because I work in that space and I often see people abusing the word when, in reality, they just want a sales pipeline. Stop misrepresenting what a community is when all you're doing is trying to replace the word “family” in your marketing trends because people - the real communities -caught on to your bullshit, and now you have to figure out something else. Remember greenwashing? Yeah, you do.Anyway, one of the organizers asked if I knew someone who could speak about co-creating a limitless future. I was having a very busy couple of weeks and tried to reach out to some folks for ideas. A friend of mine then said, “Why don’t you do it?”Excuse me? Me? What do I know about the future? I just got my driving license in January, and I have to take deep breaths and plan my way to a place before I get into the car the night before. But then I wondered… do you really have to be extremely qualified to do something, or can you just want it badly enough? How many people out there are in positions of power, unqualified, and abusing it? What if I used my “unqualifications” for good? 
 
-Why don’t I do it?
+> Why don’t I do it?
 
 Truth be told, my brain was already buzzing with the idea of what I wanted to share. So I applied, recording a clumsy 2 minute video on a work break. I got accepted a couple of days later, and I stared at my email inbox for an embarrassing amount of time. 
 
@@ -36,6 +41,8 @@ The days of planning happened, I procrastinated hard, but day after day I felt m
 The actual TedX day was a blur. I met so many interesting and inspiring people, the type of interactions eighteen year-old me would’ve thought were cringy AF, while older me was fighting not to have tears in her eyes because she understands that hope is in the awkwardness of conversations. Instead, they prepared me through the day, showing me that what I was preparing to say on my talk, was right. We are better people when we’re collaborating with others for a good purpose.
 
 I was the last speaker, and I thought it would completely throw my nervous system for a loop. Instead, I realized I’ve been facing so many fears over the past few years, I could step on that stage, speak out loud - even fuck it up completely - and it still would’ve been better than not doing it at all.What does this have to do with driving? For years, I avoided it. The same way I avoided speaking to people, going on stages, applying to contests, finishing drafts of books I’ve started when I was a kid. I wanted to do great things but always got stuck on the what-ifs. Our society is currently getting 50 shades of fucked up, and we have to somehow fight against it. The way to start is by facing your fears.
+
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd3510350-890f-4bfb-87a9-491638b3e0b4_1024x683.jpeg" alt="picture of penelope on the stage of tedX" class="img-large center-image" />
 
 *credits to @mariamashaphotographer*
 

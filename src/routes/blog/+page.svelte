@@ -3,6 +3,20 @@
 
   const posts = [
     {
+      slug: 'resolutions-fail-copycat',
+      title: 'Your resolutions fail because you\'re being a copycat',
+      description: 'Why blindly copying others\' routines leads to failed resolutions, and how to adapt advice to your own circumstances.',
+      date: '2026-01-09',
+      tags: ['personal', 'productivity', 'growth']
+    },
+    {
+      slug: 'in-defense-of-goblin-mode',
+      title: 'In defense of Goblin Mode',
+      description: 'Embracing productive chaos and rejecting social perfectionism through intentionally unscripted living.',
+      date: '2025-12-21',
+      tags: ['personal', 'productivity', 'mental-health']
+    },
+    {
       slug: 'recognition-paradox',
       title: 'The Recognition Paradox',
       description: 'Thoughts on identity, networking, and the struggle between wanting recognition and being terrified of being seen.',
@@ -12,7 +26,7 @@
     {
       slug: 'drive-30',
       title: 'Learning how to drive at 30',
-      description: 'On learning to drive at 30, facing fears, and how avoiding things doesn\'t make them go away.',
+      description: 'On learning to drive at 30, facing fears, and how avoiding things don\'t make them go away.',
       date: '2025-05-25',
       tags: ['personal', 'growth', 'community']
     },
@@ -24,11 +38,25 @@
       tags: ['personal', 'writing', 'productivity']
     },
     {
-      slug: 'hello-world',
-      title: 'Hello World: First Post',
-      description: 'Welcome to my blog! This is where I share thoughts on technology, community building, and creative chaos.',
-      date: '2025-01-15',
-      tags: ['meta', 'introduction']
+      slug: 'reason-365-consistency',
+      title: 'Reason #365 why you shouldn\'t care about consistency',
+      description: 'Thoughts on how platform changes, rigid routines, and the pursuit of consistency can kill creativity and authenticity.',
+      date: '2025-04-13',
+      tags: ['personal', 'writing', 'productivity']
+    },
+    {
+      slug: 'thoughts-on-decaf',
+      title: 'Thoughts on decaf',
+      description: 'Personal reflections on caffeine, energy management, and whether society\'s obsession with coffee delivers on its promises.',
+      date: '2025-03-29',
+      tags: ['personal', 'productivity']
+    },
+    {
+      slug: 'untitled',
+      title: 'Untitled',
+      description: 'Reflections on the fear of titles, labels, and the struggle to share creative work without needing to be exceptional.',
+      date: '2025-03-09',
+      tags: ['personal', 'writing', 'creativity']
     }
   ];
 
@@ -44,11 +72,21 @@
 
 <div class="blog-hero">
   <div class="container">
-    <h1 class="chaos-rotate-1">Blog</h1>
+    <h1 class="chaos-rotate-1">The Chaos Theory Blog</h1>
     <div class="handwritten" style="position: absolute; top: 20px; right: 20px; color: white; z-index: 100;">
-      my thoughts!
+      these are original. beware!
     </div>
-    <p class="lead chaos-spacing">Thoughts on tech, community, and creative chaos</p>
+    <p class="lead chaos-spacing">Thoughts on life, community, culture and creative chaos</p>
+    <div class="rss-link-container">
+      <a href="{base}/blog/rss.xml" class="rss-link chaos-rotate-2" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 11a9 9 0 0 1 9 9"></path>
+          <path d="M4 4a16 16 0 0 1 16 16"></path>
+          <circle cx="5" cy="19" r="1"></circle>
+        </svg>
+        RSS Feed
+      </a>
+    </div>
   </div>
 </div>
 
@@ -241,5 +279,35 @@
   .post-card:hover .read-more {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+  }
+
+  .rss-link-container {
+    margin-top: var(--spacing-6);
+  }
+
+  .rss-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .rss-link:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .rss-link svg {
+    flex-shrink: 0;
   }
 </style>

@@ -26,4 +26,7 @@
   <!-- Additional SEO tags -->
   <meta name="author" content="Penélope Gonçalves" />
   <link rel="canonical" href="https://penelopeg.github.io" />
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Penélope Gonçalves - Blog" href="{base}/blog/rss.xml" />
 </svelte:head>

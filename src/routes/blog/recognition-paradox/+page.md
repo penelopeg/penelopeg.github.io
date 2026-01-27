@@ -3,17 +3,17 @@ layout: blog
 title: "The Recognition Paradox"
 subtitle: "or Why I Suck at Networking Events"
 date: "2025-09-24"
-description: "Thoughts on identity, networking, and the struggle between wanting recognition and being terrified of being seen."
+description: "On identity, networking, and the struggle between wanting recognition and being terrified of being seen."
 tags: ["community", "networking", "personal"]
 ---
 
-Hi, what's your name? What do you do?
+*Hi, what's your name? What do you do?*
 
-I freeze every time someone asks me this at an event. Oh my god, can I signal my bestie to call me and fake an emergency? I think in a panic. It’s not like I don’t know the answer, because it would be pretty weird not to remember your own name, but it might be because I have many answers. And none of them are short enough to be the whole truth.
+I freeze every time someone asks me this at an event. *Oh my god, can I signal my bestie to call me and fake an emergency?* I think in a panic. It’s not like I don’t know the answer, because it would be pretty weird not to remember your own name, but it might be because I have many answers. And none of them are short enough to be the whole truth.
 
 Who are you, huh? Do you have a fancy job title? Are you anything besides your work? Describe yourself without mentioning your gender, religion, age, or hobbies. Who are you outside of any societal construct? Would that question even make sense if you were no longer attached to the material plane?
 
-I’m guilty of an occasional “so what do you do?”
+> I’m guilty of an occasional “so what do you do?”
 
 I've mostly been having an identity crisis since I was born. I wanted to be everything from a very young age. I struggled with being nothing at all, or too little, or often too much (I was an angel to my parents, but a bit of a brat to everyone else; sorry if you went to school with me btw).
 
@@ -21,11 +21,13 @@ I struggle with promoting myself, yet I want to be successful. I want to create,
 
 And yet, I realize I'm a bit of a rule follower, which is counter-acting to what I believe in. I see it in the way I prepare an event, paranoid about all the details, only to notice others ignore them (mostly, because they’re not that important). I see it when I'm preparing for a meeting or at the airport going through security, the place where my anxiety becomes a monster I can barely tame. I see it when I refuse to ask for help, only to watch the next person get introduced to an important contact I wish I'd reached out to in the first place.
 
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb60337ae-e24a-4551-a01a-279904146a5f_6000x4000.jpeg" alt="photo of penelope checking the time with a mic in her hand" class="img-large center-image" />
+
 *time is important people!!! if the event gets delayed one minute it's a disaster!!! Photo rights go to @calliope.pt*
 
 
 
-Recognize me, oh no no, please don’t look this way
+## Recognize me, oh no no, please don’t look this way
 
 Some of us live for the applause, like Lady Gaga says. Some of us want to be forgotten. Being a girl is a fight on both fronts every. single. day.
 
@@ -37,13 +39,15 @@ Social media seems to be a root cause of this evil, wrapping our value into like
 
 The digital world has created an illusion of perfectionism, where we remove hard work from the picture. So we become obsessed with the perfect introduction.
 
-When did networking become performance art instead of human connection?
+## When did networking become performance art instead of human connection?
 
 It's funny how this topic lingers for me and those around me. I've had this post sitting as a draft since end of May, and in early September, the team at local.foundation (shameless plug, we’re building a kick-ass app for founders) decided, as a collective, that networking sucks and we wanted to fix it.
 
 Turns out, I'm not the only one who freezes at "what do you do?". Turns out, a lot of us are walking around with our own identity crises, wearing too many hats, wanting recognition while being terrified of being seen.
 
 But maybe we're solving the wrong problem. Maybe the issue isn't perfecting our elevator pitch, it's that we're so busy rehearsing our intro, we forget to actually listen to the other person.
+
+<img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce1d5895-fce9-4665-b97f-ef24dc7e609b_2229x3343.jpeg" alt="penelope with a serious face holding a coffee" class="img-medium center-image" />
 
 *this is my "i'm actually really paying attention" face when I forget I have to smile too*
 
