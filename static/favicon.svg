@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Sticker shadow -->
+  <rect x="6" y="6" width="52" height="52" rx="16" ry="16" fill="rgba(0,0,0,0.15)" />
+  <!-- White border (sticker effect) -->
+  <rect x="3" y="3" width="52" height="52" rx="16" ry="16" fill="white" transform="rotate(-3 29 29)" />
+  <!-- Gradient background -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0891b2" />
+      <stop offset="100%" style="stop-color:#9333ea" />
+    </linearGradient>
+  </defs>
+  <rect x="6" y="6" width="46" height="46" rx="13" ry="13" fill="url(#bg)" transform="rotate(-3 29 29)" />
+  <!-- Stylized P -->
+  <text x="22" y="43" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="38" font-weight="700" fill="white" transform="rotate(-3 29 29)">P</text>
+  <!-- Small dot accent -->
+  <circle cx="44" cy="14" r="4" fill="#10b981" />
+  <circle cx="44" cy="14" r="2.5" fill="white" />
+</svg>

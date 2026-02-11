@@ -320,8 +320,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
   }
 
+  /* Cards: no tilt by default, tilt on hover */
+  .wonky-border.chaos-rotate-1,
+  .wonky-border.chaos-rotate-2,
+  .wonky-border.chaos-rotate-3,
+  .wonky-border.chaos-rotate-4 {
+    transform: none;
+  }
+
+  .wonky-border.chaos-rotate-1:hover { transform: translateY(-4px) rotate(2deg); }
+  .wonky-border.chaos-rotate-2:hover { transform: translateY(-4px) rotate(-1.5deg); }
+  .wonky-border.chaos-rotate-3:hover { transform: translateY(-4px) rotate(3deg); }
+  .wonky-border.chaos-rotate-4:hover { transform: translateY(-4px) rotate(-2.5deg); }
+
   .wonky-border:hover {
-    transform: translateY(-4px) rotate(var(--initial-rotation, 0deg));
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.12);
   }
   
@@ -352,15 +364,27 @@
   }
   
   .chaos-grid > *:nth-child(odd) {
-    transform: rotate(1.5deg);
+    transform: none;
   }
 
   .chaos-grid > *:nth-child(even) {
-    transform: rotate(-2deg);
+    transform: none;
   }
 
   .chaos-grid > *:nth-child(3n) {
-    transform: rotate(2.5deg);
+    transform: none;
+  }
+
+  .chaos-grid > *:nth-child(odd):hover {
+    transform: translateY(-4px) rotate(1.5deg);
+  }
+
+  .chaos-grid > *:nth-child(even):hover {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+
+  .chaos-grid > *:nth-child(3n):hover {
+    transform: translateY(-4px) rotate(2.5deg);
   }
   
   /* Paper texture background */
