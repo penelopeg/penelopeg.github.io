@@ -57,8 +57,9 @@
       <div class="hero-actions chaos-spacing">
         <a href="{base}/about" class="button button-primary chaos-rotate-1">Who?</a>
         <a href="{base}/portfolio" class="button button-secondary chaos-rotate-3">What?</a>
+        <a href="{base}/trinketbox" class="button button-accent chaos-rotate-2">Trinkets</a>
         <div class="handwritten" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); color: white; z-index: 100;">
-          click these!
+          click for treasure!
         </div>
       </div>
     </div>
