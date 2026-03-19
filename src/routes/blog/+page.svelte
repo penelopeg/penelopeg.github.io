@@ -3,6 +3,13 @@
 
   const posts = [
     {
+      slug: 'face-of-suffering',
+      title: 'In the face of suffering you\'ll probably do jack shit',
+      description: 'On cowardice, solidarity, small acts of rebellion, and why building community before the emergency is the whole point.',
+      date: '2026-03-02',
+      tags: ['community', 'personal', 'society']
+    },
+    {
       slug: 'resolutions-fail-copycat',
       title: 'Your resolutions fail because you\'re being a copycat',
       description: 'Why blindly copying others\' routines leads to failed resolutions, and how to adapt advice to your own circumstances.',
