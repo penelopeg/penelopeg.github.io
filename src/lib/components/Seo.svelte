@@ -1,7 +1,7 @@
 <script>
   import { base } from '$app/paths';
-  export let title = "Penélope Gonçalves - Tech Lead & Community Builder";
-  export let description = "Tech Lead at Contentserv, Community Builder at Geek Sessions Faro, and founder of local.foundation. Exploring the intersection of technology, art, and community.";
+  export let title = "Penélope Gonçalves - Community Builder";
+  export let description = "Community Builder at Geek Sessions Faro, founder of local.foundation & tech lead at Centric Software. Exploring the intersection of technology, art, and community.";
   export let keywords = "Penélope Gonçalves, penelopeg, lepsies, Tech Lead, Community Builder, Geek Sessions Faro, local.foundation, Algarve tech, Portuguese Women in Tech";
   export let image = base + "/images/profile/penelope.jpeg";
 </script>
@@ -28,5 +28,5 @@
   <link rel="canonical" href="https://penelopeg.github.io" />
 
   <!-- RSS Feed -->
-  <link rel="alternate" type="application/rss+xml" title="Penélope Gonçalves - Blog" href="{base}/blog/rss.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Penélope Gonçalves - Blog" href="{base}/feed" />
 </svelte:head>

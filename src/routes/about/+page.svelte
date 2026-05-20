@@ -24,7 +24,7 @@
     <div class="about-text">
       <h2 class="chaos-rotate-3">Who the hell is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know? <svg style="display: inline; width: 16px; height: 16px; margin-left: 5px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span></h2>
       <p>I'm someone who gets genuinely excited about what makes communities tick.</p>
-      <p>By day, I lead a development team at Contentserv, building PIM software that actually brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform helping other community builders organize and get insights about their community.</p>
+      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform helping other community builders organize and get insights about their community.</p>
       <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional, passion required). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
       <p>I've got the brain of a software engineer but the restless heart of an artist. I can't stick to just one thing. And honestly, why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
       <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
@@ -34,13 +34,13 @@
         my core values ↓
       </div>
       <div class="values-grid">
-      <div class="wonky-border value-card chaos-rotate-1">
-        <h3 class="scribble-underline">Permission to Be Messy</h3>
-        <p>Helping people embrace their full, chaotic, multi-passionate selves instead of forcing themselves into neat boxes</p>
-      </div>
       <div class="wonky-border value-card chaos-rotate-2">
         <h3 class="scribble-underline">Movement & Connection</h3>
         <p>Creating spaces where different kinds of people can solve problems together and find their humanity in each other</p>
+      </div>
+      <div class="wonky-border value-card chaos-rotate-1">
+        <h3 class="scribble-underline">Permission to Be Messy</h3>
+        <p>Helping people embrace their multi-passionate selves instead of forcing themselves into neat boxes</p>
       </div>
       <div class="wonky-border value-card chaos-rotate-3">
         <h3 class="scribble-underline">Controlled Chaos</h3>
@@ -63,7 +63,6 @@
       <li>Developing a mobile app to make networking meaningful</li>
       <li>Building a platform in local.foundation for community builders</li>
       <li>Leading my team to innovate in the PIM software space</li>
-      <li>Volunteering at 351 to make Portugal Tech Week a blast</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
       <li>Creating a wheel app for neurodivergent folk</li>
       <li>Prepping a gamejam</li>
