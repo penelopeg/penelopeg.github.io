@@ -104,7 +104,7 @@ function generateRSS() {
     <title>${escapeXml(siteTitle)}</title>
     <description>${escapeXml(siteDescription)}</description>
     <link>${siteURL}/blog</link>
-    <atom:link href="${siteURL}/blog/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="${siteURL}/feed" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
     <lastBuildDate>${toRFC822Date(posts[0].date)}</lastBuildDate>
     ${posts
