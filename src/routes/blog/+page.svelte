@@ -78,7 +78,7 @@
     </div>
     <p class="lead chaos-spacing">Thoughts on life, community, culture and creative chaos</p>
     <div class="rss-link-container">
-      <a href="{base}/blog/rss.xml" class="rss-link chaos-rotate-2" target="_blank" rel="noopener noreferrer">
+      <a href="{base}/feed" class="rss-link chaos-rotate-2" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 11a9 9 0 0 1 9 9"></path>
           <path d="M4 4a16 16 0 0 1 16 16"></path>
