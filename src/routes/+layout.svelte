@@ -25,6 +25,7 @@
       <a href="{base}/about" class="nav-link chaos-rotate-2">About</a>
       <a href="{base}/portfolio" class="nav-link chaos-rotate-3">Portfolio</a>
       <a href="{base}/blog" class="nav-link chaos-rotate-4">Blog</a>
+      <a href="{base}/trinketbox" class="nav-link chaos-rotate-1">Trinketbox</a>
       <div class="handwritten" style="position: absolute; top: -10px; right: -20px; font-size: 0.8rem; z-index: 100;">
         chaos theory!
       </div>
@@ -55,6 +56,7 @@
       <a href="{base}/about" class="mobile-nav-link">About</a>
       <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
       <a href="{base}/blog" class="mobile-nav-link">Blog</a>
+      <a href="{base}/trinketbox" class="mobile-nav-link">Trinketbox</a>
     </div>
     {/if}
   </nav>
