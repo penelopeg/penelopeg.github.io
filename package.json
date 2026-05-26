@@ -39,7 +39,7 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-sveltekit": "^0.15.5",
-		"html2pdf.js": "^0.10.3",
+		"html2pdf.js": "^0.14.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-slug": "^6.0.0",
 		"remark-abbr": "^1.4.2",

@@ -16,12 +16,7 @@
       size: { width: '16%', height: '24%' },
       rotate: -2,
       floatClass: 'float-1',
-      items: [
-        { title: 'Charity Majors', url: 'https://charity.wtf', note: 'engineering leadership that actually works', tag: 'tech' },
-        { title: 'Julia Evans', url: 'https://jvns.ca', note: 'makes the hard stuff genuinely fun to learn', tag: 'tech' },
-        { title: 'Mandy Brown', url: 'https://aworkinglibrary.com', note: 'reading & leadership wisdom in one place', tag: 'reading' },
-        { title: 'Bret Victor', url: 'https://worrydream.com', note: 'reimagining how we think with computers', tag: 'ideas' },
-      ]
+      items: []
     },
     {
       id: 'websites',
@@ -36,12 +31,9 @@
       rotate: 1.5,
       floatClass: 'float-3',
       items: [
-        { title: 'The Pudding', url: 'https://pudding.cool', note: 'data journalism as visual art', tag: 'journalism' },
-        { title: 'Are.na', url: 'https://are.na', note: 'the anti-algorithm internet', tag: 'curation' },
-        { title: 'Marginalia', url: 'https://search.marginalia.nu', note: 'search for the indie web', tag: 'discovery' },
-        { title: 'Poolside.fm', url: 'https://poolside.fm', note: 'forever summer vibes', tag: 'vibes' },
+        { title: 'Wikipedia', url: 'https://wikipedia.org', note: 'the greatest collaborative achievement of humanity', tag: 'knowledge' },
+        { title: 'Internet Archive', url: 'https://archive.org', note: 'the digital library for everything', tag: 'archive' },
         { title: 'Neocities', url: 'https://neocities.org', note: 'home of the indie web revival', tag: 'community' },
-        { title: 'Brutalist Websites', url: 'https://brutalistwebsites.com', note: 'design that breaks rules beautifully', tag: 'design' },
       ]
     },
     {
@@ -56,13 +48,7 @@
       size: { width: '14%', height: '22%' },
       rotate: 2,
       floatClass: 'float-5',
-      items: [
-        { title: 'Svelte', url: 'https://svelte.dev', note: 'the framework that just makes sense', tag: 'framework' },
-        { title: 'Observable', url: 'https://observablehq.com', note: 'notebooks for data viz', tag: 'data' },
-        { title: 'Obsidian', url: 'https://obsidian.md', note: 'my second brain', tag: 'productivity' },
-        { title: 'Val.town', url: 'https://val.town', note: 'tiny serverless scripts that just work', tag: 'serverless' },
-        { title: 'Penpot', url: 'https://penpot.app', note: 'open source design for everyone', tag: 'design' },
-      ]
+      items: []
     },
     {
       id: 'art',
@@ -76,12 +62,7 @@
       size: { width: '13%', height: '20%' },
       rotate: -3,
       floatClass: 'float-2',
-      items: [
-        { title: 'Yayoi Kusama', url: 'https://yayoikusama.jp', note: 'infinity rooms live in my head forever', tag: 'contemporary' },
-        { title: 'Studio Ghibli Art', url: 'https://www.ghibli.jp/works/', note: 'background art as emotional architecture', tag: 'animation' },
-        { title: 'Loish', url: 'https://loish.net', note: 'digital painting that feels alive', tag: 'digital' },
-        { title: 'Aaron Draplin', url: 'https://draplin.com', note: 'thick lines & good vibes', tag: 'design' },
-      ]
+      items: []
     },
     {
       id: 'books',
@@ -96,11 +77,14 @@
       rotate: 1,
       floatClass: 'float-4',
       items: [
-        { title: "Hitchhiker's Guide", url: 'https://www.goodreads.com/book/show/11.The_Hitchhiker_s_Guide_to_the_Galaxy', note: 'the universe is absurd and that\'s ok', tag: 'sci-fi' },
-        { title: 'Good Omens', url: 'https://www.goodreads.com/book/show/12067.Good_Omens', note: 'chaos + friendship = everything', tag: 'fantasy' },
-        { title: 'Piranesi', url: 'https://www.goodreads.com/book/show/50202953-piranesi', note: 'the most haunting house in fiction', tag: 'literary' },
-        { title: 'The Dispossessed', url: 'https://www.goodreads.com/book/show/13651.The_Dispossessed', note: 'Le Guin on utopia and compromise', tag: 'sci-fi' },
-        { title: 'Normal People', url: 'https://www.goodreads.com/book/show/41057294-normal-people', note: 'Sally Rooney lives rent-free in my head', tag: 'literary' },
+        { title: 'The Hunger Games', url: 'https://www.goodreads.com/book/show/2767052-the-hunger-games', note: 'the original battle royale obsession', tag: 'dystopian' },
+        { title: 'One Piece, Vol. 1', url: 'https://www.goodreads.com/book/show/1237398.One_Piece_Vol_1', note: 'where the greatest adventure begins', tag: 'manga' },
+        { title: 'A Darker Shade of Magic', url: 'https://www.goodreads.com/book/show/22055262-a-darker-shade-of-magic', note: 'four versions of London, one Kell', tag: 'fantasy' },
+        { title: 'The Raven Boys', url: 'https://www.goodreads.com/book/show/17675462-the-raven-boys', note: 'searching for a sleeping king', tag: 'fantasy' },
+        { title: 'Six of Crows', url: 'https://www.goodreads.com/book/show/23437156-six-of-crows', note: 'no mourners, no funerals', tag: 'fantasy' },
+        { title: "Raven's Gate", url: 'https://www.goodreads.com/book/show/107664.Raven_s_Gate', note: 'the power of five begins', tag: 'thriller' },
+        { title: 'The Subtle Knife', url: 'https://www.goodreads.com/book/show/41637836-the-subtle-knife', note: 'the window between worlds', tag: 'fantasy' },
+        { title: 'W.I.T.C.H. Part I', url: 'https://www.goodreads.com/book/show/34850247-w-i-t-c-h-part-i-the-twelve-portals-vol-1', note: 'guardians of the veil', tag: 'graphic novel' },
       ]
     },
     {
@@ -131,16 +115,21 @@
       color: '#9333ea',
       bgLight: '#f3e8ff',
       borderRadius: '40% 60% 30% 70% / 60% 40% 70% 30%',
-      position: { left: '7%', top: '68%' },
+      position: { left: '7%' },
       size: { width: '13%', height: '20%' },
       rotate: 2.5,
       floatClass: 'float-3',
       items: [
-        { title: 'Mitski', url: 'https://open.spotify.com/artist/2uYWxilOVlUdk4oV9DvwqK', note: 'emotional devastation on command', tag: 'indie' },
-        { title: 'Fiona Apple', url: 'https://open.spotify.com/artist/3g2kUQ6tHLLbmkV7T4GPtL', note: 'criminal that she isn\'t more famous', tag: 'alternative' },
-        { title: 'Sufjan Stevens', url: 'https://open.spotify.com/artist/4MXUO7sVCaFgFjoTI5ox5c', note: 'banjo dad crying hours', tag: 'folk' },
-        { title: 'girl in red', url: 'https://open.spotify.com/artist/4ObDam8oDyaTVDKbIKFvQd', note: 'do you listen to girl in red?', tag: 'indie' },
-        { title: 'Lorde', url: 'https://open.spotify.com/artist/163tK9Wjr9P9DmM0AVK7lm', note: 'melodrama is a perfect album', tag: 'pop' },
+        { title: 'Bring Me The Horizon', url: 'https://open.spotify.com/artist/1Ffb692uZx6OY09KWz36XG', note: 'from deathcore to experimental rock kings', tag: 'rock' },
+        { title: 'Halsey', url: 'https://open.spotify.com/artist/26VFT3mzuDfsHpqR0qznMG', note: 'cinematic pop with a dark edge', tag: 'pop' },
+        { title: 'Cage The Elephant', url: 'https://open.spotify.com/artist/26T3t9AwdSTnn9H9Zayp95', note: 'unmatched energy and indie grit', tag: 'indie' },
+        { title: 'Twenty One Pilots', url: 'https://open.spotify.com/artist/3YQBOt78p19UnvBq6S6S9Y', note: 'genre-bending lore and emotional depth', tag: 'alternative' },
+        { title: 'Florence + The Machine', url: 'https://open.spotify.com/artist/1moxjboGR7pKoYn7An936M', note: 'ethereal vocals and baroque pop magic', tag: 'indie' },
+        { title: 'Linkin Park', url: 'https://open.spotify.com/artist/6XyY88sdvR9jXmI8EXH79I', note: 'the definitive sound of a generation', tag: 'rock' },
+        { title: 'Paramore', url: 'https://open.spotify.com/artist/74XF2S16mUjUaXmS9S9S9S', note: 'pop-punk legends turned art-pop icons', tag: 'rock' },
+        { title: 'Aly & AJ', url: 'https://open.spotify.com/artist/5wugb0kaq0J6nyQ5Xgd17i', note: 'sister duo with a dreamy 80s synth sound', tag: 'pop' },
+        { title: 'Nothing But Thieves', url: 'https://open.spotify.com/artist/1is9S79v96S4S6S9S9S9S9', note: 'massive riffs and incredible vocal range', tag: 'rock' },
+        { title: 'Hozier', url: 'https://open.spotify.com/artist/2W8Dc3mbuRxy9WhN17S6S9', note: 'folky, soulful, and poetically devastating', tag: 'folk' },
       ]
     },
     {
@@ -156,11 +145,13 @@
       rotate: -2,
       floatClass: 'float-1',
       items: [
-        { title: 'Fleabag', url: 'https://www.imdb.com/title/tt5687612/', note: 'phoebe waller-bridge is simply a genius', tag: 'comedy' },
-        { title: 'Severance', url: 'https://www.imdb.com/title/tt11280740/', note: 'work-life balance as horror', tag: 'sci-fi' },
-        { title: 'WWDITS', url: 'https://www.imdb.com/title/tt7908628/', note: 'what we do in the shadows (series)', tag: 'comedy' },
-        { title: 'The Good Place', url: 'https://www.imdb.com/title/tt4955642/', note: 'philosophy but make it fun', tag: 'comedy' },
-        { title: 'Succession', url: 'https://www.imdb.com/title/tt7660850/', note: 'everyone is terrible and fascinating', tag: 'drama' },
+        { title: 'Sense8', url: 'https://www.imdb.com/title/tt2431438/', note: 'a beautiful, global connection of souls', tag: 'sci-fi' },
+        { title: 'The 100', url: 'https://www.imdb.com/title/tt2661044/', note: 'may we meet again', tag: 'dystopian' },
+        { title: 'Good Girls', url: 'https://www.imdb.com/title/tt6451050/', note: 'suburban moms turned criminal masterminds', tag: 'comedy' },
+        { title: 'Off Campus', url: 'https://www.imdb.com/title/tt31608674/', note: 'briar university hockey drama at its best', tag: 'romance' },
+        { title: 'Severance', url: 'https://www.imdb.com/title/tt11280740/', note: 'work-life balance as a psychological thriller', tag: 'sci-fi' },
+        { title: 'Buffy the Vampire Slayer', url: 'https://www.imdb.com/title/tt0118276/', note: 'the chosen one, the slayer, the icon', tag: 'supernatural' },
+        { title: 'Teen Wolf', url: 'https://www.imdb.com/title/tt1567432/', note: 'protect those who cannot protect themselves', tag: 'supernatural' },
       ]
     },
     {
@@ -176,11 +167,8 @@
       rotate: 1.5,
       floatClass: 'float-5',
       items: [
-        { title: 'Tom Scott', url: 'https://youtube.com/@TomScottGo', note: 'things you might not know about the world', tag: 'education' },
-        { title: 'Jan Misali', url: 'https://youtube.com/@jan-Misali', note: 'linguistics & games deep dives', tag: 'linguistics' },
-        { title: 'CGP Grey', url: 'https://youtube.com/@CGPGrey', note: 'elegant explanations of complex things', tag: 'explainer' },
-        { title: 'Kurzgesagt', url: 'https://youtube.com/@kurzgesagt', note: 'existential dread but beautiful', tag: 'science' },
-        { title: 'Technology Connections', url: 'https://youtube.com/@TechnologyConnections', note: 'appliances deserve appreciation', tag: 'tech' },
+        { title: 'struthless', url: 'https://youtube.com/@struthless', note: 'big weird stories, hopefully good ones', tag: 'storytelling' },
+        { title: 'leena norms', url: 'https://youtube.com/@leenanorms', note: 'gumption, sustainability, and life advice', tag: 'lifestyle' },
       ]
     },
     {
@@ -195,12 +183,7 @@
       size: { width: '13%', height: '20%' },
       rotate: -1.5,
       floatClass: 'float-2',
-      items: [
-        { title: 'Unsplash', url: 'https://unsplash.com', note: 'free photos that don\'t look stock', tag: 'resource' },
-        { title: 'Lens Culture', url: 'https://www.lensculture.com', note: 'photography as fine art', tag: 'art' },
-        { title: 'Humans of NY', url: 'https://www.humansofnewyork.com', note: 'portraits & stories', tag: 'documentary' },
-        { title: 'National Geographic', url: 'https://www.nationalgeographic.com/photography', note: 'the classics for a reason', tag: 'editorial' },
-      ]
+      items: []
     },
   ];
 
