@@ -100,11 +100,8 @@
       rotate: -1,
       floatClass: 'float-6',
       items: [
-        { title: 'Amélie', url: 'https://letterboxd.com/film/amelie/', note: '(2001) peak comfort cinema, no notes', tag: 'french' },
-        { title: 'EEAAO', url: 'https://letterboxd.com/film/everything-everywhere-all-at-once/', note: '(2022) cried 4 times minimum', tag: 'multiverse' },
-        { title: 'Princess Mononoke', url: 'https://letterboxd.com/film/princess-mononoke/', note: '(1997) nature vs industry forever', tag: 'ghibli' },
-        { title: 'Knives Out', url: 'https://letterboxd.com/film/knives-out/', note: '(2019) the whodunit reinvented', tag: 'mystery' },
-        { title: 'Grand Budapest Hotel', url: 'https://letterboxd.com/film/the-grand-budapest-hotel/', note: '(2014) Wes Anderson at his Wes Andersonest', tag: 'wes' },
+        { title: '10 Things I Hate About You', url: 'https://letterboxd.com/film/10-things-i-hate-about-you/', note: '(1999) shakespeare via seattle high school, perfectly cast', tag: 'romance' },
+        { title: 'Bridge to Terabithia', url: 'https://letterboxd.com/film/bridge-to-terabithia/', note: '(2007) destroyed me as a child and still does', tag: 'coming-of-age' },
       ]
     },
     {
