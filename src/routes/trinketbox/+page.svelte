@@ -3,7 +3,7 @@
 
   let activeCategory = null;
 
-  const categories = [
+  const allCategories = [
     {
       id: 'people',
       name: 'People',
@@ -95,16 +95,14 @@
       color: '#d97706',
       bgLight: '#fef3c7',
       borderRadius: '50% 50% 50% 50% / 60% 40% 60% 40%',
-      position: { left: '37%', top: '35%' },
+      position: { left: '72%', top: '12%' },
       size: { width: '17%', height: '26%' },
       rotate: -1,
       floatClass: 'float-6',
       items: [
-        { title: 'Amélie', url: 'https://letterboxd.com/film/amelie/', note: '(2001) peak comfort cinema, no notes', tag: 'french' },
-        { title: 'EEAAO', url: 'https://letterboxd.com/film/everything-everywhere-all-at-once/', note: '(2022) cried 4 times minimum', tag: 'multiverse' },
-        { title: 'Princess Mononoke', url: 'https://letterboxd.com/film/princess-mononoke/', note: '(1997) nature vs industry forever', tag: 'ghibli' },
-        { title: 'Knives Out', url: 'https://letterboxd.com/film/knives-out/', note: '(2019) the whodunit reinvented', tag: 'mystery' },
-        { title: 'Grand Budapest Hotel', url: 'https://letterboxd.com/film/the-grand-budapest-hotel/', note: '(2014) Wes Anderson at his Wes Andersonest', tag: 'wes' },
+        { title: 'Bridge to Terabithia', url: 'https://letterboxd.com/film/bridge-to-terabithia/', note: '(2007) keep your mind wide open', tag: 'fantasy' },
+        { title: '10 Things I Hate About You', url: 'https://letterboxd.com/film/10-things-i-hate-about-you/', note: '(1999) i hate the way i don’t hate you, not even close, not even a little bit', tag: 'romance' },
+        { title: 'The Fast and the Furious', url: 'https://letterboxd.com/film/the-fast-and-the-furious/', note: '(2001) i live my life a quarter mile at a time', tag: 'action' },
       ]
     },
     {
@@ -115,7 +113,7 @@
       color: '#9333ea',
       bgLight: '#f3e8ff',
       borderRadius: '40% 60% 30% 70% / 60% 40% 70% 30%',
-      position: { left: '7%' },
+      position: { left: '7%', top: '22%' },
       size: { width: '13%', height: '20%' },
       rotate: 2.5,
       floatClass: 'float-3',
@@ -187,6 +185,10 @@
     },
   ];
 
+  const categories = allCategories.filter(
+    (cat) => !['people', 'art', 'photos', 'tech'].includes(cat.id)
+  );
+
   function selectCategory(cat) {
     activeCategory = activeCategory?.id === cat.id ? null : cat;
   }
@@ -218,7 +220,7 @@
     <div class="map-container" role="region" aria-label="Interactive favourites map">
 
       <!-- SVG decoration layer -->
-      <svg class="map-svg" viewBox="0 0 100 56.25" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+      <svg class="map-svg" viewBox="0 0 100 62.5" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
         <!-- Background water texture: gentle wavy lines -->
         <path d="M10,28 Q20,26 30,28 Q40,30 50,28 Q60,26 70,28 Q80,30 90,28" stroke="#bae6fd" stroke-width="0.4" fill="none" opacity="0.5"/>
         <path d="M5,32 Q18,30 32,32 Q46,34 60,32 Q74,30 88,32" stroke="#bae6fd" stroke-width="0.35" fill="none" opacity="0.4"/>
@@ -258,7 +260,7 @@
         <circle cx="63" cy="52" r="0.4" fill="#94a3b8" opacity="0.4"/>
 
         <!-- Compass rose top-right corner -->
-        <g transform="translate(95,4)" opacity="0.45">
+        <g transform="translate(95,6)" opacity="0.45">
           <circle cx="0" cy="0" r="2.8" fill="none" stroke="#94a3b8" stroke-width="0.4"/>
           <circle cx="0" cy="0" r="0.6" fill="#94a3b8"/>
           <polygon points="0,-2.5 0.5,-1 -0.5,-1" fill="#64748b"/>
@@ -279,7 +281,6 @@
 
       <!-- Handwritten map annotations -->
       <div class="map-annotation" style="left: 22%; top: 2%">start here!</div>
-      <div class="map-annotation" style="left: 50%; top: 88%; transform: translateX(-50%)">scroll down for treasures →</div>
 
       <!-- Category blobs -->
       {#each categories as cat, i}
@@ -444,14 +445,13 @@
   .map-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     background:
       radial-gradient(ellipse at 50% 50%, rgba(254, 243, 199, 0.4) 0%, transparent 70%),
       repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(186,230,253,0.12) 40px),
       repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(186,230,253,0.08) 40px),
       #fdf8f0;
-    border-radius: 24px;
-    border: 4px solid white;
+    border: none;
     box-shadow:
       0 12px 40px rgba(0,0,0,0.12),
       0 4px 12px rgba(0,0,0,0.08),

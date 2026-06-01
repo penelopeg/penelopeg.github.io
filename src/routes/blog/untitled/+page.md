@@ -17,7 +17,7 @@ But among many failed attempts of seriously following a hobby, only one managed 
 
 <img src="https://images.unsplash.com/photo-1433162653888-a571db5ccccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMDAzMzh8MHwxfHNlYXJjaHwyOXx8cmFuZG9tfGVufDB8fHx8MTc0MTQ3MDMzNnww&ixlib=rb-4.0.3&q=80&w=1080" alt="pug dog wrapped in a blanket in the forest" class="img-medium center-image" />
 
-*Me, trying to understand what’s going on (Photo by Matthew Henry on Unsplash)*
+_Me, trying to understand what’s going on (Photo by Matthew Henry on Unsplash)_
 
 But what does that even mean? I’m into programming, fiction, non-fiction, art, design, dancing, video-editing, talking, music, and still I keep backing away from pressing the publish button, because I never consider myself good enough on any of these topics.
 
@@ -39,6 +39,6 @@ Has that ever happened to you? Let’s ignore the fact bullies are real, but the
 
 Whenever we are living in fear of another’s opinions, many times we are projecting our own subconscious bias towards ourselves. If you’re cringing, it’s not about them. It’s about you.
 
-*This isn’t anything new*, you say. You’re absolutely right. And still, even with this knowledge, we keep holding ourselves back. People that are more clever than me will be way more eloquent in explaining it, but so far I’ve only come up with one solution. A simply, yet terrifying solution (for someone that has deep roots in anxiety):
+_This isn’t anything new_, you say. You’re absolutely right. And still, even with this knowledge, we keep holding ourselves back. People that are more clever than me will be way more eloquent in explaining it, but so far I’ve only come up with one solution. A simply, yet terrifying solution (for someone that has deep roots in anxiety):
 
 **Do things even if they scare you.**

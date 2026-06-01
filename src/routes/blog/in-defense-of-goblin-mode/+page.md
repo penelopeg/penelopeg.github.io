@@ -20,6 +20,7 @@ I’ve always been kind of scattered, you see, not all in, not all out in my ide
 Decembers in particular are a hard time for me, like an old enemy that really wants to beat me down, and I’m not 100% sure why yet (I’m taking vitamin D, but no dice), but I truly become a little grinch in this season. I swear, people are crazy during holidays and they severely need to chill.
 
 ## The End-of-Beginning Season
+
 Ah, December. Feels like the end of a beginning, as Djo cleverly sings.
 
  <div class="video-wrapper-large">
@@ -36,7 +37,7 @@ I journal (hardly; I do a bit of cramped gratitude prompts on my notebook). I as
 
 I do hard work, I procrastinate. I think all my achievements are overrated and not that special.
 
-*Oh... oh no. That’s it, isn’t it?*
+_Oh... oh no. That’s it, isn’t it?_
 
 Little scroll-addicted brain has been seeing too much influencer content and vapid linkedin posts and now thinks whatever it does is not that big of a deal.
 
@@ -45,6 +46,7 @@ Little scroll-addicted brain has been seeing too much influencer content and vap
 Everyone sharing their 2025 Wrapped and I’m over here thinking what I do anyone could do (which they could! It’s not a competition, not really).
 
 ## The Achievements List (Yes, It Exists)
+
 Ahem, excuse you, I got my driver’s license this year.
 
 I’ve hosted a lot of events this year. I spoke on stages, one of them a TedX.
@@ -69,9 +71,10 @@ Maybe it’s the only way.
 
 <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6d34dbdc-6acf-417c-9f2c-6c7e9942a902_624x658.jpeg" alt="Grinch" class="img-medium center-image" />
 
-*Photo by Geoffrey Moffett on Unsplash*
+_Photo by Geoffrey Moffett on Unsplash_
 
 ## Anxiety’s Greatest Hits (Incomplete List)
+
 Anyway, I choose my times carefully and obsess over them, and December is perfect to brew a storm. Is my independence possible with anxiety, or are you Anxiety’s little helper?
 
 Here’s a random list I did the other day (goblins LOVE lists and don’t let those organization freaks tell you otherwise), because I was sick and stuck at home, of things that really trigger my anxiety (this is not a complete list). If you get triggered by one of these, I’m sorry:
@@ -93,6 +96,7 @@ Games that are actually hard to play. Story-mode all the way, I’m playing game
 Staying still. Props to mindfulness.
 
 ## Goblin Mode: A Defense
+
 So far we’ve complained, did a little pat in the back, reminded ourselves that functional anxiety is not to be threaded lightly. But what was the point of this draft? Right, defending goblin mode.
 
 Dictionary.com defines it as:
@@ -107,9 +111,10 @@ It terrifies me and excites me at the same time, because lack of preparation is 
 
 Why worry so much about things outside of your control, so much so, that it could influence the ones you can control?
 
-What if you just shake lose all worries and create things instead, damned the consequences (consequences being, probably, mortal embarrassment. *Pffff*)?
+What if you just shake lose all worries and create things instead, damned the consequences (consequences being, probably, mortal embarrassment. _Pffff_)?
 
 ## Strategies from a Certified Goblin
+
 Whenever I’m struggling with a more erratic mood, I noticed that I have three main goblin traits. Apparently, they’re not that goblin, because we see them in ALL the productivity hacks the YouTube gurus are talking about. And here I was labeling them as…
 
 > things that keep me sane when the world seems a bit grim

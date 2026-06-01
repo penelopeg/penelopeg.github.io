@@ -24,6 +24,7 @@ Write your blog post content using Markdown...
 ```
 
 **Frontmatter Fields:**
+
 - `layout` (required): Must be "blog"
 - `title` (required): Main post title
 - `subtitle` (optional): A catchy subtitle displayed below the title
@@ -36,11 +37,11 @@ Write your blog post content using Markdown...
 ```javascript
 const posts = [
   {
-    slug: 'your-post-slug',
-    title: 'Your Post Title',
-    description: 'A brief description',
-    date: 'YYYY-MM-DD',
-    tags: ['tag1', 'tag2']
+    slug: "your-post-slug",
+    title: "Your Post Title",
+    description: "A brief description",
+    date: "YYYY-MM-DD",
+    tags: ["tag1", "tag2"],
   },
   // ... existing posts
 ];
@@ -65,11 +66,11 @@ The blog supports:
 ```javascript
 const posts = [
   {
-    slug: 'your-post-slug',
-    title: 'Your Post Title',
-    description: 'A brief description',
-    date: 'YYYY-MM-DD',
-    tags: ['tag1', 'tag2']
+    slug: "your-post-slug",
+    title: "Your Post Title",
+    description: "A brief description",
+    date: "YYYY-MM-DD",
+    tags: ["tag1", "tag2"],
   },
   // ... existing posts
 ];
@@ -89,6 +90,7 @@ To test the feed locally: `http://localhost:5173/penelopeg.github.io/blog/rss.xm
 ## Styling
 
 The blog uses the tumblr 2012 sticker aesthetic matching the rest of the site:
+
 - **Rounded corners**: 12-20px border radius
 - **Soft shadows**: Blur shadows with depth
 - **Sticker elements**: White borders, lift animations
