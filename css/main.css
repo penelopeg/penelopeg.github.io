@@ -3,7 +3,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #2e3738;
   font-weight: 300;
 }
@@ -15,9 +15,9 @@ body {
   height: 80vh;
   width: 100%;
   -webkit-perspective: 1px;
-          perspective: 1px;
+  perspective: 1px;
   -webkit-transform: translateZ(-1px);
-          transform: translateZ(-1px);
+  transform: translateZ(-1px);
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -67,8 +67,8 @@ footer .col-sm-8 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 footer ul {

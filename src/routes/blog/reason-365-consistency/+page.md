@@ -62,4 +62,3 @@ Scott Westerfeld (the author of Uglies, yes that movie on netflix) wrote on his 
 > I wasn't clear on the details of the theory. But the concept behind SHIFT was that if enough Trendsetters started using capital letters in their e-mails and posts, maybe the herd would follow.”
 
 Here’s to some Innovator creating a shift to horizontal content to make a comeback.
-

@@ -24,10 +24,13 @@
       <a href="{base}/" class="nav-link chaos-rotate-1">Home</a>
       <a href="{base}/about" class="nav-link chaos-rotate-2">About</a>
       <a href="{base}/portfolio" class="nav-link chaos-rotate-3">Portfolio</a>
-      <a href="{base}/blog" class="nav-link chaos-rotate-4">Blog</a>
-      <div class="handwritten" style="position: absolute; top: -10px; right: -20px; font-size: 0.8rem; z-index: 100;">
-        chaos theory!
+      <div style="position: relative; display: flex; align-items: center;">
+        <a href="{base}/blog" class="nav-link chaos-rotate-4">Blog</a>
+        <div class="handwritten" style="position: absolute; top: -12px; right: -25px; font-size: 0.75rem; z-index: 100; white-space: nowrap;">
+          chaos theory!
+        </div>
       </div>
+      <a href="{base}/trinketbox" class="nav-link chaos-rotate-1">Trinketbox</a>
       <!-- <a href="{base}/events" class="nav-link">Events</a> -->
       <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
     </div>
@@ -55,6 +58,7 @@
       <a href="{base}/about" class="mobile-nav-link">About</a>
       <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
       <a href="{base}/blog" class="mobile-nav-link">Blog</a>
+      <a href="{base}/trinketbox" class="mobile-nav-link">Trinketbox</a>
     </div>
     {/if}
   </nav>

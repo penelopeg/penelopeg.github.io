@@ -22,50 +22,47 @@
   <div class="container">
     <div class="about-grid">
     <div class="about-text">
-      <h2 class="chaos-rotate-3">Who the hell is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know? <svg style="display: inline; width: 16px; height: 16px; margin-left: 5px;" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg></span></h2>
-      <p>I'm someone who gets genuinely excited about what makes communities tick.</p>
-      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. By night (and weekends), I'm working on local.foundation, a platform helping other community builders organize and get insights about their community.</p>
-      <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional, passion required). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
-      <p>I've got the brain of a software engineer but the restless heart of an artist. I can't stick to just one thing. And honestly, why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
+      <h2 class="chaos-rotate-3">who is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know?</span></h2>
+      <p>My name is Penélope, and I am genuinely curious about what makes communities tick.</p>
+      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. By night (and weekends), I'm building local.foundation, a platform to map and develop communities and regional ecosystems from the ground up.</p>
+      <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
+      <p>I've got the brain of a software engineer but the restless heart of an artist and I can't stick to just one thing. And why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
       <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
       
-      <h2 class="chaos-rotate-1">What Drives Me</h2>
-      <div class="handwritten" style="position: absolute; margin-top: -10px; margin-left: 200px; z-index: 100;">
-        my core values ↓
-      </div>
+      <h2 class="chaos-rotate-1">some core principles</h2>
       <div class="values-grid">
       <div class="wonky-border value-card chaos-rotate-2">
-        <h3 class="scribble-underline">Movement & Connection</h3>
+        <h3 class="scribble-underline">Always moving and connecting</h3>
         <p>Creating spaces where different kinds of people can solve problems together and find their humanity in each other</p>
       </div>
-      <div class="wonky-border value-card chaos-rotate-1">
-        <h3 class="scribble-underline">Permission to Be Messy</h3>
-        <p>Helping people embrace their multi-passionate selves instead of forcing themselves into neat boxes</p>
-      </div>
       <div class="wonky-border value-card chaos-rotate-3">
-        <h3 class="scribble-underline">Controlled Chaos</h3>
-        <p>Proving that you can be organized in the chaos. Planning creates the container, but magic happens in the spontaneous moments</p>
+        <h3 class="scribble-underline">Chaos Theory</h3>
+        <p>Proving that you can be organized in the chaos of a multi-passion life. Planning is an essential, but magic happens in the spontaneous moments</p>
         <div class="handwritten" style="position: absolute; bottom: -20px; right: -25px; z-index: 100;">
           this one!
         </div>
       </div>
       <div class="wonky-border value-card chaos-rotate-4">
-        <h3 class="scribble-underline">The Joy of Trying</h3>
+        <h3 class="scribble-underline">The joy of trying</h3>
         <p>Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe</p>
+      </div>
+      <div class="wonky-border value-card chaos-rotate-1">
+        <h3 class="scribble-underline">Permission to be an optimist</h3>
+        <p>The world is a good place if you focus on your circles of influence and genuinely try to do good.</p>
       </div>
       </div>
   
-      <h2 class="chaos-rotate-2">Current Focus</h2>
+      <h2 class="chaos-rotate-2">current focus</h2>
       <div class="handwritten" style="position: absolute; margin-top: -15px; margin-left: 180px; z-index: 100;">
         what I'm up to
       </div>
       <ul class="focus-list chaos-spacing">
-      <li>Developing a mobile app to make networking meaningful</li>
       <li>Building a platform in local.foundation for community builders</li>
+      <li>Developing a mobile app to make networking meaningful</li>
       <li>Leading my team to innovate in the PIM software space</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
       <li>Creating a wheel app for neurodivergent folk</li>
-      <li>Prepping a gamejam</li>
+      <li>Prepping a new format for future-led people</li>
       <li>Finishing my first draft for a space opera book</li>
       </ul>
     </div>
@@ -86,7 +83,7 @@
         </li>
         <li>
           <strong>Tech Experience: </strong>
-          <span>10 years</span>
+          <span>12 years</span>
         </li>
         <li>
           <strong>Community Experience: </strong>
@@ -106,13 +103,7 @@
   
       <div class="contact-card wonky-border chaos-rotate-3">
       <h3 class="scribble-underline">Get in Touch</h3>
-      <div class="handwritten" style="position: absolute; top: -15px; left: -25px; z-index: 100;">
-        say hi!
-      </div>
       <div class="contact-links">
-        <!-- <a href="mailto:penelope@duck.com" class="button button-primary">
-        Send Email
-        </a> -->
         <a href="https://zez.am/lepsies" class="button button-secondary chaos-rotate-1">
         Connect Online
         </a>

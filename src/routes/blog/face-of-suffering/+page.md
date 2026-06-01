@@ -29,7 +29,7 @@ That might seem sad, but we're human. And in fact, forget the big emergencies fo
 
 <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1080" alt="Small Acts - hands reaching out to help" class="img-large center-image" />
 
-*Small Acts (Photo by Nik on Unsplash)*
+_Small Acts (Photo by Nik on Unsplash)_
 
 Do you share important causes with your close friends, not just publicly, but directly, as in "hey, this matters, look at this"? When someone in your circle says something stupid about other people, do you let it slide? If your friend was catcalling someone, would you actually say something?
 
@@ -41,7 +41,7 @@ The thing about not valuing the importance of your small acts is that it leaves 
 
 When I'm too tired to clean up my house because I can't even fix the entire world, I only donated 5€ here and 10€ there and why does it look like everybody has turned into a terrible fucking human being recently?, I think about this poem.
 
-*Small Kindnesses by Danusha Laméris*
+_Small Kindnesses by Danusha Laméris_
 
 > I've been thinking about the way, when you walk
 > down a crowded aisle, people pull in their legs
@@ -83,7 +83,7 @@ And that's it. That's community.
 
 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1080" alt="People connecting and building community together" class="img-large center-image" />
 
-*A community builder convinces a participant to help out next time (Photo by Claudio Schwarz on Unsplash)*
+_A community builder convinces a participant to help out next time (Photo by Claudio Schwarz on Unsplash)_
 
 In the viral moments of collective solidarity, some people get their head out of their own bubble and realize how powerful they actually are. There will be another person who realizes they don't need to wait to be invited, to wait until obvious urgency. Another person that sets the table before the emergency, so that when it comes (and it might), the people gathering to help already know each other's names.
 

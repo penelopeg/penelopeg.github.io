@@ -15,10 +15,10 @@ $center-margin: 0px auto;
 
 html,
 body {
-  height:100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #2e3738;
   font-weight: 300;
 }
@@ -33,26 +33,26 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 
-	h1{
-		text-transform: uppercase;
+  h1 {
+    text-transform: uppercase;
     letter-spacing: 0.06em;
     font-size: 5vh;
     color: white;
     opacity: 1;
     text-align: center;
-	}
+  }
 }
 
 .maintext {
-	padding: 5%;
-	margin: $center-margin;
-	text-align: center;
+  padding: 5%;
+  margin: $center-margin;
+  text-align: center;
 }
 
 p {
   font-size: 20px;
-	font-weight: 200;
-	line-height: 1.4;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 .title {
@@ -71,11 +71,10 @@ p {
   border-radius: 145px;
 }
 
-
 footer {
   font-size: 12px;
   padding: 40px 0;
-  
+
   .col-sm-8 {
     display: flex;
     justify-content: flex-end;
@@ -88,5 +87,4 @@ footer {
     width: 32px;
     height: 32px;
   }
-
 }

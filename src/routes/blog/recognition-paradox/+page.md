@@ -7,9 +7,9 @@ description: "On identity, networking, and the struggle between wanting recognit
 tags: ["community", "networking", "personal"]
 ---
 
-*Hi, what's your name? What do you do?*
+_Hi, what's your name? What do you do?_
 
-I freeze every time someone asks me this at an event. *Oh my god, can I signal my bestie to call me and fake an emergency?* I think in a panic. It’s not like I don’t know the answer, because it would be pretty weird not to remember your own name, but it might be because I have many answers. And none of them are short enough to be the whole truth.
+I freeze every time someone asks me this at an event. _Oh my god, can I signal my bestie to call me and fake an emergency?_ I think in a panic. It’s not like I don’t know the answer, because it would be pretty weird not to remember your own name, but it might be because I have many answers. And none of them are short enough to be the whole truth.
 
 Who are you, huh? Do you have a fancy job title? Are you anything besides your work? Describe yourself without mentioning your gender, religion, age, or hobbies. Who are you outside of any societal construct? Would that question even make sense if you were no longer attached to the material plane?
 
@@ -23,9 +23,7 @@ And yet, I realize I'm a bit of a rule follower, which is counter-acting to what
 
 <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb60337ae-e24a-4551-a01a-279904146a5f_6000x4000.jpeg" alt="photo of penelope checking the time with a mic in her hand" class="img-large center-image" />
 
-*time is important people!!! if the event gets delayed one minute it's a disaster!!! Photo rights go to @calliope.pt*
-
-
+_time is important people!!! if the event gets delayed one minute it's a disaster!!! Photo rights go to @calliope.pt_
 
 ## Recognize me, oh no no, please don’t look this way
 
@@ -35,7 +33,7 @@ It hurts not to get recognition, and it hurts even more when you think that reco
 
 Thoughts are powerful things. We spend our time making ourselves victims of others' perceptions, when in truth, it's our own perception that matters. If I always feel like an idiot, I'll always present like an idiot to myself, even if others won't really care about me at all or won’t notice (maybe they’re worried they sound like an idiot too).
 
-Social media seems to be a root cause of this evil, wrapping our value into likes and followers and shares. Connecting requires community, and community requires vulnerability, time and presence. Real recognition comes from sharing, not from being seen. 
+Social media seems to be a root cause of this evil, wrapping our value into likes and followers and shares. Connecting requires community, and community requires vulnerability, time and presence. Real recognition comes from sharing, not from being seen.
 
 The digital world has created an illusion of perfectionism, where we remove hard work from the picture. So we become obsessed with the perfect introduction.
 
@@ -49,7 +47,7 @@ But maybe we're solving the wrong problem. Maybe the issue isn't perfecting our 
 
 <img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce1d5895-fce9-4665-b97f-ef24dc7e609b_2229x3343.jpeg" alt="penelope with a serious face holding a coffee" class="img-medium center-image" />
 
-*this is my "i'm actually really paying attention" face when I forget I have to smile too*
+_this is my "i'm actually really paying attention" face when I forget I have to smile too_
 
 Community builder, founder, tech lead, writer, artist, speaker, event organizer. I tend to think I do some of these badly; or mostly, that I could do better at all of them. We cover ourselves in shame and limiting beliefs, yet we applaud those who are unashamed of pursuing their goals.
 
