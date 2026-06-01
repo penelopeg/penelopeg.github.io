@@ -100,7 +100,7 @@
       rotate: -1,
       floatClass: 'float-6',
       items: [
-        { title: 'Bridge to Terabithia', url: 'https://letterboxd.com/film/bridge-to-terabithia/', note: '(2007) keep your mind wide open', tag: 'fantasy' },
+        { title: 'Bridge to Terabithia', url: 'https://letterboxd.com/film/bridge-to-terabithia/', note: '(2007) destroyed me as a child and still does', tag: 'fantasy' },
         { title: '10 Things I Hate About You', url: 'https://letterboxd.com/film/10-things-i-hate-about-you/', note: '(1999) i hate the way i don’t hate you, not even close, not even a little bit', tag: 'romance' },
         { title: 'The Fast and the Furious', url: 'https://letterboxd.com/film/the-fast-and-the-furious/', note: '(2001) i live my life a quarter mile at a time', tag: 'action' },
       ]
