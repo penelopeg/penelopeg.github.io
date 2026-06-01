@@ -89,7 +89,7 @@
   }
 </script>
 
-<div class="portfolio-hero">
+<div class="portfolio-hero ct-hero">
   <div class="container">
     <h1>Portfolio</h1>
     <p class="lead"><span class="scribble-underline">Exploring the intersection of technology, art, and community</span></p>
@@ -162,12 +162,7 @@
 
 <style>
   .portfolio-hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: var(--spacing-16) 0;
-    text-align: center;
-    transform: rotate(-0.6deg);
-    transform-origin: center center;
+    /* cream hero via ct-hero class */
   }
 
   .portfolio-hero h1 {

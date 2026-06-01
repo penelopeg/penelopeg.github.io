@@ -1,18 +1,29 @@
 <script>
   import { base } from '$app/paths';
+  import { onMount } from 'svelte';
   import '../app.css';
   import Seo from '$lib/components/Seo.svelte';
-  
+
   let isMenuOpen = false;
-  
+  let theme = 'mix';
+
+  onMount(() => {
+    theme = localStorage.getItem('ct_theme') || 'mix';
+  });
+
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
+  }
+
+  function setTheme(t) {
+    theme = t;
+    localStorage.setItem('ct_theme', t);
   }
 </script>
 
 <Seo />
 
-<div class="app">
+<div class="app" data-theme={theme}>
   <nav class="nav">
     <div class="container nav-container">
     <a href="{base}/" class="nav-brand">
@@ -30,9 +41,15 @@
           chaos theory!
         </div>
       </div>
+      <a href="{base}/events" class="nav-link chaos-rotate-2">Events</a>
+      <a href="{base}/cv" class="nav-link chaos-rotate-3">CV</a>
       <a href="{base}/trinketbox" class="nav-link chaos-rotate-1">Trinketbox</a>
-      <!-- <a href="{base}/events" class="nav-link">Events</a> -->
-      <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
+      <!-- Theme switch -->
+      <div class="ct-theme-switch" role="group" aria-label="Theme">
+        <button class="ct-theme-seg {theme === 'light' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('light')} title="Light">☀️</button>
+        <button class="ct-theme-seg {theme === 'mix' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('mix')} title="Mix">🔀</button>
+        <button class="ct-theme-seg {theme === 'dark' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('dark')} title="Dark">🌙</button>
+      </div>
     </div>
     
     <!-- Mobile Menu Button -->
@@ -58,7 +75,15 @@
       <a href="{base}/about" class="mobile-nav-link">About</a>
       <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
       <a href="{base}/blog" class="mobile-nav-link">Blog</a>
+      <a href="{base}/events" class="mobile-nav-link">Events</a>
+      <a href="{base}/cv" class="mobile-nav-link">CV</a>
       <a href="{base}/trinketbox" class="mobile-nav-link">Trinketbox</a>
+      <div style="display: flex; gap: 0.5rem; padding: 0.75rem 0; border-bottom: 1px solid rgba(0,0,0,0.1);">
+        <span style="font-size: 0.875rem; font-weight: 500; align-self: center;">Theme:</span>
+        <button class="ct-theme-seg {theme === 'light' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('light')}>☀️</button>
+        <button class="ct-theme-seg {theme === 'mix' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('mix')}>🔀</button>
+        <button class="ct-theme-seg {theme === 'dark' ? 'ct-theme-seg--active' : ''}" on:click={() => setTheme('dark')}>🌙</button>
+      </div>
     </div>
     {/if}
   </nav>
