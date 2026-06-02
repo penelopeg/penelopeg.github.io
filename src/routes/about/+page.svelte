@@ -33,7 +33,7 @@
       <div class="values-grid">
       <div class="wonky-border value-card chaos-rotate-2">
         <h3 class="scribble-underline">Always moving and connecting</h3>
-        <p>Creating spaces where different kinds of people can solve problems together and find their humanity in each other</p>
+        <p>The world is a good place. Create spaces where different kinds of people can solve problems together and find their humanity in each other</p>
       </div>
       <div class="wonky-border value-card chaos-rotate-3">
         <h3 class="scribble-underline">Chaos Theory</h3>
@@ -47,8 +47,8 @@
         <p>Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe</p>
       </div>
       <div class="wonky-border value-card chaos-rotate-1">
-        <h3 class="scribble-underline">Permission to be an optimist</h3>
-        <p>The world is a good place if you focus on your circles of influence and genuinely try to do good.</p>
+        <h3 class="scribble-underline">Do it scared</h3>
+        <p>Being fearless is misunderstood. You need fear in order to be brave. You just need to do it while scared</p>
       </div>
       </div>
   
