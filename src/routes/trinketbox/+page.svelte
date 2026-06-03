@@ -207,7 +207,7 @@
 </svelte:head>
 
 <div class="trinketbox-page">
-  <div class="page-header">
+  <div class="page-header ct-hero">
     <div class="header-inner">
       <h1 class="page-title chaos-rotate-2">The Trinketbox</h1>
       <p class="page-subtitle">a map of things i love on the internet & beyond</p>
@@ -397,11 +397,7 @@
 
   /* ── Header ── */
   .page-header {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: 3rem 1rem 2rem;
-    text-align: center;
-    transform: rotate(0.3deg);
+    /* cream hero via ct-hero class */
   }
 
   .header-inner {
@@ -412,18 +408,18 @@
 
   .page-title {
     font-size: clamp(2rem, 6vw, 4rem);
-    color: white;
+    color: var(--color-text);
     margin-bottom: 0.5rem;
   }
 
   .page-subtitle {
-    color: rgba(255,255,255,0.85);
+    color: var(--color-text-light);
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
   }
 
   .hint-text {
-    color: rgba(255,255,255,0.75);
+    color: var(--color-text-light);
     font-size: 1rem;
   }
 

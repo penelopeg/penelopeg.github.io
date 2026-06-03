@@ -39,10 +39,6 @@
 
     <article class="post-content">
       <header class="post-header">
-        <h1>{title}</h1>
-        {#if subtitle}
-          <p class="post-subtitle">{subtitle}</p>
-        {/if}
         {#if date}
           <time class="post-date">{date}</time>
         {/if}
@@ -164,7 +160,7 @@
   }
 
   .blog-post {
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-8) 0 var(--spacing-16);
     min-height: 60vh;
   }
 
@@ -195,10 +191,9 @@
   }
 
   .post-header {
-    margin-bottom: var(--spacing-12);
-    padding-bottom: var(--spacing-8);
+    margin-bottom: var(--spacing-8);
+    padding-bottom: var(--spacing-6);
     border-bottom: 2px solid var(--color-primary);
-    opacity: 0.8;
   }
 
   .post-header h1 {
