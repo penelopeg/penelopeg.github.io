@@ -432,7 +432,7 @@
   }
 </script>
 
-<div class="cv-hero ct-hero ct-hero--dark-context">
+<div class="cv-hero ct-hero">
   <div class="container">
     <h1>Curriculum Vitae</h1>
     <p class="cv-subtitle">Choose your adventure - explore my expertise through different lenses</p>
@@ -724,17 +724,11 @@
 
 <style>
   .cv-hero {
-    /* dark hero via ct-hero ct-hero--dark-context classes */
+    /* cream hero via ct-hero class */
   }
 
   .cv-hero h1 {
     margin-bottom: var(--spacing-2);
-    color: var(--hero-text-dark);
-  }
-
-  /* In mix mode the hero is dark, so text stays white */
-  :global([data-theme="light"]) .cv-hero h1 {
-    color: var(--hero-text-light);
   }
 
   .cv-subtitle {

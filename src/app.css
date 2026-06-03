@@ -498,23 +498,18 @@ p {
 }
 .ct-hero h1 { color: var(--hero-text-light); }
 
-/* Slate hero (blog posts, CV in mix mode, everything in dark mode) */
-.ct-hero--dark,
-[data-theme="dark"] .ct-hero {
+/* Slate hero — used for blog post reading view */
+.ct-hero--dark {
   background: var(--hero-bg-dark);
   color: var(--hero-text-dark);
 }
-/* Replace candy-stripe with left cyan rail */
-.ct-hero--dark::before,
-[data-theme="dark"] .ct-hero::before {
+.ct-hero--dark::before {
   left: 0; top: 0; bottom: 0; right: auto;
   width: 10px; height: auto;
   background: var(--hero-rail);
   opacity: 1;
 }
-/* Replace tape with green dot top-right */
-.ct-hero--dark::after,
-[data-theme="dark"] .ct-hero::after {
+.ct-hero--dark::after {
   top: 28px; right: 28px; left: auto;
   width: 18px; height: 18px;
   background: var(--hero-dot);
@@ -523,30 +518,7 @@ p {
   box-shadow: 0 0 0 4px rgba(16,185,129,0.25);
   opacity: 1;
 }
-.ct-hero--dark h1,
-[data-theme="dark"] .ct-hero h1 { color: var(--hero-text-dark); }
-
-/* Mix: pages with dark context (CV, blog post) stay slate */
-[data-theme="mix"] .ct-hero--dark-context {
-  background: var(--hero-bg-dark);
-  color: var(--hero-text-dark);
-}
-[data-theme="mix"] .ct-hero--dark-context::before {
-  left: 0; top: 0; bottom: 0; right: auto;
-  width: 10px; height: auto;
-  background: var(--hero-rail);
-  opacity: 1;
-}
-[data-theme="mix"] .ct-hero--dark-context::after {
-  top: 28px; right: 28px; left: auto;
-  width: 18px; height: 18px;
-  background: var(--hero-dot);
-  border-radius: 50%;
-  transform: none;
-  box-shadow: 0 0 0 4px rgba(16,185,129,0.25);
-  opacity: 1;
-}
-[data-theme="mix"] .ct-hero--dark-context h1 { color: var(--hero-text-dark); }
+.ct-hero--dark h1 { color: var(--hero-text-dark); }
 
 /* ── SECTION (slight tilt) ────────────────────────────────────────────── */
 .ct-section {
@@ -625,33 +597,6 @@ p {
   font-family: var(--font-display);
   box-shadow: inset 0 2px 4px rgba(0,0,0,0.12);
 }
-
-/* ── THEME SWITCH ─────────────────────────────────────────────────────── */
-.ct-theme-switch {
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid rgba(0,0,0,0.18);
-  border-radius: var(--border-radius-sticker);
-  overflow: hidden;
-  box-shadow: var(--shadow-tag-hard);
-  transform: rotate(-1deg);
-  background: white;
-}
-.ct-theme-seg {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 26px;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  color: var(--color-text-light);
-  transition: var(--transition-base);
-  font-size: 0.85rem;
-}
-.ct-theme-seg:hover { color: var(--color-primary); }
-.ct-theme-seg--active { background: var(--color-text); color: white; }
 
 /* ── STRIKETHROUGH (hero role list) ──────────────────────────────────── */
 .ct-strikethrough {

@@ -112,20 +112,14 @@
   .hero h1 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-4);
-    color: var(--hero-text-light);
   }
-
-  [data-theme="dark"] .hero h1 { color: var(--hero-text-dark); }
 
   .hero-subtitle {
     font-size: 1.75rem;
     opacity: 0.9;
     margin-bottom: var(--spacing-4);
     line-height: 1.3;
-    color: var(--hero-text-light);
   }
-
-  [data-theme="dark"] .hero-subtitle { color: var(--hero-text-dark); }
   
   @media (min-width: 640px) {
     .hero {
