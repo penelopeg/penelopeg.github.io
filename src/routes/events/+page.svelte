@@ -135,7 +135,7 @@
   }
 </script>
 
-<div class="events-hero">
+<div class="events-hero ct-hero">
   <div class="container">
     <h1>Events</h1>
     <p class="lead">Creating spaces for learning, connecting and building together</p>
@@ -200,10 +200,7 @@
 
 <style>
   .events-hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: var(--spacing-16) 0;
-    text-align: center;
+    /* cream hero via ct-hero class */
   }
 
   .lead {

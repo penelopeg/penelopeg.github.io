@@ -40,13 +40,13 @@
   ];
 </script>
   
-<div class="hero">
+<div class="hero ct-hero">
   <div class="container">
     <div class="hero-content">
       <h1>Olá, I'm Penélope, and I'm a</h1>
       <p class="hero-subtitle chaos-spacing">
         {#each roles as role}
-          <span class="strikethrough" style="--role-color: {role.color}">{role.title.toLowerCase()}</span>
+          <span class="ct-strikethrough" style="--role-color: {role.color}">{role.title.toLowerCase()}</span>
           {#if role !== roles[roles.length - 1]} / {/if}
         {/each}
       </p>
@@ -57,7 +57,7 @@
       <div class="hero-actions chaos-spacing">
         <a href="{base}/about" class="button button-primary chaos-rotate-1">Who?</a>
         <a href="{base}/portfolio" class="button button-secondary chaos-rotate-3">What?</a>
-        <div class="handwritten" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); color: white; z-index: 100;">
+        <div class="handwritten" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); z-index: 100;">
           click these!
         </div>
       </div>
@@ -99,12 +99,7 @@
   
 <style>
   .hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
     padding: var(--spacing-8) 0;
-    text-align: center;
-    transform: rotate(0.4deg);
-    transform-origin: center center;
   }
   
   .hero-content {
@@ -113,12 +108,12 @@
     padding: 0 var(--spacing-4);
     position: relative;
   }
-  
+
   .hero h1 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-4);
   }
-  
+
   .hero-subtitle {
     font-size: 1.75rem;
     opacity: 0.9;

@@ -26,16 +26,19 @@
   $: nextPost = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 </script>
 
+<div class="post-hero ct-hero ct-hero--dark ct-hero--dark-context">
+  <div class="container">
+    <h1>{title}</h1>
+    {#if subtitle}<p class="post-hero-subtitle">{subtitle}</p>{/if}
+  </div>
+</div>
+
 <div class="blog-post">
   <div class="container">
     <a href="{base}/blog" class="back-link">← Back to blog</a>
 
     <article class="post-content">
       <header class="post-header">
-        <h1>{title}</h1>
-        {#if subtitle}
-          <p class="post-subtitle">{subtitle}</p>
-        {/if}
         {#if date}
           <time class="post-date">{date}</time>
         {/if}
@@ -137,8 +140,27 @@
 </div>
 
 <style>
+  .post-hero {
+    padding: var(--spacing-12) 0;
+    text-align: center;
+  }
+  .post-hero h1 {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    color: white;
+    margin: 0 auto;
+    max-width: 48rem;
+  }
+  .post-hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.75);
+    font-style: italic;
+    margin-top: var(--spacing-3);
+    margin-bottom: 0;
+  }
+
   .blog-post {
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-8) 0 var(--spacing-16);
     min-height: 60vh;
   }
 
@@ -152,7 +174,7 @@
     margin-bottom: var(--spacing-8);
     padding: var(--spacing-2) var(--spacing-4);
     border: 2px solid var(--color-primary);
-    border-radius: 12px;
+    border-radius: var(--border-radius-sticker);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease;
     font-size: 0.9rem;
@@ -169,17 +191,13 @@
   }
 
   .post-header {
-    margin-bottom: var(--spacing-12);
-    padding-bottom: var(--spacing-8);
+    margin-bottom: var(--spacing-8);
+    padding-bottom: var(--spacing-6);
     border-bottom: 2px solid var(--color-primary);
-    opacity: 0.8;
   }
 
   .post-header h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-    margin-bottom: var(--spacing-2);
-    color: var(--color-text);
+    display: none;
   }
 
   .post-subtitle {
@@ -213,14 +231,16 @@
   }
 
   .tag {
-    padding: var(--spacing-2) var(--spacing-3);
+    padding: var(--spacing-1) var(--spacing-3);
     background: var(--color-primary);
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
-    border: 2px solid white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    border: 2px solid rgba(0,0,0,0.4);
+    border-radius: 0;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.20);
   }
 
   .tag:nth-child(odd) {

@@ -432,7 +432,7 @@
   }
 </script>
 
-<div class="cv-hero">
+<div class="cv-hero ct-hero">
   <div class="container">
     <h1>Curriculum Vitae</h1>
     <p class="cv-subtitle">Choose your adventure - explore my expertise through different lenses</p>
@@ -724,10 +724,7 @@
 
 <style>
   .cv-hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: var(--spacing-12) 0 var(--spacing-8) 0;
-    text-align: center;
+    /* cream hero via ct-hero class */
   }
 
   .cv-hero h1 {

@@ -77,10 +77,10 @@
   }
 </script>
 
-<div class="blog-hero">
+<div class="blog-hero ct-hero">
   <div class="container">
     <h1 class="chaos-rotate-1">The Chaos Theory Blog</h1>
-    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; color: white; z-index: 100;">
+    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
       these are original. beware!
     </div>
     <p class="lead chaos-spacing">Thoughts on life, community, culture and creative chaos</p>
@@ -138,13 +138,7 @@
 
 <style>
   .blog-hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: var(--spacing-16) 0;
-    text-align: center;
-    transform: rotate(-0.5deg);
-    transform-origin: center center;
-    position: relative;
+    /* cream hero via ct-hero class */
   }
 
   .blog-hero h1 {
@@ -298,10 +292,10 @@
     gap: var(--spacing-2);
     padding: var(--spacing-2) var(--spacing-4);
     background: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: var(--hero-text-light);
     text-decoration: none;
-    border-radius: 12px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--border-radius-sticker);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.2s ease;

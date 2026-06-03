@@ -34,9 +34,47 @@
   --spacing-16: 4rem;
 
   /* Borders */
-  --border-radius: 0.375rem;
-  --border-radius-sticker: 16px;
-  --border-radius-card: 20px;
+  --border-radius: 2px;
+  --border-radius-sticker: 6px;
+  --border-radius-card: 8px;
+
+  /* Hero treatment — cream paper (light) vs slate (dark) */
+  --hero-bg-light:   #fdf8ef;
+  --hero-text-light: var(--color-text);
+  --hero-stripe:     var(--color-primary);
+  --hero-tape:       #f59e0b;
+  --hero-bg-dark:    var(--color-text);
+  --hero-text-dark:  #ffffff;
+  --hero-rail:       var(--color-primary);
+  --hero-dot:        var(--color-accent);
+
+  /* Shadows */
+  --shadow-sticker:       0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.10);
+  --shadow-sticker-hover: 0 6px 16px rgba(0,0,0,0.20), 0 3px 6px rgba(0,0,0,0.15);
+  --shadow-card:          0 4px 12px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
+  --shadow-card-hover:    0 8px 20px rgba(0,0,0,0.16), 0 4px 8px rgba(0,0,0,0.12);
+  --shadow-tag-hard:      2px 2px 0 rgba(0,0,0,0.20);
+
+  /* Sticker borders */
+  --sticker-border-button: 3px solid #ffffff;
+  --sticker-border-card:   4px solid #ffffff;
+
+  /* Motion */
+  --transition-fast: all 0.15s ease;
+  --transition-base: all 0.2s ease;
+  --transition-slow: all 0.3s ease;
+  --lift-hover:      translateY(-2px);
+  --lift-card-hover: translateY(-4px);
+
+  /* Event / tag colors */
+  --color-tag-conference: #7c3aed;
+  --color-tag-hackathon:  #ff66b3;
+  --color-tag-workshop:   #06b6d4;
+  --color-tag-community:  #10b981;
+  --color-tag-talk:       #f59e0b;
+  --color-tag-fireside:   #ef4444;
+  --color-tag-contest:    #8b5cf6;
+  --color-tag-lan:        #6366f1;
 }
 
 /* Reset */
@@ -420,6 +458,256 @@ p {
 .chaos-grid > *:nth-child(3n):hover {
   transform: translateY(-4px) rotate(2.5deg);
 }
+
+/* ── CREAM HERO (new default) ─────────────────────────────────────────── */
+.ct-hero {
+  background: var(--hero-bg-light);
+  color: var(--hero-text-light);
+  padding: var(--spacing-16) 0;
+  text-align: center;
+  transform: rotate(-0.5deg);
+  transform-origin: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Cyan candy-stripe bottom edge */
+.ct-hero::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 22px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--hero-stripe) 0 8px,
+    transparent       8px 16px
+  );
+  opacity: 0.9;
+  pointer-events: none;
+}
+/* Orange masking-tape sticker top-left */
+.ct-hero::after {
+  content: "";
+  position: absolute;
+  top: 26px; left: 26px;
+  width: 56px; height: 14px;
+  background: var(--hero-tape);
+  transform: rotate(-8deg);
+  border-radius: 2px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+.ct-hero h1 { color: var(--hero-text-light); }
+
+/* Slate hero — used for blog post reading view */
+.ct-hero--dark {
+  background: var(--hero-bg-dark);
+  color: var(--hero-text-dark);
+}
+.ct-hero--dark::before {
+  left: 0; top: 0; bottom: 0; right: auto;
+  width: 10px; height: auto;
+  background: var(--hero-rail);
+  opacity: 1;
+}
+.ct-hero--dark::after {
+  top: 28px; right: 28px; left: auto;
+  width: 18px; height: 18px;
+  background: var(--hero-dot);
+  border-radius: 50%;
+  transform: none;
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.25);
+  opacity: 1;
+}
+.ct-hero--dark h1 { color: var(--hero-text-dark); }
+
+/* ── SECTION (slight tilt) ────────────────────────────────────────────── */
+.ct-section {
+  padding: var(--spacing-16) 0;
+  transform: rotate(0.3deg);
+  transform-origin: center;
+  position: relative;
+}
+
+/* ── TAGS — punk-zine square, hard shadow ─────────────────────────────── */
+.ct-tag {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--color-primary);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border: 2px solid rgba(0,0,0,0.4);
+  border-radius: 0;
+  box-shadow: var(--shadow-tag-hard);
+}
+.ct-tag--sm { padding: var(--spacing-1) var(--spacing-2); font-size: 0.7rem; }
+.ct-tag--lg { padding: var(--spacing-2) var(--spacing-3); font-size: 0.8rem; }
+.ct-tag-row { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+.ct-tag-row > .ct-tag:nth-child(odd)  { transform: rotate(-0.5deg); }
+.ct-tag-row > .ct-tag:nth-child(even) { transform: rotate( 0.5deg); }
+.ct-tag-row > .ct-tag:nth-child(3n)   { transform: rotate(0deg) translateY(-1px); }
+
+/* Category tints */
+.ct-tag--conference { background: var(--color-tag-conference); }
+.ct-tag--hackathon  { background: var(--color-tag-hackathon);  }
+.ct-tag--workshop   { background: var(--color-tag-workshop);   }
+.ct-tag--community  { background: var(--color-tag-community);  }
+.ct-tag--talk       { background: var(--color-tag-talk);       }
+.ct-tag--fireside   { background: var(--color-tag-fireside);   }
+.ct-tag--contest    { background: var(--color-tag-contest);    }
+.ct-tag--lan        { background: var(--color-tag-lan);        }
+
+/* ── FILTER CHIPS ─────────────────────────────────────────────────────── */
+.ct-filter-chip {
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--color-primary);
+  color: white;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: var(--sticker-border-button);
+  border-radius: var(--border-radius-sticker);
+  box-shadow: var(--shadow-sticker);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+.ct-filter-chip:nth-child(odd)  { transform: rotate(-2deg); }
+.ct-filter-chip:nth-child(even) { transform: rotate( 2deg); }
+.ct-filter-chip:nth-child(3n)   { transform: rotate( 1deg); }
+.ct-filter-chip:hover {
+  transform: var(--lift-hover) rotate(0deg);
+  box-shadow: var(--shadow-sticker-hover);
+}
+.ct-filter-chip--active {
+  background: rgba(0,0,0,0.9) !important;
+  transform: translateY(-4px) rotate(0deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.20);
+}
+
+/* ── TAGLINE BAND (CV) ────────────────────────────────────────────────── */
+.ct-tagline-band {
+  color: white;
+  text-align: center;
+  padding: var(--spacing-6) 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.12);
+}
+
+/* ── STRIKETHROUGH (hero role list) ──────────────────────────────────── */
+.ct-strikethrough {
+  position: relative;
+  display: inline-block;
+}
+.ct-strikethrough::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 auto 0;
+  height: 18px;
+  background: var(--role-color, var(--color-secondary));
+  transform: rotate(-4deg);
+  transition: var(--transition-slow);
+}
+.ct-strikethrough:hover::after {
+  opacity: 0;
+  transform: rotate(-5deg) scale(1.2);
+}
+
+/* ── BLOG POST READING VIEW ───────────────────────────────────────────── */
+.post-wrap { max-width: 48rem; margin: 0 auto; }
+.post-back {
+  display: inline-flex; align-items: center; gap: var(--spacing-2);
+  color: var(--color-primary); background: white; text-decoration: none;
+  font-weight: 600; font-size: 0.9rem; margin-bottom: var(--spacing-8);
+  padding: var(--spacing-2) var(--spacing-4); border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sticker); box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+  cursor: pointer; transition: var(--transition-base);
+}
+.post-back:hover { transform: var(--lift-hover); box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+.post-header {
+  margin-bottom: var(--spacing-12); padding-bottom: var(--spacing-8);
+  border-bottom: 2px solid var(--color-primary);
+}
+.post-header h1 { font-size: clamp(2rem,5vw,2.75rem); line-height: 1.15; margin: 0 0 var(--spacing-2); }
+.post-subtitle { font-size: 1.2rem; color: var(--color-primary); font-weight: 600; font-style: italic; margin: 0 0 var(--spacing-3); }
+.post-date {
+  display: block; color: var(--color-text-light); font-size: 0.9rem; font-weight: 600;
+  margin-bottom: var(--spacing-4); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.prose { color: var(--color-text); line-height: 1.85; font-size: 1.05rem; }
+.prose p { margin: 0 0 var(--spacing-6); }
+.prose h2 {
+  font-size: 1.85rem; margin: var(--spacing-12) 0 var(--spacing-4);
+  position: relative; padding-bottom: var(--spacing-2);
+}
+.prose h2::after {
+  content: ""; position: absolute; bottom: 0; left: 0;
+  width: 3rem; height: 4px; background: var(--color-primary); border-radius: 4px;
+}
+.prose blockquote {
+  border-left: 4px solid var(--color-primary); margin: var(--spacing-8) 0;
+  font-style: italic; color: var(--color-text-light);
+  background: rgba(8,145,178,0.08); padding: var(--spacing-4) var(--spacing-6);
+  border-radius: var(--border-radius-card); box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+/* ── RETRO MP3 PLAYER ────────────────────────────────────────────────── */
+.mp3-player { margin-top: var(--spacing-16); display: flex; flex-direction: column; align-items: center; position: relative; }
+.mp3-body {
+  width: 260px;
+  background: linear-gradient(145deg,#e8e8e8 0%,#d4d4d4 50%,#c8c8c8 100%);
+  border-radius: 28px; padding: 20px 20px 28px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.6);
+  border: 3px solid white; transform: rotate(-1.5deg);
+}
+.mp3-screen {
+  background: linear-gradient(180deg,#8cb4a0 0%,#a3c9b7 30%,#b5d6c8 100%);
+  border-radius: 8px; padding: 10px 12px; margin-bottom: 18px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2); border: 2px solid #7a9e8d;
+  min-height: 80px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.mp3-screen-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.mp3-icon { font-size: 0.7rem; color: #2d5a45; }
+.mp3-label { font-family: var(--font-mono); font-size: 0.6rem; color: #2d5a45; text-transform: uppercase; letter-spacing: 0.5px; }
+.mp3-battery { width: 18px; height: 9px; border: 1.5px solid #2d5a45; border-radius: 2px; padding: 1px; position: relative; }
+.mp3-battery::after { content: ""; position: absolute; right: -4px; top: 50%; transform: translateY(-50%); width: 2px; height: 5px; background: #2d5a45; }
+.mp3-battery > div { width: 70%; height: 100%; background: #2d5a45; }
+.mp3-title { font-family: var(--font-mono); font-size: 0.7rem; color: #1a3d2c; font-weight: 700; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin: 4px 0; }
+.mp3-progress { width: 100%; height: 3px; background: rgba(45,90,69,0.3); border-radius: 2px; overflow: hidden; }
+.mp3-progress > div { height: 100%; background: #2d5a45; animation: mp3-progress-pulse 3s ease-in-out infinite; }
+@keyframes mp3-progress-pulse { 0%,100% { width: 30%; } 50% { width: 45%; } }
+.mp3-times { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.5rem; color: #2d5a45; margin-top: 2px; }
+.mp3-wheel {
+  width: 150px; height: 150px; border-radius: 50%;
+  background: linear-gradient(145deg,#f0f0f0 0%,#d8d8d8 100%);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+  position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: center;
+}
+.mp3-wlabel { position: absolute; font-family: var(--font-mono); font-size: 0.55rem; color: #666; text-transform: uppercase; letter-spacing: 1px; pointer-events: none; }
+.mp3-wlabel--menu { top: 10px; left: 50%; transform: translateX(-50%); }
+.mp3-wlabel--play { bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 0.65rem; letter-spacing: 0; }
+.mp3-btn {
+  position: absolute; display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; color: #555; background: none; border: none; border-radius: 50%;
+  cursor: pointer; transition: var(--transition-fast); z-index: 2;
+}
+.mp3-btn:hover:not(:disabled) { color: var(--color-primary); background: rgba(8,145,178,0.08); }
+.mp3-btn:disabled { color: #bbb; cursor: not-allowed; opacity: 0.5; }
+.mp3-prev { left: 8px; top: 50%; transform: translateY(-50%); }
+.mp3-next { right: 8px; top: 50%; transform: translateY(-50%); }
+.mp3-center {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: linear-gradient(145deg,#fafafa 0%,#e8e8e8 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.9);
+  display: flex; align-items: center; justify-content: center;
+  color: #555; border: none; cursor: pointer; z-index: 3; transition: var(--transition-fast);
+}
+.mp3-center:hover { color: var(--color-primary); }
+.mp3-sticker { margin-top: -8px; font-family: var(--font-handwritten); font-size: 1rem; color: var(--color-secondary); transform: rotate(3deg); }
 
 /* Paper texture background */
 body::before {

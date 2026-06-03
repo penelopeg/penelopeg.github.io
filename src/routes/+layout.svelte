@@ -2,9 +2,9 @@
   import { base } from '$app/paths';
   import '../app.css';
   import Seo from '$lib/components/Seo.svelte';
-  
+
   let isMenuOpen = false;
-  
+
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
   }

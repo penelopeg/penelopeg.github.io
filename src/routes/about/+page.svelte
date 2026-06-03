@@ -2,16 +2,16 @@
   import { base } from '$app/paths';
 </script>
 
-<div class="about-hero">
+<div class="about-hero ct-hero">
   <div class="container">
     <h1 class="chaos-rotate-1">About Me</h1>
-    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; color: white; z-index: 100;">
+    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
       that's me!
     </div>
     <p class="lead chaos-spacing">Creative explorer on a mission to make the most with whatever we have.</p>
     <div class="hero-actions" style="position: relative;">
       <a href="{base}/portfolio" class="button button-secondary chaos-rotate-2">What?</a>
-      <div class="handwritten" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); color: white; z-index: 100;">
+      <div class="handwritten" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); z-index: 100;">
         see my stuff!
       </div>
     </div>
@@ -116,13 +116,7 @@
   
   <style>
   .about-hero {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    color: white;
-    padding: var(--spacing-16) 0;
-    text-align: center;
-    transform: rotate(0.8deg);
-    transform-origin: center center;
-    position: relative;
+    /* cream hero via ct-hero class */
   }
   
   .about-hero h1 {
