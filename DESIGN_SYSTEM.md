@@ -76,7 +76,6 @@ The `BlogLayout.svelte` renders a silver iPod-style navigation widget at the bot
 - Green LCD screen showing post title + animated progress bar
 - ← prev / → next navigation (disabled at ends)
 - Center button returns to blog listing
-- "lepsies fm" handwritten sticker label
 
 ## Component CSS Classes Reference
 

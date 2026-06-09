@@ -10,6 +10,8 @@
 
   // Posts array (keep in sync with blog listing)
   const posts = [
+    { slug: 'inspired-by-1-community', title: 'InspiredBy #1: Community', date: '2026-06-09' },
+    { slug: 'face-of-suffering', title: 'In the face of suffering you\'ll probably do jack shit', date: '2026-03-02' },
     { slug: 'resolutions-fail-copycat', title: 'Your resolutions fail because you\'re being a copycat', date: '2026-01-09' },
     { slug: 'in-defense-of-goblin-mode', title: 'In defense of Goblin Mode', date: '2025-12-21' },
     { slug: 'recognition-paradox', title: 'The Recognition Paradox', date: '2025-09-24' },
@@ -131,9 +133,6 @@
             <span class="wheel-label wheel-playpause">&#9654;&#10074;&#10074;</span>
           </div>
         </div>
-
-        <!-- Sticker label -->
-        <div class="mp3-sticker handwritten">lepsies fm</div>
       </nav>
     </article>
   </div>

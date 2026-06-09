@@ -3,9 +3,16 @@
 
   const posts = [
     {
+      slug: 'inspired-by-1-community',
+      title: 'InspiredBy #1: Community',
+      description: 'A curated roundup of community builders, social impact projects, documentary picks, and inspiring founders from the Algarve ecosystem.',
+      date: '2026-06-09',
+      tags: ['community', 'algarve', 'startups', 'newsletter']
+    },
+    {
       slug: 'face-of-suffering',
       title: 'In the face of suffering you\'ll probably do jack shit',
-      description: 'On cowardice, solidarity, small acts of rebellion, and why building community before the emergency is the whole point.',
+      description: 'On cowardice, solidarity, small acts of rebellion, and why building community before the emergency is the point.',
       date: '2026-03-02',
       tags: ['community', 'personal', 'society']
     },
@@ -81,7 +88,7 @@
   <div class="container">
     <h1 class="chaos-rotate-1">The Chaos Theory Blog</h1>
     <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
-      these are original. beware!
+      beware, contains thoughts.
     </div>
     <p class="lead chaos-spacing">Thoughts on life, community, culture and creative chaos</p>
     <div class="rss-link-container">

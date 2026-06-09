@@ -3,7 +3,7 @@ layout: blog
 title: "In the face of suffering you'll probably do jack shit"
 subtitle: "or like, it's time for you to start building community"
 date: "2026-03-02"
-description: "On cowardice, solidarity, small acts of rebellion, and why building community before the emergency is the whole point."
+description: "On cowardice, solidarity, small acts of rebellion, and why building community before the emergency is the point."
 tags: ["community", "personal", "society"]
 ---
 
