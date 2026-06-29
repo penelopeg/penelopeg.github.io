@@ -24,7 +24,7 @@
     <div class="about-text">
       <h2 class="chaos-rotate-3">who is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know?</span></h2>
       <p>My name is Penélope, and I am genuinely curious about what makes communities tick.</p>
-      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. By night (and weekends), I'm building local.foundation, a platform to map and develop communities and regional ecosystems from the ground up.</p>
+      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. On my free time, I'm building local.foundation, a platform to map and develop communities and regional ecosystems from the ground up.</p>
       <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
       <p>I've got the brain of a software engineer but the restless heart of an artist and I can't stick to just one thing. And why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
       <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
@@ -57,7 +57,7 @@
         what I'm up to
       </div>
       <ul class="focus-list chaos-spacing">
-      <li>Building a platform in local.foundation for community builders</li>
+      <li>Improving startup ecosystem mapping features on local.foundation</li>
       <li>Developing a mobile app to make networking meaningful</li>
       <li>Leading my team to innovate in the PIM software space</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
