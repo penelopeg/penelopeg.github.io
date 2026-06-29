@@ -67,7 +67,7 @@
   
 <section class="roles-section">
   <div class="container">
-    <h2 class="text-center chaos-rotate-2">What do you do again? <span class="handwritten" style="font-size: 0.8em; margin-left: 10px;"><svg style="display: inline; width: 25px; height: 15px; margin-right: 5px;" viewBox="0 0 40 15" fill="none"><path d="M2,7 Q8,3 16,9 Q24,13 32,5 Q36,3 35,7" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M35,7 L39,5 L39,9 Z" fill="currentColor"/></svg> good question tbh</span></h2>
+    <h2 class="text-center chaos-rotate-2">What do you do again? <span class="handwritten" style="font-size: 0.8em; margin-left: 10px;"><svg style="display: inline; width: 25px; height: 15px; margin-right: 5px;" viewBox="0 0 40 15" fill="none"><path d="M2,7 Q8,3 16,9 Q24,13 32,5 Q36,3 35,7" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M35,7 L39,5 L39,9 Z" fill="currentColor"/></svg> it's complicated...</span></h2>
     <div class="chaos-grid">
       {#each roles as role, i}
         <div class="wonky-border role-card chaos-rotate-{(i % 4) + 1}">
