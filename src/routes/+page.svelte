@@ -2,26 +2,26 @@
   import { base } from '$app/paths';
   const roles = [
     {
-      title: 'Community Builder',
-      description: 'Creating communities that want to create a positive impact @ Geek Sessions, Impact Hackers, and more',
+      title: 'Community & Ecosystem Builder',
+      description: '(...) @ Geek Sessions, Impact Hackers, 351 Startups, and more',
       color: '#3b82f6',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
     },
     {
-      title: 'Founder',
-      description: 'Solving the problem of loneliness in community building @ local.foundation',
+      title: 'Founder & Head of Signals',
+      description: 'Community Development Research & Tool building to understand regional and global impact @ local.foundation',
       color: '#10b981',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
     },
     {
-      title: 'Tech Lead',
-      description: 'Leading an engineering team to deliver high-quality software solutions @ Contentserv',
+      title: 'Tech & Team Lead',
+      description: 'Leading an engineering team to deliver high-quality PIM/DAM software solutions @ Centric Software',
       color: '#7c3aed',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
     },
     {
       title: 'Speaker',
-      description: 'Sharing insights and experiences by yapping a considerate amount',
+      description: 'Sharing insights and experiences with the focus on elevating new emerging impact builders',
       color: '#ff66b3',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`
     },
@@ -84,11 +84,6 @@
           {#if i === 2}
             <div class="handwritten" style="position: absolute; top: -15px; right: -25px; z-index: 100;">
               (day job)
-            </div>
-          {/if}
-          {#if role.title === 'Writer'}
-            <div class="handwritten mobile-note-writer" style="position: absolute; bottom: -20px; left: -25px; z-index: 100;">
-              wannabe
             </div>
           {/if}
         </div>
