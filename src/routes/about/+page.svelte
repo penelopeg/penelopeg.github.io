@@ -114,7 +114,7 @@
       <div class="handwritten" style="position: absolute; top: -18px; right: -20px; z-index: 100; font-size: 0.8rem;">curious?</div>
       <h3 class="scribble-underline">My Life in Weeks</h3>
       <p style="font-size: 0.875rem; color: var(--color-text-light); margin: 0.5rem 0 1rem;">Every week of my life, visualized as a tiny box. The filled ones are gone. The empty ones are still mine.</p>
-      <a href="{base}/weeklife" class="button button-accent chaos-rotate-1">See the grid →</a>
+      <a href="{base}/weeklife" class="button button-secondary chaos-rotate-1">See the grid →</a>
       </div>
     </div>
     </div>
@@ -271,10 +271,6 @@
     position: relative;
   }
 
-  .weeks-card h3 {
-    color: var(--color-accent);
-  }
-
   .contact-links {
     display: flex;
     flex-direction: column;
@@ -284,14 +280,16 @@
 
   /* Sticker-style Button Overrides */
   .hero-actions .button,
-  .contact-links .button {
+  .contact-links .button,
+  .weeks-card .button {
     font-size: 1rem;
     transform: rotate(-1.5deg);
     --hover-rotate: -1.5deg;
   }
 
   .hero-actions .button:hover,
-  .contact-links .button:hover {
+  .contact-links .button:hover,
+  .weeks-card .button:hover {
     transform: translateY(-4px) rotate(calc(var(--hover-rotate) * 1.5));
   }
 
