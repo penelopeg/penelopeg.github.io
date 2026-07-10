@@ -53,14 +53,6 @@
     0,
     Math.round((anniversary(LIFE_EXPECTANCY_YEARS).getTime() - today.getTime()) / MS_PER_WEEK)
   );
-  $: percentLived = clamp(
-    ((today.getTime() - birthDate.getTime()) /
-      (anniversary(LIFE_EXPECTANCY_YEARS).getTime() - birthDate.getTime())) *
-      100,
-    0,
-    100
-  ).toFixed(1);
-
   // Life phase per year of age; every color is at least 3:1 against white (WCAG 1.4.11)
   const phases = [
     { from: 0,  to: 5,  color: '#f43f5e',                 label: 'Early Childhood' },
@@ -98,10 +90,6 @@
         <span class="stat-number">{weeksLived.toLocaleString()}</span>
         <span class="stat-label">weeks lived</span>
       </div>
-      <div class="stat-chip wonky-border chaos-rotate-1">
-        <span class="stat-number">{percentLived}%</span>
-        <span class="stat-label">of {LIFE_EXPECTANCY_YEARS}-year life</span>
-      </div>
       <div class="stat-chip wonky-border chaos-rotate-4">
         <span class="stat-number">{weeksAhead.toLocaleString()}</span>
         <span class="stat-label">weeks ahead</span>
@@ -118,8 +106,8 @@
   <div class="container">
     <p class="sr-only">
       A decorative grid of {totalWeeks.toLocaleString()} boxes, one per week of a
-      {LIFE_EXPECTANCY_YEARS}-year life. {weeksLived.toLocaleString()} weeks are filled in so far —
-      about {percentLived}% — with {weeksAhead.toLocaleString()} still ahead.
+      {LIFE_EXPECTANCY_YEARS}-year life. {weeksLived.toLocaleString()} weeks are filled in so far,
+      with {weeksAhead.toLocaleString()} still ahead.
     </p>
 
     <div class="grid-wrapper" aria-hidden="true">
@@ -277,13 +265,21 @@
   }
 
   .grid-wrapper {
-    --cell-size: 10px;
-    --cell-gap: 1.5px;
+    --cell-size: 14px;
+    --cell-gap: 2px;
     --label-width: 2.5rem;
     --row-width: calc(52 * var(--cell-size) + 51 * var(--cell-gap));
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 0.5rem;
+  }
+
+  /* Header and grid share a fixed track width, centered on the page;
+     when the viewport is narrower they left-align and scroll instead */
+  .grid-header,
+  .life-grid {
+    width: fit-content;
+    margin-inline: auto;
   }
 
   /* Header mirrors the .year-row layout so the ticks align with the columns */
@@ -457,6 +453,13 @@
   }
 
   /* ── Responsive ───────────────────────────── */
+
+  @media (max-width: 900px) {
+    .grid-wrapper {
+      --cell-size: 10px;
+      --cell-gap: 1.5px;
+    }
+  }
 
   @media (max-width: 640px) {
     .grid-wrapper {
