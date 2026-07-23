@@ -44,6 +44,12 @@
           description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
         },
         {
+          title: 'Secretary, General Assembly Board',
+          organization: '351 Startup Community',
+          period: 'Jul 2026 - Present',
+          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
+        },
+        {
           title: 'Facilitator',
           organization: 'Techstars Startup Weekend',
           period: '2023 - Present',
@@ -77,9 +83,19 @@
       tagline: 'Building scalable solutions with modern technology',
       experience: [
         {
+          title: 'Senior Engineering Manager',
+          company: 'Centric Software',
+          period: 'Apr 2025 - Present',
+          achievements: [
+            'Lead engineering team delivering the PIM/DAM platform',
+            'Mentor and grow engineers and technical leads',
+            'Partner with product and design leadership on technical strategy'
+          ]
+        },
+        {
           title: 'Technical & Team Lead',
           company: 'Contentserv',
-          period: '2016 - Present',
+          period: '2016 - Mar 2025',
           achievements: [
             'Lead efforts in main PIM features, from architecture approach to delivery',
             'Build modern interfaces with a high focus on UI/UX',
@@ -119,7 +135,7 @@
         }
       ],
       skills: {
-        core: ['Full-Stack Development', 'Technical Architecture', 'Team Leadership', 'Code Review', 'Performance Optimization'],
+        core: ['Engineering Management', 'People Management', 'Full-Stack Development', 'Technical Architecture', 'Team Leadership', 'Code Review', 'Performance Optimization'],
         technical: ['React', 'PHP', 'Nodejs', 'HTML/CSS/JavaScript', 'jQuery', 'MySQL', 'Python', 'Elixir', 'C#', 'Shopify'],
         soft: ['Mentoring', 'Technical Communication', 'Problem Solving', 'Agile Methodologies', 'Project Management']
       },
@@ -175,6 +191,12 @@
           organization: '351 Startup Community',
           period: '2024 - Present',
           description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
+        },
+        {
+          title: 'Secretary, General Assembly Board',
+          organization: '351 Startup Community',
+          period: 'Jul 2026 - Present',
+          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
         },
         {
           title: 'Facilitator',
@@ -238,9 +260,19 @@
           ]
         },
         {
+          title: 'Senior Engineering Manager',
+          company: 'Centric Software',
+          period: 'Apr 2025 - Present',
+          achievements: [
+            'Lead engineering team delivering the PIM/DAM platform',
+            'Mentor and grow engineers and technical leads',
+            'Partner with product and design leadership on technical strategy'
+          ]
+        },
+        {
           title: 'Technical & Team Lead',
           company: 'Contentserv',
-          period: '2016 - Present',
+          period: '2016 - Mar 2025',
           achievements: [
             'Lead efforts in main PIM features, from architecture approach to delivery',
             'Build modern interfaces with a high focus on UI/UX',
@@ -291,7 +323,7 @@
         }
       ],
       skills: {
-        core: ['Product Strategy', 'Product Management', 'Full-Stack Development', 'Technical Architecture', 'Team Leadership', 'Event Planning', 'Public Speaking', 'Community Engagement', 'User Research', 'Go-to-Market Strategy'],
+        core: ['Product Strategy', 'Product Management', 'Engineering Management', 'Full-Stack Development', 'Technical Architecture', 'Team Leadership', 'Event Planning', 'Public Speaking', 'Community Engagement', 'User Research', 'Go-to-Market Strategy'],
         technical: ['React', 'PHP', 'Nodejs', 'HTML/CSS/JavaScript', 'jQuery', 'MySQL', 'Python', 'Elixir', 'C#', 'Shopify', 'Event Management Platforms', 'Social Media', 'Content Creation'],
         soft: ['Strategic Thinking', 'Problem Solving', 'Stakeholder Management', 'Mentoring', 'Technical Communication', 'Agile Methodologies', 'Project Management', 'Networking', 'Empathy', 'Facilitation', 'Storytelling']
       },
@@ -301,6 +333,12 @@
           organization: '351 Startup Community',
           period: '2024 - Present',
           description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
+        },
+        {
+          title: 'Secretary, General Assembly Board',
+          organization: '351 Startup Community',
+          period: 'Jul 2026 - Present',
+          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
         },
         {
           title: 'Facilitator',

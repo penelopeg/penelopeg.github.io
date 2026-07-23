@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   const roles = [
     {
-      title: 'Community & Ecosystem Builder',
+      title: 'Ecosystem Builder',
       description: 'Creating communities that want to create a positive impact @ Geek Sessions, Impact Hackers, 351 Startups, and more',
       color: '#3b82f6',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
@@ -14,7 +14,7 @@
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
     },
     {
-      title: 'Tech & Team Lead',
+      title: 'Tech Team Lead',
       description: 'Leading an engineering team to deliver high-quality PIM/DAM software solutions @ Centric Software',
       color: '#7c3aed',
       icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
