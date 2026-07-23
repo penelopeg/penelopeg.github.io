@@ -95,6 +95,7 @@
     <p class="lead"><span class="scribble-underline">Exploring the intersection of technology, art, and community</span></p>
     <div class="hero-actions">
         <a href="{base}/about" class="button button-primary">Who?</a>
+        <a href="{base}/cv" class="button button-secondary">CV</a>
     </div>
   </div>
 </div>
@@ -290,10 +291,22 @@
   }
 
   /* Sticker-style Button Overrides */
+  .hero-actions {
+    display: flex;
+    gap: var(--spacing-4);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .hero-actions .button {
     font-size: 1rem;
     transform: rotate(-1.5deg);
     --hover-rotate: -1.5deg;
+  }
+
+  .hero-actions .button:nth-child(2) {
+    transform: rotate(1deg);
+    --hover-rotate: 1deg;
   }
 
   .hero-actions .button:hover {
