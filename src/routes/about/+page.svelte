@@ -57,11 +57,10 @@
         what I'm up to
       </div>
       <ul class="focus-list chaos-spacing">
-      <li>Improving startup ecosystem mapping features on local.foundation</li>
-      <li>Developing a mobile app to make networking meaningful</li>
-      <li>Leading my team to innovate in the PIM software space</li>
+      <li>Creating reports for social impact, youth and women in tech for local.foundation collaborations</li>
+      <li>Designing team building exercises that promote critical thinking</li>
+      <li>Developing a task wheel & personal pokedex app for neurodivergent folk</li>
       <li>Brainstorming an RPG framework for Impact Hackers</li>
-      <li>Creating a wheel app for neurodivergent folk</li>
       <li>Prepping a new format for future-led people</li>
       <li>Finishing my first draft for a space opera book</li>
       </ul>

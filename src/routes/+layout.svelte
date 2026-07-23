@@ -30,7 +30,6 @@
           chaos theory!
         </div>
       </div>
-      <a href="{base}/trinketbox" class="nav-link chaos-rotate-1">Trinketbox</a>
       <!-- <a href="{base}/events" class="nav-link">Events</a> -->
       <!-- <a href="{base}/cv" class="nav-link">CV</a> -->
     </div>
@@ -58,7 +57,6 @@
       <a href="{base}/about" class="mobile-nav-link">About</a>
       <a href="{base}/portfolio" class="mobile-nav-link">Portfolio</a>
       <a href="{base}/blog" class="mobile-nav-link">Blog</a>
-      <a href="{base}/trinketbox" class="mobile-nav-link">Trinketbox</a>
     </div>
     {/if}
   </nav>
