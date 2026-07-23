@@ -87,9 +87,8 @@
           company: 'Centric Software',
           period: 'Apr 2025 - Present',
           achievements: [
-            'Lead multiple engineering teams delivering the PIM/DAM platform',
-            'Own engineering roadmap execution and delivery across squads',
-            'Mentor and grow engineering managers and senior engineers',
+            'Lead engineering team delivering the PIM/DAM platform',
+            'Mentor and grow engineers and technical leads',
             'Partner with product and design leadership on technical strategy'
           ]
         },
@@ -265,9 +264,8 @@
           company: 'Centric Software',
           period: 'Apr 2025 - Present',
           achievements: [
-            'Lead multiple engineering teams delivering the PIM/DAM platform',
-            'Own engineering roadmap execution and delivery across squads',
-            'Mentor and grow engineering managers and senior engineers',
+            'Lead engineering team delivering the PIM/DAM platform',
+            'Mentor and grow engineers and technical leads',
             'Partner with product and design leadership on technical strategy'
           ]
         },
