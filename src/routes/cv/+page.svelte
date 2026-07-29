@@ -874,9 +874,9 @@
   }
 
   .spoilers-button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px dashed rgba(255, 255, 255, 0.6);
-    color: white;
+    background: rgba(15, 23, 42, 0.05);
+    border: 2px dashed rgba(15, 23, 42, 0.5);
+    color: var(--color-text);
     padding: var(--spacing-3) var(--spacing-5);
     border-radius: 0;
     font-size: 0.85rem;
@@ -890,7 +890,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transform: rotate(-0.8deg);
-    box-shadow: 4px 4px 0 rgba(255, 255, 255, 0.15);
+    box-shadow: 4px 4px 0 rgba(15, 23, 42, 0.15);
   }
 
   .spoilers-button::before {
@@ -900,14 +900,14 @@
     left: 4px;
     right: -4px;
     bottom: -4px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(15, 23, 42, 0.2);
     pointer-events: none;
   }
 
   .spoilers-button:hover {
     transform: rotate(0deg) translateY(-1px);
     border-style: solid;
-    box-shadow: 5px 5px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 5px 5px 0 rgba(15, 23, 42, 0.2);
   }
 
   .spoilers-button.active {
@@ -975,7 +975,8 @@
 
   .cv-actions .button-secondary {
     background: transparent;
-    color: white;
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
   }
 
   .cv-actions .button:hover {
