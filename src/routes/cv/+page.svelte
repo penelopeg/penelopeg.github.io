@@ -41,13 +41,7 @@
           title: 'Volunteer',
           organization: '351 Startup Community',
           period: '2024 - Present',
-          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
-        },
-        {
-          title: 'Secretary, General Assembly Board',
-          organization: '351 Startup Community',
-          period: 'Jul 2026 - Present',
-          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
+          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support. Serve as Secretary on the General Assembly Board, supporting governance and organizational decisions.'
         },
         {
           title: 'Facilitator',
@@ -190,13 +184,7 @@
           title: 'Volunteer',
           organization: '351 Startup Community',
           period: '2024 - Present',
-          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
-        },
-        {
-          title: 'Secretary, General Assembly Board',
-          organization: '351 Startup Community',
-          period: 'Jul 2026 - Present',
-          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
+          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support. Serve as Secretary on the General Assembly Board, supporting governance and organizational decisions.'
         },
         {
           title: 'Facilitator',
@@ -332,13 +320,7 @@
           title: 'Volunteer',
           organization: '351 Startup Community',
           period: '2024 - Present',
-          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support.'
-        },
-        {
-          title: 'Secretary, General Assembly Board',
-          organization: '351 Startup Community',
-          period: 'Jul 2026 - Present',
-          description: 'Serve on the General Assembly Board, supporting governance and organizational decisions for Portugal\'s startup ecosystem community.'
+          description: 'Contributing to Portugal\'s startup ecosystem through community engagement and support. Serve as Secretary on the General Assembly Board, supporting governance and organizational decisions.'
         },
         {
           title: 'Facilitator',
