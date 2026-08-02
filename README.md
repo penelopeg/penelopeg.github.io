@@ -1,6 +1,6 @@
-# Penélope Gonçalves - Portfolio Website
+# Portfolio
 
-Personal portfolio and blog for Penélope Gonçalves, showcasing work as a Tech Lead, Community Builder, and Founder.
+Personal portfolio and blog
 
 ## Features
 
@@ -8,8 +8,6 @@ Personal portfolio and blog for Penélope Gonçalves, showcasing work as a Tech 
 - **Blog with Markdown**: Write blog posts in Markdown with mdsvex
 - **RSS Feed**: Subscribe to blog updates at `/feed`
 - **Responsive Design**: Mobile-first, works across all devices
-- **SEO Optimized**: Meta tags, structured data, RSS auto-discovery
-- **Static Site**: Fast, secure, deployed to GitHub Pages
 
 ## Tech Stack
 
@@ -19,7 +17,7 @@ Personal portfolio and blog for Penélope Gonçalves, showcasing work as a Tech 
 - **Deployment**: GitHub Actions → GitHub Pages
 - **Fonts**: Roboto, Space Grotesk, Kalam (handwritten)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -82,22 +80,8 @@ Your markdown content here...
 
 See `src/routes/blog/README.md` for detailed instructions.
 
-## 🎨 Design System
 
-- **Rounded Corners**: 12-20px border radius
-- **Soft Shadows**: Blur shadows instead of hard offsets
-- **Sticker Elements**: White borders, lift animations
-- **Playful Rotations**: 1-3° asymmetric tilts
-- **Hover Effects**: Lift up on hover with increased shadows
-
-### Color Palette
-
-- **Primary**: `#0891b2` (cyan/teal)
-- **Secondary**: `#9333ea` (purple)
-- **Accent**: `#10b981` (green)
-- **Text**: `#0f172a` (dark slate)
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/
