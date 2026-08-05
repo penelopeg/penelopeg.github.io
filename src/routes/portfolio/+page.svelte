@@ -73,6 +73,7 @@
       title: 'Community Map',
       description: 'Physical exhibition at IPDJ mapping the connections between people and community initiatives, now living on as an interactive piece',
       tags: ['community', 'art'],
+      image: base + '/images/portfolio/community-map.jpg',
       url: 'https://local.foundation/communitymap'
     }
   ];
@@ -123,11 +124,7 @@
       {#each filteredItems as item, i}
         <a href={item.url} class="portfolio-card wonky-border chaos-rotate-{(i % 4) + 1}" target="_blank" rel="noopener noreferrer">
           <div class="portfolio-image">
-            {#if item.image}
-              <img src={item.image} alt={item.title} />
-            {:else}
-              <div class="portfolio-image-placeholder">🗺️</div>
-            {/if}
+            <img src={item.image} alt={item.title} />
           </div>
           <div class="portfolio-info">
             <div class="title-row">
@@ -235,16 +232,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .portfolio-image-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   }
 
   .portfolio-info {
