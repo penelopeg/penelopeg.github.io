@@ -68,6 +68,13 @@
       tags: ['art'],
       image: base + '/images/portfolio/art.png',
       url: 'https://instagram.com/lepsies_art'
+    },
+    {
+      title: 'Community Map',
+      description: 'Physical exhibition at IPDJ mapping the connections between people and community initiatives, now living on as an interactive piece',
+      tags: ['community', 'art'],
+      image: base + '/images/portfolio/community-map.jpg',
+      url: 'https://local.foundation/communitymap'
     }
   ];
 
