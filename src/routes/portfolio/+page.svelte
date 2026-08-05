@@ -68,6 +68,12 @@
       tags: ['art'],
       image: base + '/images/portfolio/art.png',
       url: 'https://instagram.com/lepsies_art'
+    },
+    {
+      title: 'Community Map',
+      description: 'Physical exhibition at IPDJ mapping the connections between people and community initiatives, now living on as an interactive piece',
+      tags: ['community', 'art'],
+      url: 'https://local.foundation/communitymap'
     }
   ];
 
@@ -117,7 +123,11 @@
       {#each filteredItems as item, i}
         <a href={item.url} class="portfolio-card wonky-border chaos-rotate-{(i % 4) + 1}" target="_blank" rel="noopener noreferrer">
           <div class="portfolio-image">
-            <img src={item.image} alt={item.title} />
+            {#if item.image}
+              <img src={item.image} alt={item.title} />
+            {:else}
+              <div class="portfolio-image-placeholder">🗺️</div>
+            {/if}
           </div>
           <div class="portfolio-info">
             <div class="title-row">
@@ -225,6 +235,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .portfolio-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   }
 
   .portfolio-info {
