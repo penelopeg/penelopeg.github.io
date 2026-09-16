@@ -15,6 +15,13 @@
 
   const events = [
     {
+      title: 'SheSapiens Community Leaders Retreat',
+      description: 'Retreat for SheSapiens community leaders to work on the future of their community and on themselves, hosted and facilitated in collaboration between local.foundation and flourish mode.',
+      locations: ['Fonte do Palheiro, Algarve'],
+      date: 'September 11-13, 2026',
+      type: 'workshop'
+    },
+    {
       title: 'Portugal Tech Week Palace',
       description: 'National tech event showcasing innovation and technology across Portugal.',
       locations: ['Lisbon'],
