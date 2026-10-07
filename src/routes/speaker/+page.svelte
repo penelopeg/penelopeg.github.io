@@ -174,8 +174,7 @@
 
   .speaker-content {
     padding: var(--spacing-8) 0;
-    transform: rotate(-0.3deg);
-    transform-origin: center center;
+
   }
 
   .talks-grid {

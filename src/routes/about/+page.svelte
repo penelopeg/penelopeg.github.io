@@ -126,13 +126,12 @@
     font-size: 1.25rem;
     opacity: 0.9;
     max-width: 48rem;
-    margin: 0 auto;
+    margin: 0;
   }
   
   .about-content {
     padding: var(--spacing-16) 0;
-    transform: rotate(-0.2deg);
-    transform-origin: center center;
+
     position: relative;
   }
   

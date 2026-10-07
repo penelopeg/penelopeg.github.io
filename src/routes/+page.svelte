@@ -1,247 +1,618 @@
 <script>
   import { base } from '$app/paths';
-  const roles = [
-    {
-      title: 'Ecosystem Builder',
-      description: 'Creating communities that want to create a positive impact @ Geek Sessions, Impact Hackers, 351 Startups, and more',
-      color: '#3b82f6',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`
-    },
-    {
-      title: 'Founder & Head of Signals',
-      description: 'Community Development Research & Tool building to understand regional and global impact @ local.foundation',
-      color: '#10b981',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
-    },
-    {
-      title: 'Tech Team Lead',
-      description: 'Leading an engineering team to deliver high-quality PIM/DAM software solutions @ Centric Software',
-      color: '#7c3aed',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m6.366 2.634a9 9 0 0 1 0 12.728M7.634 5.634a9 9 0 0 0 0 12.728"/><path d="M3 12h3m12 0h3M12 18v3M12 9v6"/></svg>`
-    },
-    {
-      title: 'Speaker',
-      description: 'Sharing insights and experiences with the focus on elevating new emerging impact builders',
-      color: '#ff66b3',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`
-    },
-    {
-      title: 'Writer',
-      description: 'Legendary google keep notes writer, a thousand fiction projects to publish, posting the occasional diary entry @ substack',
-      color: '#06b6d4',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`
-    },
-    {
-      title: 'Artist',
-      description: 'Exploring creativity (and a lack of natural talent) through digital art, visual storytelling and the occasional design',
-      color: '#f59e0b',
-      icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`
-    }
+  import SectionHeading from '$lib/components/SectionHeading.svelte';
+  import WorkCard from '$lib/components/WorkCard.svelte';
+  import LabTicker from '$lib/components/LabTicker.svelte';
+  import OfflineTicket from '$lib/components/OfflineTicket.svelte';
+  import MediaClip from '$lib/components/MediaClip.svelte';
+  import { buckets } from '$lib/data/works.js';
+  import { experiments, statusLabel } from '$lib/data/lab.js';
+  import { offlineConcepts } from '$lib/data/offline.js';
+  import { clips } from '$lib/data/media.js';
+  import { posts, formatDate } from '$lib/data/posts.js';
+
+  const roles = ['community builder', 'founder', 'tech lead', 'host', 'writer', 'painter', 'dancer'];
+  const latestPosts = posts.slice(0, 3);
+
+  const tickerItems = [
+    ...experiments.map((e) => `${statusLabel[e.status]}: ${e.title}`),
+    `new on the blog: ${posts[0].title}`
   ];
 </script>
-  
-<div class="hero ct-hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Olá, I'm Penélope, and I'm a</h1>
-      <p class="hero-subtitle chaos-spacing">
-        {#each roles as role}
-          <span class="ct-strikethrough" style="--role-color: {role.color}">{role.title.toLowerCase()}</span>
-          {#if role !== roles[roles.length - 1]} / {/if}
+
+<!-- ── HERO ────────────────────────────────────────────────────────────── -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Penélope Gonçalves · Algarve, PT</p>
+      <h1 id="hero-title">
+        Building <span class="serif-italic">interactive spaces</span> and
+        <span class="mark">impact communities</span> that <span class="nowrap">co-create</span> the future.
+      </h1>
+      <ul class="roles" aria-label="Roles">
+        {#each roles as role (role)}
+          <li>{role}</li>
         {/each}
-      </p>
-      <p class="hero-subtitle escape-container">agent of (good) chaos</p>
-      <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
-        (this is me!)
-      </div>
-      <div class="hero-actions chaos-spacing">
-        <a href="{base}/about" class="button button-primary chaos-rotate-1">Who?</a>
-        <a href="{base}/portfolio" class="button button-secondary chaos-rotate-3">What?</a>
-        <div class="handwritten" style="position: absolute; bottom: -25px; left: 50%; transform: translateX(-50%); z-index: 100;">
-          click these!
-        </div>
+      </ul>
+      <div class="hero-actions">
+        <a href="#works" class="button button-primary">See selected works ↓</a>
+        <a href="#lab" class="button">Peek into the lab</a>
       </div>
     </div>
+
+    <figure class="portrait">
+      <span class="tape tape-a" aria-hidden="true"></span>
+      <span class="tape tape-b" aria-hidden="true"></span>
+      <img
+        src="{base}/images/profile/me_alternative.jpg"
+        alt="Penélope Gonçalves, smiling"
+        width="480"
+        height="600"
+      />
+      <figcaption class="handwritten">(this is me, hi!)</figcaption>
+    </figure>
   </div>
-</div>
-  
-<section class="roles-section">
+</section>
+
+<LabTicker items={tickerItems} />
+
+<!-- ── SELECTED WORKS ──────────────────────────────────────────────────── -->
+<section id="works" class="works" aria-labelledby="works-title">
   <div class="container">
-    <h2 class="text-center chaos-rotate-2">What do you do again? <span class="handwritten" style="font-size: 0.8em; margin-left: 10px;"><svg style="display: inline; width: 25px; height: 15px; margin-right: 5px;" viewBox="0 0 40 15" fill="none"><path d="M2,7 Q8,3 16,9 Q24,13 32,5 Q36,3 35,7" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M35,7 L39,5 L39,9 Z" fill="currentColor"/></svg> it's complicated...</span></h2>
-    <div class="chaos-grid">
-      {#each roles as role, i}
-        <div class="wonky-border role-card chaos-rotate-{(i % 4) + 1}">
-          <div class="role-icon" style="--role-color: {role.color}">
-            {@html role.icon}
+    <SectionHeading
+      id="works-title"
+      eyebrow="Selected works"
+      title="Three threads, one practice."
+      blurb="I don't do one thing, and I don't pretend to. Everything here is about using technology, stories and gatherings to bring people together."
+    />
+
+    {#each buckets as bucket (bucket.id)}
+      <section class="bucket" aria-labelledby="bucket-{bucket.id}" style="--accent: {bucket.color}">
+        <div class="bucket-head">
+          <span class="bucket-index">{bucket.index}</span>
+          <div>
+            <h3 id="bucket-{bucket.id}" class="bucket-title">{bucket.title}</h3>
+            <p class="bucket-blurb">{bucket.blurb}</p>
           </div>
-          <h3 class="scribble-underline">{role.title}</h3>
-          <p>{role.description}</p>
-          {#if i === 0}
-            <div class="handwritten" style="position: absolute; top: -30px; right: -15px; z-index: 100;">
-              start here!
-            </div>
-          {/if}
-          {#if i === 2}
-            <div class="handwritten" style="position: absolute; top: -15px; right: -25px; z-index: 100;">
-              (day job)
-            </div>
-          {/if}
         </div>
+        <div class="work-grid">
+          {#each bucket.works as work, i (work.title)}
+            <WorkCard {work} {i} accent={bucket.color} />
+          {/each}
+        </div>
+      </section>
+    {/each}
+
+    <p class="more">
+      <a href="{base}/portfolio" class="button button-ghost">Browse the full index →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ── CURRENT EXPERIMENTS ─────────────────────────────────────────────── -->
+<section id="lab" class="lab" aria-labelledby="lab-title">
+  <div class="container lab-grid">
+    <div>
+      <SectionHeading
+        id="lab-title"
+        eyebrow="Current experiments"
+        title="The lab bench."
+        blurb="Unpolished, in-progress, honest. Prototypes, half-drafts and ideas I'm still arguing with."
+      />
+      <p class="handwritten lab-scribble">updated whenever I break something new</p>
+    </div>
+
+    <ol class="lab-log">
+      {#each experiments as exp (exp.title)}
+        <li class="entry">
+          <div class="entry-meta">
+            <time datetime={exp.date}>{exp.date}</time>
+            <span class="status status--{exp.status}">{statusLabel[exp.status]}</span>
+            <span class="kind">#{exp.kind}</span>
+          </div>
+          <h3>
+            {#if exp.url}<a href={exp.url}>{exp.title}</a>{:else}{exp.title}{/if}
+          </h3>
+          <p>{exp.note}</p>
+          {#if exp.media?.type === 'image'}
+            <img src="{base}{exp.media.src}" alt={exp.media.alt ?? ''} loading="lazy" class="entry-media" />
+          {:else if exp.media?.type === 'video'}
+            <!-- svelte-ignore a11y_media_has_caption -->
+            <video src="{base}{exp.media.src}" controls preload="none" playsinline class="entry-media"></video>
+          {:else if exp.media?.type === 'audio'}
+            <audio src="{base}{exp.media.src}" controls preload="none" class="entry-media"></audio>
+          {/if}
+        </li>
+      {/each}
+    </ol>
+  </div>
+
+  <div class="container notebook">
+    <div class="notebook-head">
+      <p class="eyebrow">Fresh from the notebook</p>
+      <a href="{base}/blog" class="notebook-all">All writing →</a>
+    </div>
+    <ul class="notebook-list">
+      {#each latestPosts as post (post.slug)}
+        <li>
+          <a href="{base}/blog/{post.slug}" class="note-link">
+            <time datetime={post.date}>{formatDate(post.date)}</time>
+            <span class="note-title">{post.title}</span>
+            <span class="note-desc">{post.description}</span>
+          </a>
+        </li>
+      {/each}
+    </ul>
+  </div>
+</section>
+
+<!-- ── LIMITED RUN / OFFLINE ───────────────────────────────────────────── -->
+<section id="offline" class="offline" aria-labelledby="offline-title">
+  <div class="container">
+    <SectionHeading
+      id="offline-title"
+      index="IRL"
+      eyebrow="Offline-first"
+      title="Limited runs."
+      blurb="Pop-ups, retreats and one-off formats. They only happen once, in one room, with whoever showed up. That's the point."
+    />
+    <div class="ticket-grid">
+      {#each offlineConcepts as concept, i (concept.title)}
+        <OfflineTicket {concept} {i} />
+      {/each}
+    </div>
+    <p class="offline-cta">
+      Want a gathering designed around your problem?
+      <a href="https://zez.am/lepsies">Let's talk ↗</a>
+    </p>
+  </div>
+</section>
+
+<!-- ── PRESENCE (AUDIO / VISUAL) ───────────────────────────────────────── -->
+<section id="presence" class="presence" aria-labelledby="presence-title">
+  <div class="container">
+    <SectionHeading
+      id="presence-title"
+      eyebrow="Press play"
+      title="In my own voice."
+      blurb="Voice-read excerpts, the sound of a room mid-hackathon, and the odd movement sketch."
+    />
+    <div class="clip-grid">
+      {#each clips as clip (clip.title)}
+        <MediaClip {clip} />
       {/each}
     </div>
   </div>
 </section>
-  
+
 <style>
+  /* ── Hero ── */
   .hero {
-    padding: var(--spacing-8) 0;
-  }
-  
-  .hero-content {
-    max-width: 100rem;
-    margin: 0 auto;
-    padding: 0 var(--spacing-4);
     position: relative;
+    padding: var(--spacing-12) 0 var(--spacing-16);
+    overflow: hidden;
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      padding: var(--spacing-16) 0 var(--spacing-24);
+    }
+  }
+
+  /* A soft terracotta sun behind the portrait */
+  .hero::before {
+    content: '';
+    position: absolute;
+    width: 46rem;
+    height: 46rem;
+    right: -14rem;
+    top: -10rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--coral) 32%, transparent), transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    position: relative;
+    display: grid;
+    gap: var(--spacing-12);
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1.6fr 1fr;
+    }
   }
 
   .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-4);
+    font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    margin: var(--spacing-6) 0;
+    max-width: 16ch;
   }
 
-  .hero-subtitle {
-    font-size: 1.75rem;
-    opacity: 0.9;
-    margin-bottom: var(--spacing-4);
-    line-height: 1.3;
-  }
-  
-  @media (min-width: 640px) {
-    .hero {
-      padding: var(--spacing-12) 0;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 2.75rem;
-      margin-bottom: var(--spacing-6);
-    }
+  .hero h1 .serif-italic {
+    color: var(--terracotta);
   }
 
-  @media (min-width: 1024px) {
-    .hero {
-      padding: var(--spacing-16) 0;
-    }
-
-    .hero h1 {
-      font-size: 8.5rem;
-    }
-    
-    .hero-subtitle {
-      font-size: 5.25rem;
-      margin-bottom: var(--spacing-8);
-    }
+  .nowrap {
+    white-space: nowrap;
   }
-  
-  .roles-section {
-    padding: var(--spacing-8) 0;
-    background-color: var(--color-background);
+
+  .mark {
+    background: linear-gradient(transparent 62%, color-mix(in srgb, var(--cobalt) 30%, transparent) 62%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .pulse {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--olive);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--olive) 60%, transparent);
+    animation: pulse 2s infinite;
+  }
+
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    list-style: none;
+    margin-bottom: var(--spacing-8);
+  }
+
+  .roles li {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.7rem;
+    border: 1.5px solid var(--line);
+    border-radius: var(--border-radius-sticker);
+    color: var(--ink-soft);
+    background: color-mix(in srgb, var(--paper-card) 70%, transparent);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+  }
+
+  .portrait {
     position: relative;
-    transform: rotate(-0.4deg);
-    transform-origin: center center;
+    justify-self: center;
+    width: min(78%, 22rem);
+    padding: 0.75rem 0.75rem 3.25rem;
+    background: var(--paper-card);
+    box-shadow: var(--shadow-card-hover);
+    transform: rotate(2.5deg);
+    transition: transform 0.4s var(--ease-out);
   }
-  
-  .roles-section h2 {
-    margin-bottom: var(--spacing-6);
+
+  .portrait:hover {
+    transform: rotate(0deg) scale(1.01);
   }
-  
-  .roles-grid {
+
+  .portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: sepia(0.12) saturate(0.95);
+  }
+
+  .portrait figcaption {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .tape-a {
+    top: -0.7rem;
+    left: -1.2rem;
+    transform: rotate(-28deg);
+  }
+
+  .tape-b {
+    top: -0.7rem;
+    right: -1.2rem;
+    transform: rotate(24deg);
+  }
+
+  /* ── Works ── */
+  .works {
+    padding: var(--spacing-24) 0 var(--spacing-16);
+  }
+
+  .bucket {
+    padding-top: var(--spacing-8);
+    margin-bottom: var(--spacing-16);
+    border-top: 2px solid var(--ink);
+  }
+
+  .bucket-head {
     display: grid;
-    gap: var(--spacing-6);
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-4) var(--spacing-6);
+    align-items: start;
+    margin-bottom: var(--spacing-8);
   }
-  
+
+  .bucket-index {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3rem, 7vw, 5rem);
+    line-height: 0.85;
+    color: var(--accent);
+  }
+
+  .bucket-title {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .bucket-blurb {
+    margin: 0;
+    color: var(--ink-soft);
+    max-width: 40rem;
+  }
+
+  .work-grid {
+    display: grid;
+    gap: var(--spacing-12) var(--spacing-8);
+    grid-template-columns: 1fr;
+  }
+
   @media (min-width: 640px) {
-    .roles-grid {
+    .work-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
-  @media (min-width: 1024px) {
-    .roles-grid {
-      grid-template-columns: repeat(3, 1fr);
+
+  @media (min-width: 1100px) {
+    .work-grid {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
-  
-  .role-card {
+
+  .more {
     text-align: center;
   }
-  
-  .role-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 9999px;
-    background-color: var(--role-color);
-    color: white;
-    margin-bottom: var(--spacing-4);
-  }
-  
-  .role-card h3 {
-    color: var(--color-text);
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-2);
-  }
-  
-  .role-card p {
-    color: var(--color-text-light);
-    font-size: 0.875rem;
-    margin-bottom: 0;
+
+  /* ── Lab ── */
+  .lab {
+    padding: var(--spacing-24) 0;
+    background-color: var(--paper-deep);
+    background-image:
+      var(--grain),
+      linear-gradient(var(--line) 1px, transparent 1px);
+    background-size: auto, 100% 2rem;
+    border-block: 1px solid var(--line);
   }
 
-  .strikethrough {
-    position: relative;
+  .lab-grid {
+    display: grid;
+    gap: var(--spacing-8);
+  }
+
+  @media (min-width: 1024px) {
+    .lab-grid {
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--spacing-16);
+    }
+
+    .lab-grid > div {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+  }
+
+  .lab-scribble {
+    font-size: 1.5rem;
     display: inline-block;
   }
 
-  .strikethrough::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    height: 20px;
-    background: var(--role-color);
-    transform: rotate(-4deg);
-    opacity: 1;
-    transition: all 0.3s ease;
+  .lab-log {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-4);
   }
 
-  .strikethrough:hover::after {
-    opacity: 0;
-    transform: rotate(-5deg) scale(1.2);
+  .entry {
+    padding: var(--spacing-6);
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--terracotta);
+    border-radius: var(--border-radius-card);
+    transition: var(--transition-base);
   }
 
-  /* Sticker-style buttons */
-  .hero-actions .button {
-    font-size: 1rem;
-    --hover-rotate: 1deg;
+  .entry:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-card);
   }
 
-  .hero-actions .button:nth-child(odd) {
-    transform: rotate(-2deg);
+  .entry-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-soft);
   }
 
-  .hero-actions .button:nth-child(even) {
-    transform: rotate(2deg);
+  .status {
+    padding: 0.1rem 0.55rem;
+    border-radius: var(--border-radius-sticker);
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    background: var(--paper);
   }
 
-  .hero-actions .button:hover {
-    transform: translateY(-4px) rotate(calc(var(--hover-rotate) * 2));
+  .status--building {
+    background: var(--ochre);
+  }
+  .status--brewing {
+    background: color-mix(in srgb, var(--coral) 55%, var(--paper));
+  }
+  .status--testing {
+    background: color-mix(in srgb, var(--cobalt) 25%, var(--paper));
+  }
+  .status--shipped {
+    background: var(--olive);
+    color: var(--paper);
+  }
+
+  .entry h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-2);
+  }
+
+  .entry p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+
+  .entry-media {
+    margin-top: var(--spacing-4);
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  .notebook {
+    margin-top: var(--spacing-16);
+  }
+
+  .notebook-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: var(--spacing-3);
+  }
+
+  .notebook-all {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--terracotta);
+  }
+
+  .notebook-list {
+    list-style: none;
+  }
+
+  .note-link {
+    display: grid;
+    gap: var(--spacing-1) var(--spacing-8);
+    padding: var(--spacing-6) 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition: var(--transition-fast);
+  }
+
+  @media (min-width: 768px) {
+    .note-link {
+      grid-template-columns: 11rem 1fr;
+    }
+    .note-desc {
+      grid-column: 2;
+    }
+  }
+
+  .note-link time {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    padding-top: 0.4rem;
+  }
+
+  .note-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .note-desc {
+    color: var(--ink-soft);
+  }
+
+  .note-link:hover .note-title {
+    color: var(--terracotta);
+  }
+
+  /* ── Offline ── */
+  .offline {
+    padding: var(--spacing-24) 0;
+    background: var(--olive);
+    background-image: var(--grain);
+    color: var(--paper);
+  }
+
+  .offline :global(.section-heading .blurb),
+  .offline :global(.section-heading .eyebrow) {
+    color: rgba(243, 235, 221, 0.85);
+  }
+
+  .ticket-grid {
+    display: grid;
+    gap: var(--spacing-8);
+  }
+
+  @media (min-width: 900px) {
+    .ticket-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .offline-cta {
+    margin: var(--spacing-12) 0 0;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+  }
+
+  .offline-cta a {
+    color: var(--ochre);
+    text-underline-offset: 4px;
+  }
+
+  /* ── Presence ── */
+  .presence {
+    padding: var(--spacing-24) 0;
+    background: var(--slate);
+    background-image: var(--grain);
+    color: var(--paper);
+  }
+
+  .presence :global(.section-heading .blurb),
+  .presence :global(.section-heading .eyebrow) {
+    color: rgba(243, 235, 221, 0.8);
+  }
+
+  .clip-grid {
+    display: grid;
+    gap: var(--spacing-6);
+  }
+
+  @media (min-width: 768px) {
+    .clip-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @keyframes pulse {
+    70% {
+      box-shadow: 0 0 0 0.6rem transparent;
+    }
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
   }
 </style>

@@ -1,98 +1,75 @@
-# Chaos Theory Design System — Implementation Notes
+# Digital Warmth: Design System
 
-## Overview
+> High-tech meets craft. A portfolio that feels like a well-loved studio
+> notebook: grounded, tactile, a little electric.
 
-The site uses the **Chaos Theory** design system: a "Tumblr 2012 sticker" aesthetic with playful rotations, polaroid cards, handwritten margin notes, and punk-zine tags.
+## Principles
 
-## Hero Treatment (Updated)
+1. **Warm, not clinical.** Earth tones and paper grain instead of neon-on-black.
+2. **Editorial with a pulse.** A characterful serif for story; mono for systems.
+3. **Show the process.** Raw notes, sketches and works-in-progress sit next to finished pieces.
+4. **Offline has weight.** Real-world gatherings are presented as scarce, "limited run" artefacts.
+5. **Presence over polish.** Voice, sound and movement where possible.
 
-The old cyan→purple gradient hero has been **retired**. All heroes now use one of two treatments:
+## Tokens (`src/app.css`)
 
-### Light Hero (cream paper) — default
-- Background: `#fdf8ef` (warm cream)
-- Text: `var(--color-text)` (dark slate)
-- Decorations: cyan candy-stripe along the bottom edge, orange "masking tape" sticker top-left
-- Transform: `rotate(-0.5deg)` for slight tilt
-- CSS class: `.ct-hero`
+### Colour
 
-### Dark Hero (slate) — blog posts, CV in mix mode, all pages in dark mode
-- Background: `var(--color-text)` (`#0f172a` dark slate)
-- Text: white
-- Decorations: 10px cyan rail down the left edge, green dot top-right with glow halo
-- CSS class: `.ct-hero--dark` (or `.ct-hero--dark-context` for pages that are dark only in mix mode)
+| Token | Value | Role |
+| --- | --- | --- |
+| `--paper` | `#f3ebdd` | background |
+| `--paper-deep` | `#e9dcc5` | heroes, lab |
+| `--paper-card` | `#fbf6ec` | cards |
+| `--ink` | `#26211c` | text, borders |
+| `--ink-soft` | `#5d5348` | secondary text |
+| `--terracotta` | `#b4492b` | primary |
+| `--olive` | `#4d5a2b` | grounded secondary |
+| `--slate` | `#2f3236` | dark surfaces |
+| `--cobalt` | `#2a44e0` | electric accent, focus |
+| `--coral` | `#ff6a4d` | electric accent (decorative) |
+| `--ochre` | `#d4962a` | tape, underlines (decorative) |
+| `--line` | ink @ 16% | hairlines |
 
-### Theming (Light / Mix / Dark)
-The nav has a three-segment toggle (☀️ / 🔀 / 🌙) stored in `localStorage` under `ct_theme`.  
-The root `.app` div gets `data-theme={theme}`.
+`--grain` is an inline SVG noise texture layered on paper surfaces.
 
-- **Light**: all heroes are cream
-- **Dark**: all heroes are slate
-- **Mix** (default): most pages cream, CV + blog posts stay slate for darker reading context
+### Type
 
-## Updated Design Tokens
+| Role | Family | Notes |
+| --- | --- | --- |
+| Display | Fraunces | weight 600–700, tight tracking; `.serif-italic` for soft/wonky italics |
+| Body | Instrument Sans | 16px, line-height 1.6 |
+| Meta / nav / labels | JetBrains Mono | `.eyebrow`: 0.75rem uppercase, 0.12em tracking |
+| Notes | Caveat | `.handwritten`, terracotta, −3deg |
 
-```css
---border-radius-sticker: 6px;   /* was 16px — tighter sticker corners */
---border-radius-card: 8px;      /* was 20px — flatter polaroid cards */
+### Shape & depth
 
-/* Hero */
---hero-bg-light:   #fdf8ef;
---hero-bg-dark:    #0f172a;
---hero-stripe:     #0891b2;     /* cyan candy-stripe */
---hero-tape:       #f59e0b;     /* orange tape sticker */
---hero-rail:       #0891b2;     /* cyan left rail (dark) */
---hero-dot:        #10b981;     /* green dot (dark) */
+- `--border-radius-sticker: 999px` (pills), `--border-radius-card: 6px`
+- `--shadow-sticker`: `3px 3px 0 var(--ink)`, a printed offset for buttons/tickets
+- `--shadow-card`: soft warm drop for paper cards
 
-/* Shadows */
---shadow-tag-hard: 2px 2px 0 rgba(0,0,0,0.20);  /* punk-zine hard offset */
+## Components
 
-/* Motion */
---lift-hover:      translateY(-2px);
---lift-card-hover: translateY(-4px);
-```
+| Component | Purpose |
+| --- | --- |
+| `SectionHeading` | index chip + eyebrow + title + blurb |
+| `WorkCard` | taped frame; hover/focus peels the image to reveal `sketch` or `note` |
+| `LabTicker` | decorative live marquee (aria-hidden; content is listed accessibly elsewhere) |
+| `OfflineTicket` | ticket stub with "Limited Run" tag and edition |
+| `MediaClip` | cassette-styled audio/video player with optional transcript |
+| `FilterTags` | mono pill filters with colour dot, `aria-pressed` |
 
-## Tags — Punk-Zine Square Style
+## Global classes
 
-Tags use **square corners** (`border-radius: 0`), a hard drop shadow (`2px 2px 0 rgba(0,0,0,0.2)`), uppercase text, and a 2px dark border. They alternate micro-tilts (±0.5deg) via `.ct-tag-row` context.
+`.button` (+ `-primary`, `-secondary`, `-accent`, `-ghost`), `.card`, `.ct-hero`,
+`.ct-hero--dark`, `.ct-tag`, `.eyebrow`, `.serif-italic`, `.handwritten`,
+`.scribble-underline`, `.tape`, `.visually-hidden`.
 
-Classes: `.ct-tag`, `.ct-tag--sm`, `.ct-tag--lg`, `.ct-tag--{category}`.
+Legacy `chaos-*` / `wonky-border` hooks still exist so older pages keep
+working, but are toned down (no rotation). Don't use them in new code.
 
-Category tints use CSS vars: `--color-tag-conference`, `--color-tag-hackathon`, etc.
+## Accessibility
 
-## Navigation
-
-- Events and CV links are now visible (were commented out)
-- Theme switch widget sits at the end of desktop nav
-- Mobile nav includes a theme switch row
-
-## Blog Post Layout
-
-Each blog post now starts with a dark slate hero (`BlogLayout.svelte`) showing the post title. The existing retro **lepsies fm** iPod click-wheel player at the bottom navigates prev/next posts.
-
-## Retro MP3 Player
-
-The `BlogLayout.svelte` renders a silver iPod-style navigation widget at the bottom of every blog post:
-- Silvery gradient body with click wheel
-- Green LCD screen showing post title + animated progress bar
-- ← prev / → next navigation (disabled at ends)
-- Center button returns to blog listing
-
-## Component CSS Classes Reference
-
-| Class | Purpose |
-|---|---|
-| `.ct-hero` | Cream paper hero section |
-| `.ct-hero--dark` | Slate hero (always dark) |
-| `.ct-hero--dark-context` | Slate in mix/dark mode, cream in light |
-| `.ct-section` | Section with subtle 0.3deg rotation |
-| `.ct-tag` | Square punk-zine tag |
-| `.ct-tag-row` | Flex container with alternating tag tilts |
-| `.ct-filter-chip` | Rounded sticker filter button |
-| `.ct-filter-chip--active` | Dark active state for filter chip |
-| `.ct-tagline-band` | Colored accent band below CV hero |
-| `.ct-theme-switch` | Three-segment theme toggle |
-| `.ct-strikethrough` | Hover-reveals role text (home hero) |
-| `.chaos-rotate-{1-4}` | Tilt assignments for chaos grid items |
-| `.wonky-border` | White-rimmed polaroid card |
-| `.handwritten` | Kalam font annotation (purple) |
-| `.scribble-underline` | SVG wavy underline |
+- Skip link, landmark labels, `aria-current` in nav
+- `:focus-visible` cobalt ring; hover effects also trigger on focus
+- `prefers-reduced-motion` disables animation globally
+- Absolutely-positioned margin notes are hidden below 768px

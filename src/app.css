@@ -1,26 +1,43 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Kalam:wght@300;400;700&family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;700&family=Caveat:wght@500;700&display=swap");
 @import "tailwindcss";
 
+/* ══════════════════════════════════════════════════════════════════════
+   DIGITAL WARMTH — high-tech meets craft
+   Grounded earth tones + electric pops. Editorial serif headers,
+   functional sans/mono body, paper grain and handwritten margin notes.
+   ══════════════════════════════════════════════════════════════════════ */
 :root {
-  /* Colors */
-  --color-primary: #0891b2;
-  --color-primary-light: #22d3ee;
-  --color-secondary: #9333ea;
-  --color-secondary-light: #c084fc;
-  --color-accent: #10b981;
-  --color-accent-light: #34d399;
+  /* Raw palette */
+  --paper: #f3ebdd;
+  --paper-deep: #e9dcc5;
+  --paper-card: #fbf6ec;
+  --ink: #26211c;
+  --ink-soft: #5d5348;
+  --terracotta: #b4492b;
+  --terracotta-deep: #8f3820;
+  --olive: #4d5a2b;
+  --slate: #2f3236;
+  --cobalt: #2a44e0;
+  --coral: #ff6a4d;
+  --ochre: #d4962a;
+  --line: rgba(38, 33, 28, 0.16);
 
-  --color-background: #ffffff;
-  --color-text: #0f172a;
-  --color-text-light: #64748b;
+  /* Semantic aliases (kept so every page inherits the new look) */
+  --color-primary: var(--terracotta);
+  --color-primary-light: var(--coral);
+  --color-secondary: var(--cobalt);
+  --color-secondary-light: #5b72f2;
+  --color-accent: var(--olive);
+  --color-accent-light: var(--ochre);
+  --color-background: var(--paper);
+  --color-surface: var(--paper-card);
+  --color-text: var(--ink);
+  --color-text-light: var(--ink-soft);
 
-  --font-sans:
-    "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  --font-display: "Space Grotesk", Georgia, serif;
-  --font-handwritten: "Kalam", cursive;
-  --font-chaotic: "Creepster", cursive;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-handwritten: "Caveat", "Comic Sans MS", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Spacing */
   --spacing-0: 0;
@@ -32,49 +49,46 @@
   --spacing-8: 2rem;
   --spacing-12: 3rem;
   --spacing-16: 4rem;
+  --spacing-24: 6rem;
 
-  /* Borders */
+  /* Shape */
   --border-radius: 2px;
-  --border-radius-sticker: 6px;
-  --border-radius-card: 8px;
+  --border-radius-sticker: 999px;
+  --border-radius-card: 6px;
 
-  /* Hero treatment — cream paper (light) vs slate (dark) */
-  --hero-bg-light:   #fdf8ef;
-  --hero-text-light: var(--color-text);
-  --hero-stripe:     var(--color-primary);
-  --hero-tape:       #f59e0b;
-  --hero-bg-dark:    var(--color-text);
-  --hero-text-dark:  #ffffff;
-  --hero-rail:       var(--color-primary);
-  --hero-dot:        var(--color-accent);
+  /* Hero */
+  --hero-bg-light: var(--paper);
+  --hero-text-light: var(--ink);
+  --hero-bg-dark: var(--slate);
+  --hero-text-dark: var(--paper);
 
-  /* Shadows */
-  --shadow-sticker:       0 4px 12px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.10);
-  --shadow-sticker-hover: 0 6px 16px rgba(0,0,0,0.20), 0 3px 6px rgba(0,0,0,0.15);
-  --shadow-card:          0 4px 12px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.08);
-  --shadow-card-hover:    0 8px 20px rgba(0,0,0,0.16), 0 4px 8px rgba(0,0,0,0.12);
-  --shadow-tag-hard:      2px 2px 0 rgba(0,0,0,0.20);
-
-  /* Sticker borders */
-  --sticker-border-button: 3px solid #ffffff;
-  --sticker-border-card:   4px solid #ffffff;
+  /* Shadows — warm, printed-matter offsets instead of glossy blur */
+  --shadow-sticker: 3px 3px 0 var(--ink);
+  --shadow-sticker-hover: 5px 5px 0 var(--ink);
+  --shadow-card: 0 1px 0 var(--line), 0 10px 24px -14px rgba(38, 33, 28, 0.35);
+  --shadow-card-hover: 0 1px 0 var(--line), 0 18px 32px -16px rgba(38, 33, 28, 0.45);
+  --shadow-tag-hard: 2px 2px 0 var(--ink);
 
   /* Motion */
-  --transition-fast: all 0.15s ease;
-  --transition-base: all 0.2s ease;
-  --transition-slow: all 0.3s ease;
-  --lift-hover:      translateY(-2px);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-fast: all 0.15s var(--ease-out);
+  --transition-base: all 0.25s var(--ease-out);
+  --transition-slow: all 0.4s var(--ease-out);
+  --lift-hover: translateY(-2px);
   --lift-card-hover: translateY(-4px);
 
-  /* Event / tag colors */
-  --color-tag-conference: #7c3aed;
-  --color-tag-hackathon:  #ff66b3;
-  --color-tag-workshop:   #06b6d4;
-  --color-tag-community:  #10b981;
-  --color-tag-talk:       #f59e0b;
-  --color-tag-fireside:   #ef4444;
-  --color-tag-contest:    #8b5cf6;
-  --color-tag-lan:        #6366f1;
+  /* Event / tag colors — earthy with electric pops */
+  --color-tag-conference: var(--cobalt);
+  --color-tag-hackathon: var(--terracotta);
+  --color-tag-workshop: var(--olive);
+  --color-tag-community: #3f6b57;
+  --color-tag-talk: #a36d12;
+  --color-tag-fireside: #9b3a4a;
+  --color-tag-contest: #5b3fa8;
+  --color-tag-lan: var(--slate);
+
+  /* Paper grain (inline SVG noise) */
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.12 0 0 0 0 0.1 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Reset */
@@ -89,37 +103,83 @@
 html {
   font-family: var(--font-sans);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--paper);
+  background-image: var(--grain);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--coral);
+  color: var(--ink);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--spacing-4);
+  top: -4rem;
+  z-index: 1000;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: var(--spacing-4);
 }
 
 /* Container */
 .container {
   width: 100%;
-  max-width: 100rem;
+  max-width: 82rem;
   margin: 0 auto;
   padding: 0 var(--spacing-4);
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-8);
+  }
+}
+
 /* Navigation */
 .nav {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--color-background);
-  transform: rotate(-0.3deg);
-  transform-origin: center center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--line);
+  background-color: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(8px);
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 4.25rem;
 }
 
 .nav-links {
@@ -130,19 +190,26 @@ body {
 @media (min-width: 768px) {
   .nav-links {
     display: flex;
-    gap: var(--spacing-8);
+    gap: var(--spacing-6);
+    align-items: center;
   }
 }
 
 .nav-link {
-  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  padding: var(--spacing-1) 0;
+  border-bottom: 2px solid transparent;
+  transition: var(--transition-fast);
 }
 
-.nav-link:hover {
-  color: var(--color-primary);
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--terracotta);
+  border-bottom-color: currentColor;
 }
 
 /* Typography */
@@ -153,28 +220,33 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  line-height: 1.2;
+  font-weight: 600;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
   margin-bottom: var(--spacing-4);
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
 }
 
 h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
   font-size: 1.5rem;
 }
 
-h5 {
+h4 {
   font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
 }
 
 h6 {
@@ -185,80 +257,108 @@ p {
   margin-bottom: var(--spacing-4);
 }
 
-/* Buttons - Sticker Style */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.serif-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+
+/* Buttons — pill stickers with a printed offset shadow */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: var(--spacing-2);
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--border-radius-sticker);
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: var(--transition-base);
   position: relative;
-  border: 3px solid white;
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow-sticker);
+  color: var(--ink);
+  background: var(--paper-card);
 }
 
 .button:hover {
-  transform: translateY(-2px) rotate(var(--hover-rotate, 0deg));
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.2),
-    0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-sticker-hover);
 }
 
 .button:active {
-  transform: translateY(0) rotate(var(--hover-rotate, 0deg));
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--ink);
 }
 
 .button-primary {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--terracotta);
+  color: var(--paper);
 }
 
 .button-primary:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--terracotta-deep);
 }
 
 .button-secondary {
-  background-color: var(--color-secondary);
-  color: white;
+  background-color: var(--cobalt);
+  color: #fff;
 }
 
 .button-secondary:hover {
-  background-color: var(--color-secondary-light);
+  background-color: #1d33b8;
 }
 
 .button-accent {
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--olive);
+  color: var(--paper);
 }
 
 .button-accent:hover {
-  background-color: var(--color-accent-light);
+  background-color: #3c4721;
 }
 
-/* Cards - Polaroid/Sticker Style */
-.card {
-  background-color: var(--color-background);
+.button-ghost {
+  background: transparent;
+  box-shadow: none;
+}
+.button-ghost:hover {
+  box-shadow: var(--shadow-sticker);
+}
+
+/* Cards — paper slips */
+.card,
+.wonky-border {
+  background-color: var(--paper-card);
+  border: 1px solid var(--line);
   border-radius: var(--border-radius-card);
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-card);
   padding: var(--spacing-6);
-  transition: all 0.3s ease;
-  border: 4px solid white;
+  position: relative;
+  transition: var(--transition-base);
 }
 
-.card:hover {
-  transform: translateY(-4px) rotate(var(--card-rotate, 0deg));
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.16),
-    0 4px 8px rgba(0, 0, 0, 0.12);
+.card:hover,
+.wonky-border:hover {
+  transform: var(--lift-card-hover);
+  box-shadow: var(--shadow-card-hover);
 }
 
 /* Utilities */
@@ -267,15 +367,24 @@ p {
 }
 
 .text-primary {
-  color: var(--color-primary);
+  color: var(--terracotta);
 }
 
 .text-secondary {
-  color: var(--color-secondary);
+  color: var(--cobalt);
 }
 
 .text-accent {
-  color: var(--color-accent);
+  color: var(--olive);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .animate-fade-in {
@@ -291,135 +400,55 @@ p {
   }
 }
 
-/* COUNTER-DESIGN CHAOS BEGINS HERE */
-
-/* Intentionally broken spacing */
+/* ── LEGACY "CHAOS" HOOKS — retuned to a quieter, crafted register ─────── */
 .chaos-spacing {
-  margin-top: calc(var(--spacing-4) + 7px);
-  margin-left: -3px;
-  margin-right: 11px;
+  margin-top: var(--spacing-4);
 }
 
-/* Playful sticker rotations */
-.chaos-rotate-1 {
-  transform: rotate(2deg);
-}
-.chaos-rotate-2 {
-  transform: rotate(-1.5deg);
-}
-.chaos-rotate-3 {
-  transform: rotate(3deg);
-}
-.chaos-rotate-4 {
-  transform: rotate(-2.5deg);
-}
-
-/* Handwritten annotations */
-.handwritten {
-  font-family: var(--font-handwritten);
-  font-size: 0.9rem;
-  color: var(--color-secondary);
-  transform: rotate(-1.2deg);
-  position: relative;
-  z-index: 100 !important;
-  pointer-events: auto;
-}
-
-/* Mobile adjustments for handwritten notes */
-@media (max-width: 768px) {
-  .handwritten {
-    font-size: 0.8rem;
-  }
-
-  .mobile-note-writer {
-    right: -15px !important;
-    top: -10px !important;
-  }
-
-  /* Ensure chaos grid has enough margin on mobile for notes */
-  .chaos-grid {
-    margin: 0 20px;
-  }
-}
-
-/* Make role card text more compact */
-.role-card p {
-  max-width: 70%;
-  margin: 0 auto;
-  margin-bottom: 0 !important;
-}
-
-/* Scribbled underlines instead of clean ones */
-.scribble-underline {
-  position: relative;
-  text-decoration: none;
-}
-
-.scribble-underline::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  right: -2px;
-  bottom: -3px;
-  height: 3px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0,7 Q25,2 50,6 T100,5' stroke='%239333ea' stroke-width='2' fill='none'/%3E%3C/svg%3E")
-    repeat-x;
-  background-size: 100px 10px;
-  opacity: 0.8;
-}
-
-/* Sticker-style borders */
-.wonky-border {
-  border: 4px solid white;
-  border-radius: var(--border-radius-card);
-  position: relative;
-  background: var(--color-background);
-  padding: var(--spacing-6);
-  transition: all 0.3s ease;
-  z-index: 1;
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    0 2px 4px rgba(0, 0, 0, 0.08);
-}
-
-/* Cards: no tilt by default, tilt on hover */
-.wonky-border.chaos-rotate-1,
-.wonky-border.chaos-rotate-2,
-.wonky-border.chaos-rotate-3,
-.wonky-border.chaos-rotate-4 {
+.chaos-rotate-1,
+.chaos-rotate-2,
+.chaos-rotate-3,
+.chaos-rotate-4,
+.escape-container {
   transform: none;
 }
 
-.wonky-border.chaos-rotate-1:hover {
-  transform: translateY(-4px) rotate(2deg);
-}
-.wonky-border.chaos-rotate-2:hover {
-  transform: translateY(-4px) rotate(-1.5deg);
-}
-.wonky-border.chaos-rotate-3:hover {
-  transform: translateY(-4px) rotate(3deg);
-}
-.wonky-border.chaos-rotate-4:hover {
-  transform: translateY(-4px) rotate(-2.5deg);
-}
-
-.wonky-border:hover {
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.16),
-    0 4px 8px rgba(0, 0, 0, 0.12);
+/* Handwritten margin notes */
+.handwritten {
+  font-family: var(--font-handwritten);
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--terracotta);
+  transform: rotate(-3deg);
+  position: relative;
+  z-index: 5;
+  pointer-events: none;
 }
 
-/* Escaped elements that break container */
-.escape-container {
-  margin-left: -10px !important;
-  margin-right: -5px !important;
-  transform: rotate(-0.5deg);
+@media (max-width: 768px) {
+  /* Absolutely-positioned margin notes crowd small screens */
+  .handwritten[style*="absolute"] {
+    display: none;
+  }
 }
 
-/* Chaotic grid that refuses to align */
+.role-card p {
+  margin-bottom: 0;
+}
+
+/* Hand-drawn underline */
+.scribble-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M1,7 C20,3 40,9 60,5 S90,4 99,6' stroke='%23d4962a' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 0.35em;
+  background-position: 0 100%;
+  padding-bottom: 0.1em;
+}
+
 .chaos-grid {
   display: grid;
-  gap: var(--spacing-2);
+  gap: var(--spacing-6);
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -435,170 +464,112 @@ p {
   }
 }
 
-.chaos-grid > *:nth-child(odd) {
-  transform: none;
+/* Masking tape strip — drop on any positioned element */
+.tape {
+  position: absolute;
+  width: 5.5rem;
+  height: 1.4rem;
+  background: color-mix(in srgb, var(--ochre) 55%, transparent);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 2;
 }
 
-.chaos-grid > *:nth-child(even) {
-  transform: none;
-}
-
-.chaos-grid > *:nth-child(3n) {
-  transform: none;
-}
-
-.chaos-grid > *:nth-child(odd):hover {
-  transform: translateY(-4px) rotate(1.5deg);
-}
-
-.chaos-grid > *:nth-child(even):hover {
-  transform: translateY(-4px) rotate(-2deg);
-}
-
-.chaos-grid > *:nth-child(3n):hover {
-  transform: translateY(-4px) rotate(2.5deg);
-}
-
-/* ── CREAM HERO (new default) ─────────────────────────────────────────── */
+/* ── PAGE HERO ─────────────────────────────────────────────────────────── */
 .ct-hero {
-  background: var(--hero-bg-light);
-  color: var(--hero-text-light);
-  padding: var(--spacing-16) 0;
-  text-align: center;
-  transform: rotate(-0.5deg);
-  transform-origin: center;
+  background: var(--paper-deep);
+  background-image: var(--grain);
+  color: var(--ink);
+  padding: var(--spacing-16) 0 var(--spacing-12);
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid var(--line);
 }
-/* Cyan candy-stripe bottom edge */
+@media (min-width: 768px) {
+  .ct-hero {
+    padding: var(--spacing-24) 0 var(--spacing-16);
+  }
+}
+/* Thin ruled-paper stripe along the bottom */
 .ct-hero::before {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 22px;
-  background: repeating-linear-gradient(
-    45deg,
-    var(--hero-stripe) 0 8px,
-    transparent       8px 16px
-  );
-  opacity: 0.9;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--terracotta) 0 40%, var(--ochre) 40% 62%, var(--olive) 62% 84%, var(--cobalt) 84%);
   pointer-events: none;
 }
-/* Orange masking-tape sticker top-left */
-.ct-hero::after {
-  content: "";
-  position: absolute;
-  top: 26px; left: 26px;
-  width: 56px; height: 14px;
-  background: var(--hero-tape);
-  transform: rotate(-8deg);
-  border-radius: 2px;
-  opacity: 0.85;
-  pointer-events: none;
+.ct-hero h1 {
+  color: var(--ink);
+  max-width: 18ch;
 }
-.ct-hero h1 { color: var(--hero-text-light); }
+.ct-hero .lead {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: 42rem;
+}
+.ct-hero .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
 
-/* Slate hero — used for blog post reading view */
+/* Slate hero — blog post reading view */
 .ct-hero--dark {
-  background: var(--hero-bg-dark);
-  color: var(--hero-text-dark);
+  background-color: var(--slate);
+  color: var(--paper);
 }
-.ct-hero--dark::before {
-  left: 0; top: 0; bottom: 0; right: auto;
-  width: 10px; height: auto;
-  background: var(--hero-rail);
-  opacity: 1;
+.ct-hero--dark h1 {
+  color: var(--paper);
 }
-.ct-hero--dark::after {
-  top: 28px; right: 28px; left: auto;
-  width: 18px; height: 18px;
-  background: var(--hero-dot);
-  border-radius: 50%;
-  transform: none;
-  box-shadow: 0 0 0 4px rgba(16,185,129,0.25);
-  opacity: 1;
-}
-.ct-hero--dark h1 { color: var(--hero-text-dark); }
 
-/* ── SECTION (slight tilt) ────────────────────────────────────────────── */
+/* ── SECTION ──────────────────────────────────────────────────────────── */
 .ct-section {
   padding: var(--spacing-16) 0;
-  transform: rotate(0.3deg);
-  transform-origin: center;
   position: relative;
 }
 
-/* ── TAGS — punk-zine square, hard shadow ─────────────────────────────── */
+/* ── TAGS — mono labels ───────────────────────────────────────────────── */
 .ct-tag {
   display: inline-block;
-  padding: var(--spacing-1) var(--spacing-3);
-  background: var(--color-primary);
-  color: white;
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  background: var(--terracotta);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
-  border: 2px solid rgba(0,0,0,0.4);
-  border-radius: 0;
-  box-shadow: var(--shadow-tag-hard);
-}
-.ct-tag--sm { padding: var(--spacing-1) var(--spacing-2); font-size: 0.7rem; }
-.ct-tag--lg { padding: var(--spacing-2) var(--spacing-3); font-size: 0.8rem; }
-.ct-tag-row { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
-.ct-tag-row > .ct-tag:nth-child(odd)  { transform: rotate(-0.5deg); }
-.ct-tag-row > .ct-tag:nth-child(even) { transform: rotate( 0.5deg); }
-.ct-tag-row > .ct-tag:nth-child(3n)   { transform: rotate(0deg) translateY(-1px); }
-
-/* Category tints */
-.ct-tag--conference { background: var(--color-tag-conference); }
-.ct-tag--hackathon  { background: var(--color-tag-hackathon);  }
-.ct-tag--workshop   { background: var(--color-tag-workshop);   }
-.ct-tag--community  { background: var(--color-tag-community);  }
-.ct-tag--talk       { background: var(--color-tag-talk);       }
-.ct-tag--fireside   { background: var(--color-tag-fireside);   }
-.ct-tag--contest    { background: var(--color-tag-contest);    }
-.ct-tag--lan        { background: var(--color-tag-lan);        }
-
-/* ── FILTER CHIPS ─────────────────────────────────────────────────────── */
-.ct-filter-chip {
-  padding: var(--spacing-2) var(--spacing-4);
-  background: var(--color-primary);
-  color: white;
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: 0.9rem;
-  border: var(--sticker-border-button);
+  letter-spacing: 0.06em;
+  border: 1.5px solid var(--ink);
   border-radius: var(--border-radius-sticker);
-  box-shadow: var(--shadow-sticker);
-  cursor: pointer;
-  transition: var(--transition-base);
 }
-.ct-filter-chip:nth-child(odd)  { transform: rotate(-2deg); }
-.ct-filter-chip:nth-child(even) { transform: rotate( 2deg); }
-.ct-filter-chip:nth-child(3n)   { transform: rotate( 1deg); }
-.ct-filter-chip:hover {
-  transform: var(--lift-hover) rotate(0deg);
-  box-shadow: var(--shadow-sticker-hover);
+.ct-tag--sm {
+  font-size: 0.65rem;
 }
-.ct-filter-chip--active {
-  background: rgba(0,0,0,0.9) !important;
-  transform: translateY(-4px) rotate(0deg) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.20);
+.ct-tag--lg {
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: 0.8rem;
+}
+.ct-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
 }
 
-/* ── TAGLINE BAND (CV) ────────────────────────────────────────────────── */
-.ct-tagline-band {
-  color: white;
-  text-align: center;
-  padding: var(--spacing-6) 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: var(--font-display);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.12);
-}
+.ct-tag--conference { background: var(--color-tag-conference); }
+.ct-tag--hackathon  { background: var(--color-tag-hackathon); }
+.ct-tag--workshop   { background: var(--color-tag-workshop); }
+.ct-tag--community  { background: var(--color-tag-community); }
+.ct-tag--talk       { background: var(--color-tag-talk); }
+.ct-tag--fireside   { background: var(--color-tag-fireside); }
+.ct-tag--contest    { background: var(--color-tag-contest); }
+.ct-tag--lan        { background: var(--color-tag-lan); }
 
-/* ── STRIKETHROUGH (hero role list) ──────────────────────────────────── */
+/* ── HERO ROLE STRIKETHROUGH (kept for reuse) ─────────────────────────── */
 .ct-strikethrough {
   position: relative;
   display: inline-block;
@@ -607,14 +578,24 @@ p {
   content: "";
   position: absolute;
   inset: 50% 0 auto 0;
-  height: 18px;
-  background: var(--role-color, var(--color-secondary));
-  transform: rotate(-4deg);
+  height: 0.12em;
+  background: var(--role-color, var(--terracotta));
+  transform: rotate(-3deg);
   transition: var(--transition-slow);
 }
 .ct-strikethrough:hover::after {
   opacity: 0;
-  transform: rotate(-5deg) scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* ── BLOG POST READING VIEW ───────────────────────────────────────────── */
@@ -708,31 +689,3 @@ p {
 }
 .mp3-center:hover { color: var(--color-primary); }
 .mp3-sticker { margin-top: -8px; font-family: var(--font-handwritten); font-size: 1rem; color: var(--color-secondary); transform: rotate(3deg); }
-
-/* Paper texture background */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image:
-    radial-gradient(
-      circle at 20% 80%,
-      rgba(120, 119, 198, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 20%,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 40% 40%,
-      rgba(120, 119, 198, 0.05) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
-  z-index: -2;
-}
