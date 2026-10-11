@@ -20,6 +20,8 @@
   --cobalt: #2a44e0;
   --coral: #ff6a4d;
   --ochre: #d4962a;
+  --ochre-light: #f7cf7a;
+  --plum: #7a2f4a;
   --line: rgba(38, 33, 28, 0.16);
 
   /* Semantic aliases (kept so every page inherits the new look) */
@@ -56,9 +58,12 @@
   --border-radius-sticker: 999px;
   --border-radius-card: 6px;
 
-  /* Hero */
-  --hero-bg-light: var(--paper);
-  --hero-text-light: var(--ink);
+  /* Header — "sunset": terracotta → plum → cobalt */
+  --hero-gradient: linear-gradient(135deg, var(--terracotta) 0%, var(--plum) 55%, var(--cobalt) 120%);
+  --nav-gradient: linear-gradient(90deg, var(--terracotta) 0%, var(--plum) 100%);
+  --on-hero: var(--paper);
+  --on-hero-accent: var(--ochre-light); /* large text only (≥24px) */
+  --hero-text-light: var(--on-hero);
   --hero-bg-dark: var(--slate);
   --hero-text-dark: var(--paper);
 
@@ -170,9 +175,10 @@ a {
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid var(--line);
-  background-color: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(243, 235, 221, 0.14);
+  background-color: var(--terracotta);
+  background-image: var(--grain), var(--nav-gradient);
+  color: var(--on-hero);
 }
 
 .nav-container {
@@ -199,7 +205,7 @@ a {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
-  color: var(--ink);
+  color: var(--on-hero);
   text-decoration: none;
   padding: var(--spacing-1) 0;
   border-bottom: 2px solid transparent;
@@ -208,8 +214,11 @@ a {
 
 .nav-link:hover,
 .nav-link[aria-current="page"] {
-  color: var(--terracotta);
-  border-bottom-color: currentColor;
+  border-bottom-color: var(--ochre-light);
+}
+
+.nav :focus-visible {
+  outline-color: var(--ochre-light);
 }
 
 /* Typography */
@@ -476,40 +485,39 @@ p {
   z-index: 2;
 }
 
-/* ── PAGE HERO ─────────────────────────────────────────────────────────── */
+/* ── PAGE HERO — sunset gradient ──────────────────────────────────── */
 .ct-hero {
-  background: var(--paper-deep);
-  background-image: var(--grain);
-  color: var(--ink);
+  background-color: var(--terracotta);
+  background-image: var(--grain), var(--hero-gradient);
+  color: var(--on-hero);
   padding: var(--spacing-16) 0 var(--spacing-12);
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
 }
 @media (min-width: 768px) {
   .ct-hero {
     padding: var(--spacing-24) 0 var(--spacing-16);
   }
 }
-/* Thin ruled-paper stripe along the bottom */
-.ct-hero::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6px;
-  background: linear-gradient(90deg, var(--terracotta) 0 40%, var(--ochre) 40% 62%, var(--olive) 62% 84%, var(--cobalt) 84%);
-  pointer-events: none;
-}
-.ct-hero h1 {
-  color: var(--ink);
+.ct-hero h1,
+.ct-hero h2 {
+  color: var(--on-hero);
   max-width: 18ch;
+}
+.ct-hero .serif-italic {
+  color: var(--on-hero-accent);
+}
+.ct-hero p,
+.ct-hero .lead,
+.ct-hero .eyebrow {
+  color: var(--on-hero);
 }
 .ct-hero .lead {
   font-size: 1.2rem;
-  color: var(--ink-soft);
   max-width: 42rem;
+}
+.ct-hero .handwritten {
+  color: var(--on-hero);
 }
 .ct-hero .hero-actions {
   display: flex;
@@ -517,10 +525,21 @@ p {
   gap: var(--spacing-4);
   margin-top: var(--spacing-8);
 }
+/* Dark primary buttons read better than terracotta-on-terracotta */
+.ct-hero .button-primary,
+.ct-hero .button-secondary {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+.ct-hero .button-primary:hover,
+.ct-hero .button-secondary:hover {
+  background-color: #000;
+}
 
 /* Slate hero — blog post reading view */
 .ct-hero--dark {
   background-color: var(--slate);
+  background-image: var(--grain);
   color: var(--paper);
 }
 .ct-hero--dark h1 {

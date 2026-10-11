@@ -74,7 +74,7 @@
 
 <style>
   .blog-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .blog-hero h1 {
@@ -83,7 +83,6 @@
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
   }
 
   .blog-content {

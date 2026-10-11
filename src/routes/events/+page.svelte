@@ -207,12 +207,11 @@
 
 <style>
   .events-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
   }
 
   .events-content {

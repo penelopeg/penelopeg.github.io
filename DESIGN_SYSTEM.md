@@ -18,7 +18,7 @@
 | Token | Value | Role |
 | --- | --- | --- |
 | `--paper` | `#f3ebdd` | background |
-| `--paper-deep` | `#e9dcc5` | heroes, lab |
+| `--paper-deep` | `#e9dcc5` | lab |
 | `--paper-card` | `#fbf6ec` | cards |
 | `--ink` | `#26211c` | text, borders |
 | `--ink-soft` | `#5d5348` | secondary text |
@@ -28,9 +28,19 @@
 | `--cobalt` | `#2a44e0` | electric accent, focus |
 | `--coral` | `#ff6a4d` | electric accent (decorative) |
 | `--ochre` | `#d4962a` | tape, underlines (decorative) |
+| `--ochre-light` | `#f7cf7a` | italic accents on the header (large text) |
+| `--plum` | `#7a2f4a` | header gradient midpoint |
 | `--line` | ink @ 16% | hairlines |
 
 `--grain` is an inline SVG noise texture layered on paper surfaces.
+
+### Header gradient ("Sunset")
+
+- `--hero-gradient`: `linear-gradient(135deg, terracotta 0%, plum 55%, cobalt 120%)` on page heroes and the homepage hero
+- `--nav-gradient`: `linear-gradient(90deg, terracotta, plum)` on the sticky nav
+- `--on-hero`: paper text (≥4.5:1 across the whole gradient; never reduce its opacity)
+- `--on-hero-accent`: ochre-light, for large italic emphasis only
+- The logo mark is recoloured to paper with a CSS filter in the nav
 
 ### Type
 

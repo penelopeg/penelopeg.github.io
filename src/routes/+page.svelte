@@ -191,6 +191,19 @@
     position: relative;
     padding: var(--spacing-12) 0 var(--spacing-16);
     overflow: hidden;
+    background-color: var(--terracotta);
+    background-image: var(--grain), var(--hero-gradient);
+    color: var(--on-hero);
+  }
+
+  .hero .eyebrow {
+    color: var(--on-hero);
+  }
+
+  /* Dark CTA so it doesn't melt into the terracotta */
+  .hero :global(.button-primary) {
+    background-color: var(--ink);
+    color: var(--paper);
   }
 
   @media (min-width: 1024px) {
@@ -199,7 +212,7 @@
     }
   }
 
-  /* A soft terracotta sun behind the portrait */
+  /* A low coral sun behind the portrait */
   .hero::before {
     content: '';
     position: absolute;
@@ -208,7 +221,7 @@
     right: -14rem;
     top: -10rem;
     border-radius: 50%;
-    background: radial-gradient(circle, color-mix(in srgb, var(--coral) 32%, transparent), transparent 65%);
+    background: radial-gradient(circle, color-mix(in srgb, var(--coral) 45%, transparent), transparent 65%);
     pointer-events: none;
   }
 
@@ -234,7 +247,7 @@
   }
 
   .hero h1 .serif-italic {
-    color: var(--terracotta);
+    color: var(--on-hero-accent);
   }
 
   .nowrap {
@@ -242,7 +255,7 @@
   }
 
   .mark {
-    background: linear-gradient(transparent 62%, color-mix(in srgb, var(--cobalt) 30%, transparent) 62%);
+    background: linear-gradient(transparent 62%, color-mix(in srgb, var(--ink) 38%, transparent) 62%);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
@@ -251,8 +264,8 @@
     width: 0.55rem;
     height: 0.55rem;
     border-radius: 50%;
-    background: var(--olive);
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--olive) 60%, transparent);
+    background: var(--ochre-light);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ochre-light) 60%, transparent);
     animation: pulse 2s infinite;
   }
 
@@ -268,10 +281,9 @@
     font-family: var(--font-mono);
     font-size: 0.8rem;
     padding: 0.2rem 0.7rem;
-    border: 1.5px solid var(--line);
+    border: 1.5px solid rgba(243, 235, 221, 0.55);
     border-radius: var(--border-radius-sticker);
-    color: var(--ink-soft);
-    background: color-mix(in srgb, var(--paper-card) 70%, transparent);
+    color: var(--on-hero);
   }
 
   .hero-actions {

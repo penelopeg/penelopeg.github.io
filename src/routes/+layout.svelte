@@ -166,18 +166,20 @@
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: -0.02em;
-    color: var(--ink);
+    color: var(--on-hero);
   }
 
   .wordmark img {
     height: 32px;
     width: auto;
+    /* the orange mark vanishes on terracotta; print it in paper */
+    filter: brightness(0) invert(94%) sepia(9%) saturate(390%) hue-rotate(338deg);
   }
 
   .wordmark em {
     font-style: italic;
     font-weight: 400;
-    color: var(--terracotta);
+    color: var(--ochre-light);
     font-variation-settings: 'SOFT' 100, 'WONK' 1;
   }
 
@@ -186,7 +188,7 @@
   }
 
   .n {
-    color: var(--ink-soft);
+    font-weight: 400;
     margin-right: 0.15rem;
   }
 
@@ -195,7 +197,7 @@
     padding: 0.5rem;
     background: none;
     border: none;
-    color: var(--ink);
+    color: var(--on-hero);
     cursor: pointer;
   }
 
@@ -208,7 +210,7 @@
   .mobile-nav {
     list-style: none;
     padding: var(--spacing-2) var(--spacing-4) var(--spacing-4);
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(243, 235, 221, 0.2);
   }
 
   @media (min-width: 768px) {
@@ -222,11 +224,11 @@
     gap: var(--spacing-3);
     align-items: baseline;
     padding: var(--spacing-3) 0;
-    color: var(--ink);
+    color: var(--on-hero);
     text-decoration: none;
     font-family: var(--font-display);
     font-size: 1.5rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(243, 235, 221, 0.2);
   }
 
   .mobile-nav-link .n {
@@ -235,7 +237,7 @@
   }
 
   .mobile-nav-link[aria-current='page'] {
-    color: var(--terracotta);
+    color: var(--ochre-light);
   }
 
   .footer {

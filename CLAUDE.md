@@ -43,7 +43,7 @@ Full reference: `DESIGN_SYSTEM.md`. Tokens live in `src/app.css`.
 | Token | Hex | Use |
 | --- | --- | --- |
 | `--paper` | `#f3ebdd` | page background |
-| `--paper-deep` | `#e9dcc5` | page heroes, lab section |
+| `--paper-deep` | `#e9dcc5` | lab section |
 | `--paper-card` | `#fbf6ec` | cards, frames |
 | `--ink` | `#26211c` | body text, borders, footer |
 | `--ink-soft` | `#5d5348` | secondary text |
@@ -53,6 +53,8 @@ Full reference: `DESIGN_SYSTEM.md`. Tokens live in `src/app.css`.
 | `--cobalt` | `#2a44e0` | electric pop, focus ring |
 | `--coral` | `#ff6a4d` | electric pop: highlights, ticker label |
 | `--ochre` | `#d4962a` | tape, underlines, status pills |
+| `--ochre-light` | `#f7cf7a` | italic accents on the header gradient (large text only) |
+| `--plum` | `#7a2f4a` | middle stop of the header gradient |
 
 Legacy aliases (`--color-primary`, `--color-secondary`, `--color-text`, …) map
 onto these, so prefer the named tokens in new code. Coral and ochre are
@@ -64,6 +66,16 @@ backgrounds/decoration only; don't use them for text on paper (contrast).
 - **Body**: Instrument Sans (`--font-sans`)
 - **Labels / meta / nav**: JetBrains Mono (`--font-mono`, `.eyebrow`)
 - **Margin notes**: Caveat (`--font-handwritten`, `.handwritten`)
+
+### Header: "Sunset" gradient
+
+The nav and every page hero (`.ct-hero` and the homepage `.hero`) share one
+gradient, `--hero-gradient` (terracotta → plum → cobalt, 135deg). The nav uses
+`--nav-gradient` (terracotta → plum, 90deg). Text on it is `--on-hero` (paper);
+italic emphasis is `--on-hero-accent` (ochre-light, large text only). Primary
+buttons on the header are ink, not terracotta. Don't dim header text with
+opacity: paper on pure terracotta is only 4.5:1. Blog post pages keep the slate
+reading hero (`.ct-hero--dark`).
 
 ### Patterns
 

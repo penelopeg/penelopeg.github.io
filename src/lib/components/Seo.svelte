@@ -31,7 +31,7 @@
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
-  <meta name="theme-color" content="#f3ebdd" />
+  <meta name="theme-color" content="#b4492b" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
