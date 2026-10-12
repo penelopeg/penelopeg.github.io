@@ -99,6 +99,16 @@ Experiments (lab log + latest posts) → Limited Runs (offline) → Presence
 - `offline.js`: limited-run gatherings
 - `media.js`: audio/video clips (files in `static/media/`); clips without `src` show "recording soon"
 
+Everything below the hero lives in `src/lib/components/home/HomeSections.svelte`
+so alternative heroes can reuse it.
+
+**Prototype: `/preview/strikes/`** (noindex) swaps the hero for `StrikeHero`:
+the original "Olá, I'm Penélope, and I'm a ~~ecosystem builder~~ / … agent of
+(good) chaos" line. On large screens (and only without reduced motion) the
+section pins while scrolling and each marker strike flies off its word and
+morphs into that role's card; on mobile and reduced motion it renders
+statically (struck roles + card grid). Role content: `src/lib/data/roles.js`.
+
 ## Blog System
 
 ### Adding Blog Posts
