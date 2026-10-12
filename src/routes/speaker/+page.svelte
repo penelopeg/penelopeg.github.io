@@ -162,20 +162,18 @@
 
 <style>
   .speaker-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
     max-width: 48rem;
     margin: 0 auto;
   }
 
   .speaker-content {
     padding: var(--spacing-8) 0;
-    transform: rotate(-0.3deg);
-    transform-origin: center center;
+
   }
 
   .talks-grid {

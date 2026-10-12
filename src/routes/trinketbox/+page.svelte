@@ -397,7 +397,7 @@
 
   /* ── Header ── */
   .page-header {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .header-inner {
@@ -408,18 +408,18 @@
 
   .page-title {
     font-size: clamp(2rem, 6vw, 4rem);
-    color: var(--color-text);
+    color: var(--on-hero);
     margin-bottom: 0.5rem;
   }
 
   .page-subtitle {
-    color: var(--color-text-light);
+    color: var(--on-hero);
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
   }
 
   .hint-text {
-    color: var(--color-text-light);
+    color: var(--on-hero);
     font-size: 1rem;
   }
 
