@@ -17,7 +17,7 @@
       id: 'cpo',
       title: 'Co-founder/CPO',
       icon: '🚀',
-      color: '#b4492b',
+      color: '#7a2a1c',
       tagline: 'Building products that solve real problems',
       experience: [
         {

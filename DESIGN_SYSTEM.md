@@ -29,33 +29,20 @@
 | `--coral` | `#ff6a4d` | electric accent (decorative) |
 | `--ochre` | `#d4962a` | tape, underlines (decorative) |
 | `--ochre-light` | `#f7cf7a` | italic accents on the header (large text) |
-| `--plum` | `#7a2f4a` | header gradient midpoint |
+| `--sun-dot` | `#e2683f` | halftone sun dots |
 | `--line` | ink @ 16% | hairlines |
 
 `--grain` is an inline SVG noise texture layered on paper surfaces.
 
-### Header gradient ("Sunset")
+### Header ("Riso sun")
 
-- `--hero-gradient`: `linear-gradient(135deg, terracotta 0%, plum 55%, cobalt 120%)` on page heroes and the homepage hero
-- `--nav-gradient`: `linear-gradient(90deg, terracotta, plum)` on the sticky nav
-- `--on-hero`: paper text (≥4.5:1 across the whole gradient; never reduce its opacity)
+- Flat `--terracotta` + `--grain` on the nav and all page heroes; no smooth gradients
+- `--halftone-sun`: `radial-gradient(var(--sun-dot) 30%, transparent 32%) 0 0 / 14px 14px` clipped to a circle
+  - homepage: 34rem circle behind the portrait (22rem, bottom-right on mobile)
+  - inner pages (`.ct-hero::after`): rising from the bottom-right
+- `--on-hero`: paper text (4.5:1 on terracotta; never reduce its opacity)
 - `--on-hero-accent`: ochre-light, for large italic emphasis only
 - The logo mark is recoloured to paper with a CSS filter in the nav
-
-### Type
-
-| Role | Family | Notes |
-| --- | --- | --- |
-| Display | Fraunces | weight 600–700, tight tracking; `.serif-italic` for soft/wonky italics |
-| Body | Instrument Sans | 16px, line-height 1.6 |
-| Meta / nav / labels | JetBrains Mono | `.eyebrow`: 0.75rem uppercase, 0.12em tracking |
-| Notes | Caveat | `.handwritten`, terracotta, −3deg |
-
-### Shape & depth
-
-- `--border-radius-sticker: 999px` (pills), `--border-radius-card: 6px`
-- `--shadow-sticker`: `3px 3px 0 var(--ink)`, a printed offset for buttons/tickets
-- `--shadow-card`: soft warm drop for paper cards
 
 ## Components
 

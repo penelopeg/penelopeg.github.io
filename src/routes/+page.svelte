@@ -192,7 +192,7 @@
     padding: var(--spacing-12) 0 var(--spacing-16);
     overflow: hidden;
     background-color: var(--terracotta);
-    background-image: var(--grain), var(--hero-gradient);
+    background-image: var(--grain);
     color: var(--on-hero);
   }
 
@@ -212,17 +212,26 @@
     }
   }
 
-  /* A low coral sun behind the portrait */
+  /* Halftone sun rising behind the portrait */
   .hero::before {
     content: '';
     position: absolute;
-    width: 46rem;
-    height: 46rem;
-    right: -14rem;
-    top: -10rem;
+    width: 22rem;
+    height: 22rem;
+    right: -6rem;
+    bottom: -6rem;
     border-radius: 50%;
-    background: radial-gradient(circle, color-mix(in srgb, var(--coral) 45%, transparent), transparent 65%);
+    background: var(--halftone-sun);
     pointer-events: none;
+  }
+
+  @media (min-width: 1024px) {
+    .hero::before {
+      width: 34rem;
+      height: 34rem;
+      top: 4rem;
+      bottom: auto;
+    }
   }
 
   .hero-grid {
