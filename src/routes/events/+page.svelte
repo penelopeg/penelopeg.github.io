@@ -4,13 +4,13 @@
   import { getTagStyle } from '$lib/utils/tagStyles';
   
   const tagColors = {
-    'conference': { bg: '#ff66b3', text: 'white' },
-    'hackathon': { bg: '#7c3aed', text: 'white' },
-    'talk': { bg: '#06b6d4', text: 'white' },
-    'workshop': { bg: '#f59e0b', text: 'white' },
-    'community': { bg: '#10b981', text: 'white' },
-    'fireside chat': { bg: '#3b82f6', text: 'white' },
-    'lan party': { bg: '#ef4444', text: 'white' }
+    'conference': { bg: '#2a44e0', text: 'white' },
+    'hackathon': { bg: '#b4492b', text: 'white' },
+    'talk': { bg: '#8a5a0c', text: 'white' },
+    'workshop': { bg: '#4d5a2b', text: 'white' },
+    'community': { bg: '#3f6b57', text: 'white' },
+    'fireside chat': { bg: '#9b3a4a', text: 'white' },
+    'lan party': { bg: '#2f3236', text: 'white' }
   };
 
   const events = [
@@ -45,7 +45,7 @@
     },
     {
       title: 'Algarve Buildathon',
-      description: 'Building solutions for the Algarve region using No-Code and AI technologies',
+      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
       locations: ['Algarve'],
       date: 'November 2025',
       type: 'hackathon'
@@ -81,7 +81,7 @@
       title: 'Geek Sessions',
       description: '15 years of monthly tech meetups in Algarve, featuring talks, workshops and networking.',
       locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
-      date: '2009 - Present',
+      date: '2021 - Present',
       type: ['talk', 'fireside chat', 'workshop'],
       // image: '{base}/images/events/geeksessions.jpg',
       url: 'https://geeksessions.io'
@@ -207,12 +207,11 @@
 
 <style>
   .events-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
   }
 
   .events-content {
