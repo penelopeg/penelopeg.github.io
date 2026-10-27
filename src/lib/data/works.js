@@ -32,9 +32,9 @@ export const buckets = [
     works: [
       {
         title: "Geek Sessions",
-        role: "Community lead · 2009 → now",
+        role: "Community lead · 2021 → now",
         description:
-          "15+ years of tech meetups across the Algarve: talks, workshops, a conference and very good conversations.",
+          "Tech meetups across the Algarve for 15+ years, which I've helped lead since 2021: talks, workshops, a conference and very good conversations.",
         image: "/images/portfolio/geeksessionsbanner.jpg",
         url: "https://zez.am/GeekSessionsFaro",
         note: "the room where it all started",

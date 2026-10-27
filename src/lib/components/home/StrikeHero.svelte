@@ -17,6 +17,7 @@
   /** @type {HTMLElement} */ let sticky;
   /** @type {HTMLElement} */ let inner;
   /** @type {HTMLElement} */ let hint;
+  /** @type {HTMLElement} */ let headline;
   /** @type {HTMLElement[]} */ const words = [];
   /** @type {HTMLElement[]} */ const slots = [];
   /** @type {HTMLElement[]} */ const cards = [];
@@ -24,12 +25,18 @@
   // Hand-placed tilts: wonky marker strokes, gently tilted landed cards
   const BAR_TILT = [-3, 2, -2.5, 3, -2, 2.5];
   const CARD_TILT = [-1.5, 1, -0.5, 1.5, -1, 0.5];
-  // Each role starts a little after the previous one and takes this share of the scroll
-  const STAGGER = 0.11;
-  const DURATION = 0.42;
+  // Scroll timeline (0..1): the headline shrinks from START_SCALE to 1 over the first SHRINK,
+  // the first strike lets go a little before that ends, then each role follows with STAGGER.
+  const START_SCALE = 1.6;
+  const SHRINK = 0.3;
+  const FIRST_ROLE = 0.18;
+  const STAGGER = 0.09;
+  const DURATION = 0.37;
 
-  /** @type {{ bar: DOMRectLike, card: DOMRectLike }[]} */
+  /** @type {DOMRectLike[]} */
   let geo = [];
+  /** How far down the headline sits at the start, so the enlarged copy is centred in the pinned frame */
+  let startShift = 0;
   let frame = 0;
 
   /** @typedef {{ x: number, y: number, w: number, h: number }} DOMRectLike */
@@ -43,22 +50,19 @@
   }
 
   /**
-   * Geometry relative to .inner (the cards' containing block). It doesn't change
-   * while scrolling, so measure on mount, resize and font load only.
+   * Where each card lands, relative to .inner (the cards' containing block). The slots
+   * don't move while scrolling, so measure on mount, resize and font load only.
+   * The strikes' starting points are read live in update(): the headline is scaling.
    */
   function measure() {
     if (!animated) return;
     const s = inner.getBoundingClientRect();
-    geo = roles.map((_, i) => {
-      const w = words[i].getBoundingClientRect();
-      const sl = slots[i].getBoundingClientRect();
-      const fontSize = parseFloat(getComputedStyle(words[i]).fontSize);
-      const h = Math.max(8, fontSize * 0.32);
-      return {
-        bar: { x: w.left - s.left - 6, y: w.top - s.top + w.height * 0.56 - h / 2, w: w.width + 12, h },
-        card: { x: sl.left - s.left, y: sl.top - s.top, w: sl.width, h: sl.height }
-      };
+    geo = slots.map((slot) => {
+      const sl = slot.getBoundingClientRect();
+      return { x: sl.left - s.left, y: sl.top - s.top, w: sl.width, h: sl.height };
     });
+    const top = headline.offsetTop;
+    startShift = Math.max(0, (inner.clientHeight - headline.offsetHeight * START_SCALE) / 2 - top);
     update();
   }
 
@@ -73,9 +77,23 @@
     if (!animated || !geo.length) return;
     const p = overallProgress();
 
+    const shrink = easeInOut(clamp(p / SHRINK));
+    headline.style.setProperty('--s', String(lerp(START_SCALE, 1, shrink)));
+    headline.style.setProperty('--y', `${lerp(startShift, 0, shrink)}px`);
+
+    const origin = inner.getBoundingClientRect();
     roles.forEach((_, i) => {
-      const t = easeInOut(clamp((p - i * STAGGER) / DURATION));
-      const { bar, card } = geo[i];
+      const t = easeInOut(clamp((p - FIRST_ROLE - i * STAGGER) / DURATION));
+      // the strike follows its word while the headline is still scaling
+      const w = words[i].getBoundingClientRect();
+      const h = Math.max(8, w.height * 0.26);
+      const bar = {
+        x: w.left - origin.left - 6,
+        y: w.top - origin.top + w.height * 0.56 - h / 2,
+        w: w.width + 12,
+        h
+      };
+      const card = geo[i];
       const el = cards[i];
       el.style.left = `${lerp(bar.x, card.x, t)}px`;
       el.style.top = `${lerp(bar.y, card.y, t)}px`;
@@ -86,6 +104,7 @@
       // content and printed shadow arrive as the card lands; a soft lift mid-flight
       el.style.setProperty('--reveal', String(clamp((t - 0.7) / 0.25)));
       el.style.setProperty('--lift', String(Math.sin(Math.PI * t)));
+      // the card is the strike from the first frame, so the word's own bar stays hidden
       words[i].classList.toggle('freed', t > 0.02);
     });
 
@@ -112,6 +131,8 @@
     });
     words.forEach((w) => w.classList.remove('freed'));
     if (hint) hint.style.removeProperty('opacity');
+    headline?.style.removeProperty('--s');
+    headline?.style.removeProperty('--y');
   }
 
   /** @type {MediaQueryList | undefined} */
@@ -145,23 +166,36 @@
 <section class="strike-hero" class:animated bind:this={stage} aria-labelledby="strike-title">
   <div class="sticky" bind:this={sticky}>
     <div class="container inner" bind:this={inner}>
-      <div class="headline">
-        <p class="eyebrow">Penélope Gonçalves · Algarve, PT</p>
-        <h1 id="strike-title">Olá, I'm Penélope, and I'm a</h1>
-        <p class="roles-line">
-          {#each roles as role, i (role.word)}
-            <span class="role"
-              ><span class="role-word" style="--bg: {role.bg}; --tilt: {BAR_TILT[i]}deg" bind:this={words[i]}
-                >{role.word}</span
-              >{#if i < roles.length - 1}<span class="slash" aria-hidden="true">&nbsp;/</span><span
-                  class="visually-hidden">,</span
-                >{/if}</span
-            >{' '}
-          {/each}
-        </p>
-        <p class="truth">agent of <span class="serif-italic">(good)</span> chaos</p>
-        <p class="handwritten note-me" aria-hidden="true">(this is me!)</p>
-        <p class="handwritten hint" aria-hidden="true" bind:this={hint}>scroll to un-strike them ↓</p>
+      <div class="headline" bind:this={headline}>
+        <div class="headline-copy">
+          <h1 id="strike-title">
+            Building <span class="serif-italic">interactive spaces</span> and
+            <span class="mark">impact communities</span> that <span class="nowrap">co-create</span> the future.
+          </h1>
+          <p class="roles-line">
+            {#each roles as role, i (role.word)}
+              <span class="role"
+                ><span class="role-word" style="--bg: {role.bg}; --tilt: {BAR_TILT[i]}deg" bind:this={words[i]}
+                  >{role.word}</span
+                ><span class="slash" aria-hidden="true">&nbsp;/</span><span class="visually-hidden">,</span></span
+              >{' '}
+            {/each}
+            <span class="truth">agent of <span class="serif-italic">(good)</span> chaos</span>
+          </p>
+          <p class="handwritten hint" aria-hidden="true" bind:this={hint}>scroll to un-strike them ↓</p>
+        </div>
+
+        <figure class="portrait">
+          <span class="tape tape-a" aria-hidden="true"></span>
+          <span class="tape tape-b" aria-hidden="true"></span>
+          <img
+            src="{base}/images/profile/me_alternative.jpg"
+            alt="Penélope Gonçalves, smiling"
+            width="480"
+            height="600"
+          />
+          <figcaption class="handwritten">(this is me, hi!)</figcaption>
+        </figure>
       </div>
 
       <ul class="slots" aria-label="What I do">
@@ -179,7 +213,6 @@
               on:focus={onCardFocus}
             >
               <span class="card-body">
-                <span class="card-index">0{i + 1} · {role.word}</span>
                 <span class="card-title">{role.title}</span>
                 <span class="card-desc">{role.description}</span>
                 <span class="card-cta"
@@ -204,19 +237,6 @@
     color: var(--on-hero);
   }
 
-  /* Halftone sun, rising behind the cards (inside the pinned frame) */
-  .sticky::before {
-    content: '';
-    position: absolute;
-    width: 30rem;
-    height: 30rem;
-    right: -8rem;
-    top: 8rem;
-    border-radius: 50%;
-    background: var(--halftone-sun);
-    pointer-events: none;
-  }
-
   .sticky {
     position: relative;
     overflow: hidden;
@@ -231,28 +251,48 @@
   /* ── Headline ── */
   .headline {
     position: relative;
-    max-width: 72rem;
+    display: grid;
+    gap: var(--spacing-8);
+    align-items: center;
   }
 
-  .eyebrow {
-    color: var(--on-hero);
+  @media (min-width: 768px) {
+    .headline {
+      grid-template-columns: 1fr auto;
+      gap: var(--spacing-12);
+    }
   }
 
   h1 {
-    margin: var(--spacing-4) 0 var(--spacing-2);
-    font-size: clamp(2.2rem, 5vw, 4.25rem);
+    margin: 0 0 var(--spacing-4);
+    font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
     color: var(--on-hero);
-    max-width: none;
+    max-width: 24ch;
+  }
+
+  h1 .serif-italic {
+    color: var(--on-hero-accent);
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .mark {
+    background: linear-gradient(transparent 62%, color-mix(in srgb, var(--ink) 38%, transparent) 62%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   .roles-line {
     margin: 0;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: clamp(1.6rem, 3.6vw, 3.1rem);
-    line-height: 1.3;
+    font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+    line-height: 1.4;
     letter-spacing: -0.02em;
-    text-wrap: balance;
   }
 
   .role {
@@ -284,32 +324,13 @@
   }
 
   .truth {
-    margin: var(--spacing-3) 0 0;
-    font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(1.8rem, 4vw, 3.4rem);
-    line-height: 1.1;
     letter-spacing: -0.03em;
+    white-space: nowrap;
   }
 
   .truth .serif-italic {
     color: var(--on-hero-accent);
-  }
-
-  .note-me {
-    display: none;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.6rem;
-    color: var(--on-hero);
-    transform: rotate(4deg);
-  }
-
-  @media (min-width: 768px) {
-    .note-me {
-      display: block;
-    }
   }
 
   .hint {
@@ -317,6 +338,44 @@
     font-size: 1.6rem;
     color: var(--on-hero);
     display: none;
+  }
+
+  .portrait {
+    position: relative;
+    justify-self: center;
+    width: min(70%, 16rem);
+    padding: 0.6rem 0.6rem 2.6rem;
+    background: var(--paper-card);
+    box-shadow: var(--shadow-card-hover);
+    transform: rotate(2.5deg);
+  }
+
+  .portrait img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: sepia(0.12) saturate(0.95);
+  }
+
+  .portrait figcaption {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .tape-a {
+    top: -0.7rem;
+    left: -1.2rem;
+    transform: rotate(-28deg);
+  }
+
+  .tape-b {
+    top: -0.7rem;
+    right: -1.2rem;
+    transform: rotate(24deg);
   }
 
   /* ── Cards (static layout) ── */
@@ -383,7 +442,6 @@
     opacity: var(--reveal);
   }
 
-  .card-index,
   .card-cta {
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -416,7 +474,7 @@
 
   /* ── Animated mode: pin the section and let JS fly the strikes ── */
   .animated {
-    height: 360vh;
+    height: 420vh;
   }
 
   .animated .sticky {
@@ -434,15 +492,36 @@
   }
 
   .animated h1 {
-    font-size: min(4.2vw, 6.4vh);
+    font-size: min(3.8vw, 6vh);
+    max-width: 26ch;
   }
 
   .animated .roles-line {
-    font-size: min(2.9vw, 4.6vh);
+    font-size: min(2.2vw, 3.6vh);
   }
 
-  .animated .truth {
-    font-size: min(3.4vw, 5.2vh);
+  /* Start big, settle to size as the scroll begins. The copy's box is narrowed by the
+     start scale so the enlarged text still fits its column. */
+  .animated .headline {
+    translate: 0 var(--y, 0);
+  }
+
+  .animated .headline-copy {
+    width: calc(100% / 1.6);
+    transform: scale(var(--s, 1));
+    transform-origin: top left;
+  }
+
+  .animated .portrait {
+    transform: rotate(2.5deg) scale(var(--s, 1));
+    transform-origin: top right;
+    width: min(13vw, 22vh);
+    padding: 0.4rem 0.4rem 1.8rem;
+  }
+
+  .animated .portrait figcaption {
+    font-size: 0.95rem;
+    bottom: 0.3rem;
   }
 
   .animated .role-word::after {
@@ -451,10 +530,8 @@
 
   .animated .hint {
     display: block;
-    position: absolute;
-    right: 0;
-    bottom: -0.2rem;
-    margin: 0;
+    margin: var(--spacing-3) 0 0;
+    font-size: 1.3rem;
   }
 
   .animated .slots {

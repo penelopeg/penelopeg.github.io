@@ -21,7 +21,6 @@
   --coral: #ff6a4d;
   --ochre: #d4962a;
   --ochre-light: #f7cf7a;
-  --sun-dot: #e2683f;
   --line: rgba(38, 33, 28, 0.16);
 
   /* Semantic aliases (kept so every page inherits the new look) */
@@ -58,8 +57,7 @@
   --border-radius-sticker: 999px;
   --border-radius-card: 6px;
 
-  /* Header — "Riso sun": flat clay with a printed halftone sun */
-  --halftone-sun: radial-gradient(var(--sun-dot) 30%, transparent 32%) 0 0 / 14px 14px;
+  /* Header: flat clay with paper grain */
   --on-hero: var(--paper);
   --on-hero-accent: var(--ochre-light); /* large text only (≥24px) */
   --hero-text-light: var(--on-hero);
@@ -484,7 +482,7 @@ p {
   z-index: 2;
 }
 
-/* ── PAGE HERO — flat clay + halftone sun ───────────────────────────── */
+/* ── PAGE HERO — flat clay ───────────────────────────── */
 .ct-hero {
   background-color: var(--terracotta);
   background-image: var(--grain);
@@ -496,27 +494,6 @@ p {
 @media (min-width: 768px) {
   .ct-hero {
     padding: var(--spacing-24) 0 var(--spacing-16);
-  }
-}
-/* Risograph-style dotted sun rising from the bottom-right
-   (top-right is kept clear for handwritten margin notes) */
-.ct-hero::after {
-  content: "";
-  position: absolute;
-  width: 14rem;
-  height: 14rem;
-  bottom: -7rem;
-  right: -5rem;
-  border-radius: 50%;
-  background: var(--halftone-sun);
-  pointer-events: none;
-}
-@media (min-width: 768px) {
-  .ct-hero::after {
-    width: 24rem;
-    height: 24rem;
-    bottom: -10rem;
-    right: 4%;
   }
 }
 .ct-hero > * {

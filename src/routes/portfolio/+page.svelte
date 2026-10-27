@@ -10,8 +10,7 @@
 
 <section class="ct-hero">
   <div class="container">
-    <p class="eyebrow">01 · The index</p>
-    <h1>Works, grouped by <span class="serif-italic">thread</span>.</h1>
+    <h1>Portfolio</h1>
     <p class="lead">
       Gatherings, creative tech and words. Hover a piece to peek at the raw notes behind it.
     </p>
@@ -33,7 +32,6 @@
           aria-pressed={selected === bucket.id}
           on:click={() => (selected = selected === bucket.id ? '' : bucket.id)}
         >
-          <span class="chip-index">{bucket.index}</span>
           {bucket.title}
         </button>
       {/each}
@@ -42,7 +40,6 @@
     {#each visible as bucket (bucket.id)}
       <section class="bucket" aria-labelledby="bucket-{bucket.id}">
         <header class="bucket-head" style="--accent: {bucket.color}">
-          <span class="bucket-index">{bucket.index}</span>
           <div>
             <h2 id="bucket-{bucket.id}">{bucket.title}</h2>
             <p>{bucket.blurb}</p>
@@ -96,10 +93,6 @@
     box-shadow: var(--shadow-sticker);
   }
 
-  .chip-index {
-    opacity: 0.7;
-  }
-
   .bucket {
     border-top: 2px solid var(--ink);
     padding-top: var(--spacing-8);
@@ -108,17 +101,8 @@
 
   .bucket-head {
     display: grid;
-    grid-template-columns: auto 1fr;
     gap: var(--spacing-6);
     margin-bottom: var(--spacing-8);
-  }
-
-  .bucket-index {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(3rem, 7vw, 5rem);
-    line-height: 0.85;
-    color: var(--accent);
   }
 
   .bucket-head h2 {

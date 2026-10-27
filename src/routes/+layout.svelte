@@ -5,11 +5,11 @@
   import Seo from '$lib/components/Seo.svelte';
 
   const links = [
-    { href: '/', label: 'Index', n: '00' },
-    { href: '/portfolio', label: 'Works', n: '01' },
-    { href: '/events', label: 'Gatherings', n: '02' },
-    { href: '/blog', label: 'Writing', n: '03' },
-    { href: '/about', label: 'About', n: '04' }
+    { href: '/', label: 'Home' },
+    { href: '/portfolio', label: 'Do' },
+    { href: '/events', label: 'Gather' },
+    { href: '/blog', label: 'Reflect' },
+    { href: '/about', label: 'About' }
   ];
 
   let isMenuOpen = false;
@@ -47,7 +47,7 @@
               href="{base}{link.href}"
               class="nav-link"
               aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
-              ><span class="n">{link.n}</span> {link.label}</a
+              >{link.label}</a
             >
           </li>
         {/each}
@@ -78,7 +78,7 @@
               href="{base}{link.href}"
               class="mobile-nav-link"
               aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
-              ><span class="n">{link.n}</span>{link.label}</a
+              >{link.label}</a
             >
           </li>
         {/each}
@@ -93,11 +93,10 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-statement">
-        Let’s build something <span class="serif-italic">together</span>, online or in a room full of people.
+        Let’s build something <span class="serif-italic">together</span>, in a room full of people.
       </p>
       <div class="footer-grid">
         <div>
-          <p class="eyebrow footer-label">Penélope Gonçalves · lepsies</p>
           <p class="footer-subtitle">
             Community builder · founder · tech lead · writer · agent of (good) chaos. Based in the Algarve, Portugal.
           </p>
@@ -113,9 +112,11 @@
               </a>
             </li>
             <li>
-              <a href="https://lepsies.substack.com" class="social-link" aria-label="Substack">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z" />
+              <a href="https://instagram.com/lepsies_art" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
                 </svg>
               </a>
             </li>
@@ -140,7 +141,7 @@
         </div>
       </div>
       <p class="footer-copyright">
-        © {new Date().getFullYear()} Penélope Gonçalves. Handmade with SvelteKit, decaf and good chaos.
+        © {new Date().getFullYear()} Penélope Gonçalves. Made with decaf and good chaos.
       </p>
     </div>
   </footer>
@@ -187,11 +188,6 @@
     list-style: none;
   }
 
-  .n {
-    font-weight: 400;
-    margin-right: 0.15rem;
-  }
-
   .menu-button {
     display: block;
     padding: 0.5rem;
@@ -229,11 +225,6 @@
     font-family: var(--font-display);
     font-size: 1.5rem;
     border-bottom: 1px solid rgba(243, 235, 221, 0.2);
-  }
-
-  .mobile-nav-link .n {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
   }
 
   .mobile-nav-link[aria-current='page'] {

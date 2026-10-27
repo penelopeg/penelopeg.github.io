@@ -54,7 +54,6 @@ Full reference: `DESIGN_SYSTEM.md`. Tokens live in `src/app.css`.
 | `--coral` | `#ff6a4d` | electric pop: highlights, ticker label |
 | `--ochre` | `#d4962a` | tape, underlines, status pills |
 | `--ochre-light` | `#f7cf7a` | italic accents on the header (large text only) |
-| `--sun-dot` | `#e2683f` | halftone sun dots on the header |
 
 Legacy aliases (`--color-primary`, `--color-secondary`, `--color-text`, …) map
 onto these, so prefer the named tokens in new code. Coral and ochre are
@@ -67,13 +66,10 @@ backgrounds/decoration only; don't use them for text on paper (contrast).
 - **Labels / meta / nav**: JetBrains Mono (`--font-mono`, `.eyebrow`)
 - **Margin notes**: Caveat (`--font-handwritten`, `.handwritten`)
 
-### Header: "Riso sun"
+### Header
 
-The nav and every page hero (`.ct-hero` and the homepage `.hero`) are flat
-terracotta with paper grain, plus a risograph-style halftone "sun"
-(`--halftone-sun`, dots in `--sun-dot`). On the homepage the sun sits behind
-the portrait; on inner pages it rises from the bottom-right, keeping the
-top-right clear for handwritten notes. No smooth gradients in the header.
+The nav and every page hero (`.ct-hero` and the homepage `StrikeHero`) are flat
+terracotta with paper grain. No dots, no smooth gradients in the header.
 Text on it is `--on-hero` (paper); italic emphasis is `--on-hero-accent`
 (ochre-light, large text only). Primary buttons on the header are ink, not
 terracotta. Don't dim header text with opacity: paper on terracotta is only
@@ -90,24 +86,23 @@ terracotta. Don't dim header text with opacity: paper on terracotta is only
 
 ### Homepage structure ("The Lab & The Story")
 
-Hero statement → lab ticker → Selected Works (three buckets) → Current
-Experiments (lab log + latest posts) → Limited Runs (offline) → Presence
-(audio/video). All content is data-driven from `src/lib/data/`:
+Strike hero → works link → lab ticker → Current
+Experiments (lab log + latest posts) → Limited Runs (offline). All content is data-driven from `src/lib/data/`:
 
 - `works.js`: buckets and works (also powers `/portfolio`); add `sketch` for a scanned sketch reveal
 - `lab.js`: work-in-progress experiments, newest first
 - `offline.js`: limited-run gatherings
-- `media.js`: audio/video clips (files in `static/media/`); clips without `src` show "recording soon"
+- `media.js` / `MediaClip`: audio/video clips; currently not shown on the homepage
 
 Everything below the hero lives in `src/lib/components/home/HomeSections.svelte`
 so alternative heroes can reuse it.
 
-**Prototype: `/preview/strikes/`** (noindex) swaps the hero for `StrikeHero`:
-the original "Olá, I'm Penélope, and I'm a ~~ecosystem builder~~ / … agent of
-(good) chaos" line. On large screens (and only without reduced motion) the
-section pins while scrolling and each marker strike flies off its word and
-morphs into that role's card; on mobile and reduced motion it renders
-statically (struck roles + card grid). Role content: `src/lib/data/roles.js`.
+**Hero: `StrikeHero`** shows the headline and portrait, then the struck-through
+roles ending in "agent of (good) chaos". On large screens (and only without
+reduced motion) the section pins while scrolling and each marker strike flies
+off its word and morphs into that role's card; on mobile and reduced motion it
+renders statically (struck roles + card grid). Role content:
+`src/lib/data/roles.js`. The work buckets only appear on `/portfolio`.
 
 ## Blog System
 

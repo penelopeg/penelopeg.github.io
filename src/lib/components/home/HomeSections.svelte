@@ -1,14 +1,10 @@
 <script>
   import { base } from '$app/paths';
   import SectionHeading from '$lib/components/SectionHeading.svelte';
-  import WorkCard from '$lib/components/WorkCard.svelte';
   import LabTicker from '$lib/components/LabTicker.svelte';
   import OfflineTicket from '$lib/components/OfflineTicket.svelte';
-  import MediaClip from '$lib/components/MediaClip.svelte';
-  import { buckets } from '$lib/data/works.js';
   import { experiments, statusLabel } from '$lib/data/lab.js';
   import { offlineConcepts } from '$lib/data/offline.js';
-  import { clips } from '$lib/data/media.js';
   import { posts, formatDate } from '$lib/data/posts.js';
 
   const latestPosts = posts.slice(0, 3);
@@ -19,49 +15,19 @@
   ];
 </script>
 
-<!-- Everything on the homepage below the hero: ticker → works → lab → offline → presence -->
-<LabTicker items={tickerItems} />
-
-<!-- ── SELECTED WORKS ──────────────────────────────────────────────────── -->
-<section id="works" class="works" aria-labelledby="works-title">
-  <div class="container">
-    <SectionHeading
-      id="works-title"
-      eyebrow="Selected works"
-      title="Three threads, one practice."
-      blurb="I don't do one thing, and I don't pretend to. Everything here is about using technology, stories and gatherings to bring people together."
-    />
-
-    {#each buckets as bucket (bucket.id)}
-      <section class="bucket" aria-labelledby="bucket-{bucket.id}" style="--accent: {bucket.color}">
-        <div class="bucket-head">
-          <span class="bucket-index">{bucket.index}</span>
-          <div>
-            <h3 id="bucket-{bucket.id}" class="bucket-title">{bucket.title}</h3>
-            <p class="bucket-blurb">{bucket.blurb}</p>
-          </div>
-        </div>
-        <div class="work-grid">
-          {#each bucket.works as work, i (work.title)}
-            <WorkCard {work} {i} accent={bucket.color} />
-          {/each}
-        </div>
-      </section>
-    {/each}
-
-    <p class="more">
-      <a href="{base}/portfolio" class="button button-ghost">Browse the full index →</a>
-    </p>
-  </div>
-</section>
+<!-- Everything on the homepage below the hero: works link → ticker → lab → offline -->
+<p class="more">
+  <a href="{base}/portfolio" class="button button-ghost">Browse all works →</a>
+</p>
 
 <!-- ── CURRENT EXPERIMENTS ─────────────────────────────────────────────── -->
+<LabTicker items={tickerItems} />
+
 <section id="lab" class="lab" aria-labelledby="lab-title">
   <div class="container lab-grid">
     <div>
       <SectionHeading
         id="lab-title"
-        eyebrow="Current experiments"
         title="The lab bench."
         blurb="Unpolished, in-progress, honest. Prototypes, half-drafts and ideas I'm still arguing with."
       />
@@ -95,7 +61,7 @@
 
   <div class="container notebook">
     <div class="notebook-head">
-      <p class="eyebrow">Fresh from the notebook</p>
+      <h3 class="notebook-title">Fresh from the notebook</h3>
       <a href="{base}/blog" class="notebook-all">All writing →</a>
     </div>
     <ul class="notebook-list">
@@ -117,8 +83,6 @@
   <div class="container">
     <SectionHeading
       id="offline-title"
-      index="IRL"
-      eyebrow="Offline-first"
       title="Limited runs."
       blurb="Pop-ups, retreats and one-off formats. They only happen once, in one room, with whoever showed up. That's the point."
     />
@@ -134,80 +98,9 @@
   </div>
 </section>
 
-<!-- ── PRESENCE (AUDIO / VISUAL) ───────────────────────────────────────── -->
-<section id="presence" class="presence" aria-labelledby="presence-title">
-  <div class="container">
-    <SectionHeading
-      id="presence-title"
-      eyebrow="Press play"
-      title="In my own voice."
-      blurb="Voice-read excerpts, the sound of a room mid-hackathon, and the odd movement sketch."
-    />
-    <div class="clip-grid">
-      {#each clips as clip (clip.title)}
-        <MediaClip {clip} />
-      {/each}
-    </div>
-  </div>
-</section>
 
 <style>
-  /* ── Works ── */
-  .works {
-    padding: var(--spacing-24) 0 var(--spacing-16);
-  }
-
-  .bucket {
-    padding-top: var(--spacing-8);
-    margin-bottom: var(--spacing-16);
-    border-top: 2px solid var(--ink);
-  }
-
-  .bucket-head {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: var(--spacing-4) var(--spacing-6);
-    align-items: start;
-    margin-bottom: var(--spacing-8);
-  }
-
-  .bucket-index {
-    font-family: var(--font-display);
-    font-weight: 300;
-    font-size: clamp(3rem, 7vw, 5rem);
-    line-height: 0.85;
-    color: var(--accent);
-  }
-
-  .bucket-title {
-    font-size: clamp(1.6rem, 3vw, 2.25rem);
-    margin-bottom: var(--spacing-2);
-  }
-
-  .bucket-blurb {
-    margin: 0;
-    color: var(--ink-soft);
-    max-width: 40rem;
-  }
-
-  .work-grid {
-    display: grid;
-    gap: var(--spacing-12) var(--spacing-8);
-    grid-template-columns: 1fr;
-  }
-
-  @media (min-width: 640px) {
-    .work-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 1100px) {
-    .work-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
+  /* ── Works link ── */
   .more {
     text-align: center;
   }
@@ -230,7 +123,7 @@
 
   @media (min-width: 1024px) {
     .lab-grid {
-      grid-template-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 2fr;
       gap: var(--spacing-16);
     }
 
@@ -249,20 +142,21 @@
   .lab-log {
     list-style: none;
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     gap: var(--spacing-4);
+    align-items: start;
   }
 
   .entry {
     padding: var(--spacing-6);
     background: var(--paper-card);
     border: 1px solid var(--line);
-    border-left: 4px solid var(--terracotta);
     border-radius: var(--border-radius-card);
     transition: var(--transition-base);
   }
 
   .entry:hover {
-    transform: translateX(4px);
+    transform: translateY(-3px);
     box-shadow: var(--shadow-card);
   }
 
@@ -327,6 +221,11 @@
     padding-bottom: var(--spacing-3);
   }
 
+  .notebook-title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
   .notebook-all {
     font-family: var(--font-mono);
     font-size: 0.85rem;
@@ -385,8 +284,7 @@
     color: var(--paper);
   }
 
-  .offline :global(.section-heading .blurb),
-  .offline :global(.section-heading .eyebrow) {
+  .offline :global(.section-heading .blurb) {
     color: rgba(243, 235, 221, 0.85);
   }
 
@@ -410,29 +308,5 @@
   .offline-cta a {
     color: var(--ochre);
     text-underline-offset: 4px;
-  }
-
-  /* ── Presence ── */
-  .presence {
-    padding: var(--spacing-24) 0;
-    background: var(--slate);
-    background-image: var(--grain);
-    color: var(--paper);
-  }
-
-  .presence :global(.section-heading .blurb),
-  .presence :global(.section-heading .eyebrow) {
-    color: rgba(243, 235, 221, 0.8);
-  }
-
-  .clip-grid {
-    display: grid;
-    gap: var(--spacing-6);
-  }
-
-  @media (min-width: 768px) {
-    .clip-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 </style>

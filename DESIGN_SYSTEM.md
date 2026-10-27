@@ -29,17 +29,13 @@
 | `--coral` | `#ff6a4d` | electric accent (decorative) |
 | `--ochre` | `#d4962a` | tape, underlines (decorative) |
 | `--ochre-light` | `#f7cf7a` | italic accents on the header (large text) |
-| `--sun-dot` | `#e2683f` | halftone sun dots |
 | `--line` | ink @ 16% | hairlines |
 
 `--grain` is an inline SVG noise texture layered on paper surfaces.
 
-### Header ("Riso sun")
+### Header
 
 - Flat `--terracotta` + `--grain` on the nav and all page heroes; no smooth gradients
-- `--halftone-sun`: `radial-gradient(var(--sun-dot) 30%, transparent 32%) 0 0 / 14px 14px` clipped to a circle
-  - homepage: 34rem circle behind the portrait (22rem, bottom-right on mobile)
-  - inner pages (`.ct-hero::after`): rising from the bottom-right
 - `--on-hero`: paper text (4.5:1 on terracotta; never reduce its opacity)
 - `--on-hero-accent`: ochre-light, for large italic emphasis only
 - The logo mark is recoloured to paper with a CSS filter in the nav

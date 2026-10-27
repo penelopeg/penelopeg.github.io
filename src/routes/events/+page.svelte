@@ -45,7 +45,7 @@
     },
     {
       title: 'Algarve Buildathon',
-      description: 'Building solutions for the Algarve region using No-Code and AI technologies',
+      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
       locations: ['Algarve'],
       date: 'November 2025',
       type: 'hackathon'
@@ -81,7 +81,7 @@
       title: 'Geek Sessions',
       description: '15 years of monthly tech meetups in Algarve, featuring talks, workshops and networking.',
       locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
-      date: '2009 - Present',
+      date: '2021 - Present',
       type: ['talk', 'fireside chat', 'workshop'],
       // image: '{base}/images/events/geeksessions.jpg',
       url: 'https://geeksessions.io'

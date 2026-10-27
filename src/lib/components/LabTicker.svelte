@@ -6,7 +6,7 @@
 
 <!-- Decorative marquee; the same content is listed accessibly elsewhere on the page -->
 <div class="ticker" aria-hidden="true">
-  <span class="label"><span class="dot"></span>{label}</span>
+  <span class="label">{label}</span>
   <div class="track">
     {#each [0, 1] as copy (copy)}
       <ul class="run">
@@ -45,14 +45,6 @@
     z-index: 1;
   }
 
-  .dot {
-    width: 0.55rem;
-    height: 0.55rem;
-    border-radius: 50%;
-    background: var(--ink);
-    animation: blink 1.4s steps(2, start) infinite;
-  }
-
   .track {
     display: flex;
     width: max-content;
@@ -85,12 +77,6 @@
   @keyframes scroll {
     to {
       transform: translateX(-50%);
-    }
-  }
-
-  @keyframes blink {
-    to {
-      visibility: hidden;
     }
   }
 </style>

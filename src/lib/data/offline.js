@@ -47,6 +47,6 @@ export const offlineConcepts = [
     when: "Nov 2025",
     edition: "48h",
     description:
-      "Building real solutions for the region with no-code and AI, in one weekend.",
+      "Made with Algarve Evolution. Building real solutions for the region with no-code and AI, in one weekend.",
   },
 ];

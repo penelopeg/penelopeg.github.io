@@ -41,7 +41,7 @@ export const roles = [
   {
     word: 'tech lead',
     title: 'Tech Team Lead',
-    description: 'Leading an engineering team to deliver high-quality PIM/DAM software @ Centric Software. (Day job!)',
+    description: 'Leading an engineering team to deliver high-quality PIM/DAM software @ Centric Software.',
     href: '/cv',
     cta: 'CV',
     bg: 'var(--ink)',
@@ -50,7 +50,8 @@ export const roles = [
   {
     word: 'speaker',
     title: 'Speaker',
-    description: 'Sharing insights and experiences, with a focus on elevating new, emerging impact builders.',
+    description:
+      'TEDx speaker sharing insights and experiences, with a focus on elevating new, emerging impact builders.',
     href: '/speaker',
     cta: 'Talks',
     bg: 'var(--paper-card)',
@@ -60,7 +61,7 @@ export const roles = [
     word: 'writer',
     title: 'Writer',
     description:
-      'Legendary Google Keep notes writer, a thousand fiction projects to publish, the occasional diary entry @ Substack.',
+      'Legendary Google Keep notes writer, a thousand fiction projects to publish, the occasional diary entry.',
     href: '/blog',
     cta: 'Writing',
     bg: 'var(--olive)',
@@ -70,7 +71,7 @@ export const roles = [
     word: 'artist',
     title: 'Artist',
     description:
-      'Exploring creativity (and a lack of natural talent) through digital art, visual storytelling and the occasional design.',
+      'Exploring creativity through digital art, visual storytelling and the occasional design.',
     href: 'https://instagram.com/lepsies_art',
     cta: 'Art',
     bg: 'var(--coral)',
