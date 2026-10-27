@@ -48,7 +48,7 @@
   }
 
   /** Out of the drawer, to a spot on the ring. */
-  function burstOut(/** @type {Element} */ _node, { delay = 0, dx = 0, dy = 0, tilt = 0, duration = 650 } = {}) {
+  function burstOut(/** @type {Element} */ _node, { delay = 0, dx = 0, dy = 0, tilt = 0, duration = 500 } = {}) {
     return {
       delay,
       duration,
@@ -184,7 +184,7 @@
         {#each open.items as item, i (item.title)}
           <li
             style="translate: calc(-50% + {ring[i].dx}px) calc(-50% + {ring[i].dy}px)"
-            in:burstOut|global={{ delay: 1700 + i * 70, dx: ring[i].dx, dy: ring[i].dy, tilt: ((i % 5) - 2) * 8 }}
+            in:burstOut|global={{ delay: 1100 + i * 45, dx: ring[i].dx, dy: ring[i].dy, tilt: ((i % 5) - 2) * 8 }}
           >
             <a href={item.url} target="_blank" rel="noopener noreferrer" class="trinket">
               <span class="trinket-tag">{item.tag}</span>
@@ -424,7 +424,7 @@
     z-index: 2; /* in front of the ring, so trinkets come out from behind it */
     width: 14rem;
     perspective: 700px;
-    animation: box-in 0.75s ease-out both;
+    animation: box-in 0.5s ease-out both;
   }
 
   .box-body {
@@ -460,7 +460,7 @@
     border: 2px solid var(--paper);
     border-radius: 6px;
     transform-origin: top center;
-    animation: lid-open 0.55s 0.75s cubic-bezier(0.5, 0, 0.3, 1) both;
+    animation: lid-open 0.4s 0.5s cubic-bezier(0.5, 0, 0.3, 1) both;
   }
 
   @keyframes box-in {
