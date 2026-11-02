@@ -4,13 +4,13 @@
   import { getTagStyle } from '$lib/utils/tagStyles';
   
   const tagColors = {
-    'conference': { bg: '#ff66b3', text: 'white' },
-    'hackathon': { bg: '#7c3aed', text: 'white' },
-    'talk': { bg: '#06b6d4', text: 'white' },
-    'workshop': { bg: '#f59e0b', text: 'white' },
-    'community': { bg: '#10b981', text: 'white' },
-    'fireside chat': { bg: '#3b82f6', text: 'white' },
-    'lan party': { bg: '#ef4444', text: 'white' }
+    'conference': { bg: '#2a44e0', text: 'white' },
+    'hackathon': { bg: '#b4492b', text: 'white' },
+    'talk': { bg: '#8a5a0c', text: 'white' },
+    'workshop': { bg: '#4d5a2b', text: 'white' },
+    'community': { bg: '#3f6b57', text: 'white' },
+    'fireside chat': { bg: '#9b3a4a', text: 'white' },
+    'lan party': { bg: '#2f3236', text: 'white' }
   };
 
   const events = [
@@ -45,7 +45,7 @@
     },
     {
       title: 'Algarve Buildathon',
-      description: 'Building solutions for the Algarve region using No-Code and AI technologies',
+      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
       locations: ['Algarve'],
       date: 'November 2025',
       type: 'hackathon'
@@ -81,7 +81,7 @@
       title: 'Geek Sessions',
       description: '15 years of monthly tech meetups in Algarve, featuring talks, workshops and networking.',
       locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
-      date: '2009 - Present',
+      date: '2021 - Present',
       type: ['talk', 'fireside chat', 'workshop'],
       // image: '{base}/images/events/geeksessions.jpg',
       url: 'https://geeksessions.io'
@@ -159,7 +159,7 @@
 
     <div class="events-grid">
       {#each filteredEvents as event}
-        <div class="event-card card">
+        <div class="event-card card" class:has-link={event.url}>
           {#if event.image}
             <div class="event-image">
               <img src={event.image} alt={event.title} />
@@ -173,7 +173,7 @@
             <div class="title-row">
               <h3>{event.title}</h3>
               {#if event.url}
-                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer">
+                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer" aria-label="{event.title} (opens in a new tab)">
                   <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -207,12 +207,11 @@
 
 <style>
   .events-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
   }
 
   .events-content {
@@ -246,8 +245,33 @@
     transition: transform 0.3s ease;
   }
 
+  .event-card {
+    position: relative;
+  }
+
   .event-card:hover {
     transform: translateY(-4px);
+  }
+
+  .event-card.has-link:focus-within {
+    outline: 3px solid var(--cobalt);
+    outline-offset: 3px;
+  }
+
+  /* stretched link: the arrow link covers the whole card */
+  .external-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .external-link:focus-visible {
+    outline: none;
+  }
+
+  .event-card.has-link {
+    cursor: pointer;
   }
 
   .event-card:hover .external-link {

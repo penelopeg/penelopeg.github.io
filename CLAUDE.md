@@ -31,75 +31,78 @@
 - Follow existing component patterns in the codebase
 - Keep components focused and single-purpose
 
-## Design System
+## Design System: "Digital Warmth"
+
+High-tech meets craft. Grounded earth tones with electric pops, an editorial
+serif against a functional sans/mono, paper grain and handwritten margin notes.
+It should feel raw, elevated and human, never like a sterile corporate portfolio.
+Full reference: `DESIGN_SYSTEM.md`. Tokens live in `src/app.css`.
 
 ### Color Palette
 
-**Primary Colors:**
+| Token | Hex | Use |
+| --- | --- | --- |
+| `--paper` | `#f3ebdd` | page background |
+| `--paper-deep` | `#e9dcc5` | lab section |
+| `--paper-card` | `#fbf6ec` | cards, frames |
+| `--ink` | `#26211c` | body text, borders, footer |
+| `--ink-soft` | `#5d5348` | secondary text |
+| `--terracotta` | `#b4492b` | primary: links, CTAs, accents |
+| `--olive` | `#4d5a2b` | "Limited Run" section, workshop tags |
+| `--slate` | `#2f3236` | dark sections (presence, blog post hero) |
+| `--cobalt` | `#2a44e0` | electric pop, focus ring |
+| `--coral` | `#ff6a4d` | electric pop: highlights, ticker label |
+| `--ochre` | `#d4962a` | tape, underlines, status pills |
+| `--ochre-light` | `#f7cf7a` | italic accents on the header (large text only) |
 
-- Primary: `#0891b2` (main brand, CTAs, links)
-- Primary Light: `#22d3ee` (hover states)
-- Secondary: `#9333ea` (gradients, secondary actions)
-- Secondary Light: `#c084fc` (hover states)
-- Accent: `#10b981` (highlights, success states)
-- Accent Light: `#34d399` (hover states)
+Legacy aliases (`--color-primary`, `--color-secondary`, `--color-text`, …) map
+onto these, so prefer the named tokens in new code. Coral and ochre are
+backgrounds/decoration only; don't use them for text on paper (contrast).
 
-**Text Colors:**
+### Typography
 
-- Text: `#0f172a` (main body text)
-- Text Light: `#64748b` (secondary text, metadata)
+- **Display**: Fraunces (`--font-display`), with italics + `"SOFT" 100, "WONK" 1` for emphasis words (`.serif-italic`)
+- **Body**: Instrument Sans (`--font-sans`)
+- **Labels / meta / nav**: JetBrains Mono (`--font-mono`, `.eyebrow`)
+- **Margin notes**: Caveat (`--font-handwritten`, `.handwritten`)
 
-**Event/Tag Colors:**
+### Header
 
-- Conference: `#7c3aed`, Hackathon: `#ff66b3`, Workshop: `#06b6d4`
-- Community: `#10b981`, Talk: `#f59e0b`, Fireside Chat: `#ef4444`
-- Contest: `#8b5cf6`, Lan Party: `#6366f1`
+The nav and every page hero (`.ct-hero` and the homepage `StrikeHero`) are flat
+terracotta with paper grain. No dots, no smooth gradients in the header.
+Text on it is `--on-hero` (paper); italic emphasis is `--on-hero-accent`
+(ochre-light, large text only). Primary buttons on the header are ink, not
+terracotta. Don't dim header text with opacity: paper on terracotta is only
+4.5:1. Blog post pages keep the slate reading hero (`.ct-hero--dark`).
 
-### Design Aesthetic: Tumblr 2012 Sticker Style
+### Patterns
 
-**Key Principles:**
+- **Buttons**: pill shape, 2px ink border, printed offset shadow (`3px 3px 0 var(--ink)`); hover nudges up-left
+- **Cards / frames**: paper card, 1px `--line` border, soft warm shadow, `.tape` strips for a pinned-up feel
+- **Raw-layer reveal**: work thumbnails peel back on hover/focus to show a sketch or handwritten note (`WorkCard`)
+- **Section headings**: mono eyebrow + optional index chip + Fraunces title (`SectionHeading`)
+- **Motion**: subtle lifts and small rotations (≤3deg) only; everything respects `prefers-reduced-motion`
+- Keep 4.5:1 contrast, visible `:focus-visible` states, and semantic landmarks
 
-- **Rounded Corners**: Use `--border-radius-sticker` (16px) for buttons/tags, `--border-radius-card` (20px) for cards
-- **Soft Shadows**: Multi-layer shadows with blur: `0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1)`
-- **White Borders**: 3-4px white borders on interactive elements for sticker effect
-- **Lift Animations**: `translateY(-2px)` to `translateY(-4px)` on hover with increased shadow
-- **Playful Rotations**: Use `rotate(1-3deg)` with nth-child selectors for asymmetry
-- **Sticker Overlaps**: Elements can overlap slightly with different z-indexes
+### Homepage structure ("The Lab & The Story")
 
-**Design Patterns:**
+Strike hero → works link → lab ticker → Current
+Experiments (lab log + latest posts) → Limited Runs (offline). All content is data-driven from `src/lib/data/`:
 
-- Use Primary to Secondary gradient for hero sections
-- White backgrounds for cards with Primary color for interactions
-- Sticker-style buttons with white borders and soft shadows
-- Maintain 4.5:1 contrast ratio minimum
-- Provide hover/focus states with lift animations for all interactive elements
+- `works.js`: buckets and works (also powers `/portfolio`); add `sketch` for a scanned sketch reveal
+- `lab.js`: work-in-progress experiments, newest first
+- `offline.js`: limited-run gatherings
+- `media.js` / `MediaClip`: audio/video clips; currently not shown on the homepage
 
-**CSS Variables:**
+Everything below the hero lives in `src/lib/components/home/HomeSections.svelte`
+so alternative heroes can reuse it.
 
-```css
---border-radius-sticker: 16px;
---border-radius-card: 20px;
-```
-
-**Button Pattern:**
-
-```css
-.button {
-  border-radius: var(--border-radius-sticker);
-  border: 3px solid white;
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.2),
-    0 3px 6px rgba(0, 0, 0, 0.15);
-}
-```
+**Hero: `StrikeHero`** shows the headline and portrait, then the struck-through
+roles ending in "agent of (good) chaos". On large screens (and only without
+reduced motion) the section pins while scrolling and each marker strike flies
+off its word and morphs into that role's card; on mobile and reduced motion it
+renders statically (struck roles + card grid). Role content:
+`src/lib/data/roles.js`. The work buckets only appear on `/portfolio`.
 
 ## Blog System
 
@@ -117,20 +120,16 @@
    tags: ["tag1", "tag2"]
    ---
    ```
-3. Update `/src/routes/blog/+page.svelte` posts array
-4. Update `/src/routes/blog/rss.xml/+server.js` posts array
+3. Add the post to the top of `/src/lib/data/posts.js`
 
 ### RSS Feed
 
-- **Location**: `/src/routes/blog/rss.xml/+server.js`
+- **Location**: `/src/routes/feed/+server.js`
 - **Format**: RSS 2.0 with proper XML escaping
 - **Auto-discovery**: Meta tag in `Seo.svelte` component
-- **Updates**: Manually sync posts array with blog listing
 
-**Important**: Always keep the posts arrays in sync between:
-
-- `blog/+page.svelte` (listing)
-- `blog/rss.xml/+server.js` (RSS feed)
+`src/lib/data/posts.js` is the single source of truth for the blog listing,
+the homepage and the RSS feed. Don't duplicate the posts array elsewhere.
 
 ## File Structure Guidelines
 

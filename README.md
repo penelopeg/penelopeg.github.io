@@ -15,7 +15,7 @@ Personal portfolio and blog
 - **Styling**: Tailwind CSS + Custom CSS
 - **Markdown**: mdsvex for blog posts
 - **Deployment**: GitHub Actions → GitHub Pages
-- **Fonts**: Roboto, Space Grotesk, Kalam (handwritten)
+- **Fonts**: Fraunces (display), Instrument Sans (body), JetBrains Mono (labels), Caveat (handwritten)
 
 ## Getting Started
 
