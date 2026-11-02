@@ -159,7 +159,7 @@
 
     <div class="events-grid">
       {#each filteredEvents as event}
-        <div class="event-card card">
+        <div class="event-card card" class:has-link={event.url}>
           {#if event.image}
             <div class="event-image">
               <img src={event.image} alt={event.title} />
@@ -173,7 +173,7 @@
             <div class="title-row">
               <h3>{event.title}</h3>
               {#if event.url}
-                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer">
+                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer" aria-label="{event.title} (opens in a new tab)">
                   <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -245,8 +245,33 @@
     transition: transform 0.3s ease;
   }
 
+  .event-card {
+    position: relative;
+  }
+
   .event-card:hover {
     transform: translateY(-4px);
+  }
+
+  .event-card.has-link:focus-within {
+    outline: 3px solid var(--cobalt);
+    outline-offset: 3px;
+  }
+
+  /* stretched link: the arrow link covers the whole card */
+  .external-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .external-link:focus-visible {
+    outline: none;
+  }
+
+  .event-card.has-link {
+    cursor: pointer;
   }
 
   .event-card:hover .external-link {
