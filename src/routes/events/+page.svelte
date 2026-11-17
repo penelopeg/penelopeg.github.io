@@ -25,7 +25,7 @@
       title: 'Portugal Tech Week Palace',
       description: 'National tech event showcasing innovation and technology across Portugal.',
       locations: ['Lisbon'],
-      date: 'November 2025',
+      date: 'November 2025, November 2026',
       type: 'conference',
       url: 'https://portugaltechweek.com'
     },
@@ -54,7 +54,7 @@
       title: 'Geek Sessions Conf',
       description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
       locations: ['Faro'],
-      date: 'February 2025',
+      date: 'February 2025, March 2026',
       type: 'conference',
       // image: '{base}/images/events/gsconf.jpg',
       url: 'https://geeksessionsconf.pt'
@@ -71,11 +71,18 @@
     {
       title: 'Techstars Startup Weekend',
       description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
-      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos'],
+      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos', 'Loulé', 'Madeira'],
       date: '2023 - Present',
       type: 'hackathon',
       // image: '{base}/images/events/startup-weekend.jpg',
       url: 'https://techstars.com'
+    },
+    {
+      title: 'Meetballs by Geek Sessions',
+      description: 'Weekly sessions where the community decides what to run.',
+      date: 'Weekly',
+      type: 'community',
+      url: 'https://meetballs.org'
     },
     {
       title: 'Geek Sessions',
