@@ -36,7 +36,7 @@
       locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
       date: '2021 - Present',
       type: ['talk', 'fireside chat', 'workshop'],
-      // image: '{base}/images/events/geeksessions.jpg',
+      image: '/images/events/geek-sessions.jpg',
       url: 'https://geeksessions.io'
     },
     {
