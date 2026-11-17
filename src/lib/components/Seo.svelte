@@ -4,11 +4,11 @@
 
   const siteURL = 'https://penelopebuilds.me';
 
-  export let title = 'Penélope Gonçalves (lepsies) · Building spaces & communities that co-create the future';
+  export let title = 'Penélope Gonçalves · Building spaces & communities that co-create the future';
   export let description =
-    'Penélope Gonçalves (lepsies): community builder, founder of local.foundation, tech lead and writer in the Algarve. Hackathons, creative tech, interactive installations and stories.';
+    'Penélope Gonçalves: community builder, founder of local.foundation, tech lead and writer in the Algarve. Hackathons, creative tech, interactive installations and stories.';
   export let keywords =
-    'Penélope Gonçalves, penelopeg, lepsies, penelopebuilds, Community Builder, Tech Lead, local.foundation, Geek Sessions Faro, Impact Hackers, Algarve tech, Portuguese Women in Tech';
+    'Penélope Gonçalves, penelopeg, penelopebuilds, Community Builder, Tech Lead, local.foundation, Geek Sessions Faro, Impact Hackers, Algarve tech, Portuguese Women in Tech';
   export let image = siteURL + '/images/profile/penelope.jpeg';
 
   // Route ids are base-independent; every route is static, with trailing slashes
@@ -18,7 +18,7 @@
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Penélope Gonçalves',
-    alternateName: ['lepsies', 'penelopeg'],
+    alternateName: ['penelopeg'],
     url: siteURL,
     image: siteURL + '/images/profile/penelope.jpeg',
     jobTitle: 'Community Builder, Founder & Tech Lead',

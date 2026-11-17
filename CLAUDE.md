@@ -19,7 +19,7 @@
 
 ### SEO Optimization
 
-- Optimize for keywords: "Penélope Gonçalves" and "lepsies"
+- Optimize for the keyword "Penélope Gonçalves" (the "lepsies" name is no longer used in titles, descriptions or structured data)
 - Use proper meta tags and structured data
 - Implement semantic HTML structure
 - Ensure fast loading times
