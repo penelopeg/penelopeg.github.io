@@ -503,7 +503,11 @@
   /* Start big, settle to size as the scroll begins. The copy's box is narrowed by the
      start scale so the enlarged text still fits its column. */
   .animated .headline {
+    --portrait-w: min(13vw, 22vh);
     translate: 0 var(--y, 0);
+    /* The portrait scales up from its top-right corner, so it grows leftwards.
+       Leave room for that growth (0.6 at the 1.6 start scale) so it never covers the text. */
+    column-gap: calc(var(--spacing-12) + 0.65 * var(--portrait-w));
   }
 
   .animated .headline-copy {
@@ -515,7 +519,7 @@
   .animated .portrait {
     transform: rotate(2.5deg) scale(var(--s, 1));
     transform-origin: top right;
-    width: min(13vw, 22vh);
+    width: var(--portrait-w);
     padding: 0.4rem 0.4rem 1.8rem;
   }
 
