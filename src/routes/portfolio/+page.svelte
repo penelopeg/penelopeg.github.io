@@ -12,7 +12,7 @@
   <div class="container">
     <h1>Portfolio</h1>
     <p class="lead">
-      Gatherings, creative tech and words. Hover a piece to peek at the raw notes behind it.
+      Gatherings, the teams I lead, creative tech and words.
     </p>
     <div class="hero-actions">
       <a href="{base}/about" class="button">Who's behind this?</a>

@@ -57,7 +57,7 @@ export const buckets = [
           "Techstars Startup Weekends, buildathons, leader retreats. When a problem needs solving, I design the format around it.",
         image: "/images/portfolio/facilitator.jpg",
         url: "/events",
-        note: "Faro · Coimbra · Évora · Lagos…",
+        note: "Faro · Coimbra · Évora · Lagos · Loulé · Madeira…",
         tags: ["events", "community"],
       },
       {
@@ -73,8 +73,38 @@ export const buckets = [
     ],
   },
   {
-    id: "creative-tech",
+    id: "leadership",
     index: "02",
+    title: "Founder & Tech Lead",
+    blurb:
+      "The work I do as a founder building community tooling, and as a tech lead guiding an engineering team.",
+    color: "var(--slate)",
+    works: [
+      {
+        title: "local.foundation",
+        role: "Founder & Head of Signals",
+        description:
+          "Research and tooling to map and grow communities and regional ecosystems from the ground up.",
+        image: "/images/portfolio/local-foundation-website.png",
+        url: "https://local.foundation",
+        note: "personal fav ♥",
+        tags: ["tech", "community"],
+      },
+      {
+        title: "Centric Software",
+        role: "Tech team lead · day job",
+        description:
+          "Leading an engineering team building next-gen PIM/DAM software.",
+        image: "/images/portfolio/contentserv.jpg",
+        url: "https://centricsoftware.com",
+        note: "12 years of shipping software",
+        tags: ["tech"],
+      },
+    ],
+  },
+  {
+    id: "creative-tech",
+    index: "03",
     title: "Creative Tech & Visuals",
     blurb:
       "Interactive tools, installations and digital painting. Systems thinking you can touch.",
@@ -91,14 +121,14 @@ export const buckets = [
         tags: ["community", "art"],
       },
       {
-        title: "local.foundation",
-        role: "Founder & Head of Signals",
+        title: "L'asthena",
+        role: "Label design · Nova Vida",
         description:
-          "Research and tooling to map and grow communities and regional ecosystems from the ground up.",
-        image: "/images/portfolio/local-foundation-website.png",
-        url: "https://local.foundation",
-        note: "personal fav ♥",
-        tags: ["tech", "community"],
+          "The label I designed for L'asthena, a beer by Nova Vida.",
+        image: "/images/portfolio/lasthena-label.jpg",
+        url: "https://www.instagram.com/p/DJJVpa5MTRm/",
+        note: "a beer with my art on it",
+        tags: ["art"],
       },
       {
         title: "Digital art",
@@ -110,21 +140,11 @@ export const buckets = [
         note: "messy but fun",
         tags: ["art"],
       },
-      {
-        title: "Centric Software",
-        role: "Tech team lead · day job",
-        description:
-          "Leading an engineering team building next-gen PIM/DAM software.",
-        image: "/images/portfolio/contentserv.jpg",
-        url: "https://centricsoftware.com",
-        note: "12 years of shipping software",
-        tags: ["tech"],
-      },
     ],
   },
   {
     id: "words",
-    index: "03",
+    index: "04",
     title: "Words & Narrative",
     blurb:
       "Fiction, essays and diary entries. Storytelling as a way of making sense of the chaos.",
