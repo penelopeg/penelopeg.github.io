@@ -86,8 +86,9 @@ terracotta. Don't dim header text with opacity: paper on terracotta is only
 
 ### Homepage structure ("The Lab & The Story")
 
-Strike hero → works link → lab ticker → Current
-Experiments (lab log + latest posts) → Limited Runs (offline). All content is data-driven from `src/lib/data/`:
+Strike hero → works link → Live from the Lab (lab log + latest posts) →
+Limited Runs (offline; currently parked behind `showLimitedRuns` in
+`HomeSections.svelte`). All content is data-driven from `src/lib/data/`:
 
 - `works.js`: buckets and works (also powers `/portfolio`); add `sketch` for a scanned sketch reveal
 - `lab.js`: work-in-progress experiments, newest first

@@ -1,37 +1,32 @@
 <script>
   import { base } from '$app/paths';
   import SectionHeading from '$lib/components/SectionHeading.svelte';
-  import LabTicker from '$lib/components/LabTicker.svelte';
   import OfflineTicket from '$lib/components/OfflineTicket.svelte';
   import { experiments, statusLabel } from '$lib/data/lab.js';
   import { offlineConcepts } from '$lib/data/offline.js';
   import { posts, formatDate } from '$lib/data/posts.js';
 
+  // "Limited runs" is parked for now. Flip to true to bring it back.
+  const showLimitedRuns = false;
+
   const latestPosts = posts.slice(0, 3);
 
-  const tickerItems = [
-    ...experiments.map((e) => `${statusLabel[e.status]}: ${e.title}`),
-    `new on the blog: ${posts[0].title}`
-  ];
 </script>
 
-<!-- Everything on the homepage below the hero: works link → ticker → lab → offline -->
+<!-- Everything on the homepage below the hero: works link → lab → offline -->
 <p class="more">
   <a href="{base}/portfolio" class="button button-ghost">Browse all works →</a>
 </p>
 
 <!-- ── CURRENT EXPERIMENTS ─────────────────────────────────────────────── -->
-<LabTicker items={tickerItems} />
-
 <section id="lab" class="lab" aria-labelledby="lab-title">
   <div class="container lab-grid">
     <div>
       <SectionHeading
         id="lab-title"
-        title="The lab bench."
-        blurb="Unpolished, in-progress, honest. Prototypes, half-drafts and ideas I'm still arguing with."
+        title="Live from the Lab."
+        blurb="In-progress ideas I'll eventually polish."
       />
-      <p class="handwritten lab-scribble">updated whenever I break something new</p>
     </div>
 
     <ol class="lab-log">
@@ -79,6 +74,7 @@
 </section>
 
 <!-- ── LIMITED RUN / OFFLINE ───────────────────────────────────────────── -->
+{#if showLimitedRuns}
 <section id="offline" class="offline" aria-labelledby="offline-title">
   <div class="container">
     <SectionHeading
@@ -97,7 +93,7 @@
     </p>
   </div>
 </section>
-
+{/if}
 
 <style>
   /* ── Works link ── */
@@ -132,11 +128,6 @@
       top: 6rem;
       align-self: start;
     }
-  }
-
-  .lab-scribble {
-    font-size: 1.5rem;
-    display: inline-block;
   }
 
   .lab-log {
