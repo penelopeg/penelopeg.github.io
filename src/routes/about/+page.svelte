@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
 </script>
 
 <div class="about-hero ct-hero">

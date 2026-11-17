@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import WorkCard from '$lib/components/WorkCard.svelte';
   import { buckets } from '$lib/data/works.js';
 

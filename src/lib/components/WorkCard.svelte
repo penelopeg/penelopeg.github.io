@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import { resolveUrl, isExternal } from '$lib/data/works.js';
 
   /** @type {import('$lib/data/works.js').Work} */

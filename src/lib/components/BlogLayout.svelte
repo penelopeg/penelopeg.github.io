@@ -1,6 +1,6 @@
 <script>
-  import { base } from '$app/paths';
-  import { page } from '$app/stores';
+  import { base } from '$lib/paths';
+  import { page } from '$app/state';
 
   export let title = '';
   export let subtitle = '';
@@ -22,10 +22,14 @@
     { slug: 'untitled', title: 'Untitled', date: '2025-03-09' },
   ];
 
-  $: currentSlug = $page.url.pathname.split('/').filter(Boolean).pop();
-  $: currentIndex = posts.findIndex(p => p.slug === currentSlug);
-  $: previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
-  $: nextPost = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+  function neighbours(pathname) {
+    const slug = pathname.split('/').filter(Boolean).pop();
+    const index = posts.findIndex(p => p.slug === slug);
+    return {
+      previous: index > 0 ? posts[index - 1] : null,
+      next: index >= 0 && index < posts.length - 1 ? posts[index + 1] : null
+    };
+  }
 </script>
 
 <div class="post-hero ct-hero ct-hero--dark ct-hero--dark-context">
@@ -92,10 +96,10 @@
 
             <!-- Prev button (left) -->
             <a
-              href={previousPost ? `${base}/blog/${previousPost.slug}` : '#'}
+              href={neighbours(page.url.pathname).previous ? `${base}/blog/${neighbours(page.url.pathname).previous.slug}` : '#'}
               class="wheel-btn wheel-prev"
-              class:disabled={!previousPost}
-              aria-label={previousPost ? `Previous: ${previousPost.title}` : 'No previous post'}
+              class:disabled={!neighbours(page.url.pathname).previous}
+              aria-label={neighbours(page.url.pathname).previous ? `Previous: ${neighbours(page.url.pathname).previous.title}` : 'No previous post'}
             >
               <svg width="14" height="12" viewBox="0 0 14 12" fill="currentColor">
                 <rect x="0" y="1" width="2" height="10"/>
@@ -105,10 +109,10 @@
 
             <!-- Next button (right) -->
             <a
-              href={nextPost ? `${base}/blog/${nextPost.slug}` : '#'}
+              href={neighbours(page.url.pathname).next ? `${base}/blog/${neighbours(page.url.pathname).next.slug}` : '#'}
               class="wheel-btn wheel-next"
-              class:disabled={!nextPost}
-              aria-label={nextPost ? `Next: ${nextPost.title}` : 'No next post'}
+              class:disabled={!neighbours(page.url.pathname).next}
+              aria-label={neighbours(page.url.pathname).next ? `Next: ${neighbours(page.url.pathname).next.title}` : 'No next post'}
             >
               <svg width="14" height="12" viewBox="0 0 14 12" fill="currentColor">
                 <polygon points="0,1 10,6 0,11"/>

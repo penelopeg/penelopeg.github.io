@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import SectionHeading from '$lib/components/SectionHeading.svelte';
   import OfflineTicket from '$lib/components/OfflineTicket.svelte';
   import { experiments, statusLabel } from '$lib/data/lab.js';

@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
 
   /** @type {import('$lib/data/media.js').MediaClip} */
   export let clip;
