@@ -56,7 +56,7 @@
       locations: ['Faro'],
       date: 'February 2025, March 2026',
       type: 'conference',
-      // image: '{base}/images/events/gsconf.jpg',
+      image: '/images/events/geek-sessions-conf.jpg',
       url: 'https://geeksessionsconf.pt'
     },
     {
@@ -65,7 +65,7 @@
       locations: ['Faro'],
       date: 'November 2024',
       type: 'hackathon',
-      // image: '{base}/images/events/impact-hackers.jpg',
+      image: '/images/events/impact-hackers.jpg',
       url: 'https://impacthackerscommunity.com'
     },
     {
@@ -82,6 +82,7 @@
       description: 'Weekly sessions where the community decides what to run.',
       date: 'Weekly',
       type: 'community',
+      image: '/images/events/meetballs.jpg',
       url: 'https://meetballs.org'
     },
     {
@@ -169,7 +170,7 @@
         <div class="event-card card" class:has-link={event.url}>
           {#if event.image}
             <div class="event-image">
-              <img src={event.image} alt={event.title} />
+              <img src="{base}{event.image}" alt={event.title} loading="lazy" />
             </div>
           {:else}
             <div class="event-placeholder" style={getEventTagStyle(event.type)}>
