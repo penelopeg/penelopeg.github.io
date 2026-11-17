@@ -45,7 +45,7 @@
       locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos', 'Loulé', 'Madeira'],
       date: '2023 - Present',
       type: 'hackathon',
-      // image: '{base}/images/events/startup-weekend.jpg',
+      image: '/images/events/startup-weekend.jpg',
       url: 'https://techstars.com'
     },
     {
