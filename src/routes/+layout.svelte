@@ -5,11 +5,11 @@
   import Seo from '$lib/components/Seo.svelte';
 
   const links = [
-    { href: '/', label: 'Home' },
+    { href: '/', label: 'Home', icon: true },
+    { href: '/about', label: 'Be' },
     { href: '/portfolio', label: 'Do' },
     { href: '/events', label: 'Gather' },
-    { href: '/blog', label: 'Reflect' },
-    { href: '/about', label: 'About' }
+    { href: '/blog', label: 'Reflect' }
   ];
 
   let isMenuOpen = false;
@@ -47,7 +47,7 @@
               href="{base}{link.href}"
               class="nav-link"
               aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
-              >{link.label}</a
+              >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg><span class="visually-hidden">{link.label}</span>{:else}{link.label}{/if}</a
             >
           </li>
         {/each}
@@ -78,7 +78,7 @@
               href="{base}{link.href}"
               class="mobile-nav-link"
               aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
-              >{link.label}</a
+              >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg>{/if}{link.label}</a
             >
           </li>
         {/each}
@@ -225,6 +225,19 @@
     font-family: var(--font-display);
     font-size: 1.5rem;
     border-bottom: 1px solid rgba(243, 235, 221, 0.2);
+  }
+
+  .home-icon {
+    display: block;
+  }
+
+  .nav-link:has(.home-icon) {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .mobile-nav-link .home-icon {
+    align-self: center;
   }
 
   .mobile-nav-link[aria-current='page'] {
