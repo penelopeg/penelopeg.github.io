@@ -26,10 +26,10 @@
   const BAR_TILT = [-3, 2, -2.5, 3, -2, 2.5];
   const CARD_TILT = [-1.5, 1, -0.5, 1.5, -1, 0.5];
   // Scroll timeline (0..1): the headline shrinks from START_SCALE to 1 over the first SHRINK,
-  // the first strike lets go a little before that ends, then each role follows with STAGGER.
+  // the first strike lets go early, while the headline is still shrinking, then each role follows with STAGGER.
   const START_SCALE = 1.6;
   const SHRINK = 0.3;
-  const FIRST_ROLE = 0.18;
+  const FIRST_ROLE = 0.08;
   const STAGGER = 0.09;
   const DURATION = 0.37;
 
