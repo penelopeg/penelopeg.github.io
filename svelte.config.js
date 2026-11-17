@@ -1,6 +1,7 @@
 import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
+import { fileURLToPath } from "node:url";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -22,7 +23,9 @@ const config = {
     mdsvex({
       extensions: [".md"],
       layout: {
-        blog: "./src/lib/components/BlogLayout.svelte",
+        blog: fileURLToPath(
+          new URL("./src/lib/components/BlogLayout.svelte", import.meta.url),
+        ),
       },
     }),
   ],
