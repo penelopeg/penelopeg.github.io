@@ -19,7 +19,8 @@
       description: 'Retreat for SheSapiens community leaders to work on the future of their community and on themselves, hosted and facilitated in collaboration between local.foundation and flourish mode.',
       locations: ['Fonte do Palheiro, Algarve'],
       date: 'September 11-13, 2026',
-      type: 'workshop'
+      type: 'workshop',
+      url: 'https://www.instagram.com/p/DdQ-dBWop0s/'
     },
     {
       title: 'Portugal Tech Week Palace',
@@ -28,62 +29,6 @@
       date: 'November 2025, November 2026',
       type: 'conference',
       url: 'https://portugaltechweek.com'
-    },
-    {
-      title: 'Eléctrico Pitch',
-      description: 'Startup pitch competition taking place in Lisbon\'s iconic trams.',
-      locations: ['Lisbon'],
-      date: 'November 2025',
-      type: 'conference'
-    },
-    {
-      title: 'Geek Sessions x LOFT Summer Party',
-      description: 'Summer tech and networking party by Geek Sessions and LOFT.',
-      locations: ['Faro'],
-      date: 'August 2025',
-      type: 'community'
-    },
-    {
-      title: 'Algarve Buildathon',
-      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
-      locations: ['Algarve'],
-      date: 'November 2025',
-      type: 'hackathon'
-    },
-    {
-      title: 'Geek Sessions Conf',
-      description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
-      locations: ['Faro'],
-      date: 'February 2025, March 2026',
-      type: 'conference',
-      image: '/images/events/geek-sessions-conf.jpg',
-      url: 'https://geeksessionsconf.pt'
-    },
-    {
-      title: 'Impact Hackers - Social Hackathon',
-      description: 'A social impact hackathon focused on solving local community challenges through technology.',
-      locations: ['Faro'],
-      date: 'November 2024',
-      type: 'hackathon',
-      image: '/images/events/impact-hackers.jpg',
-      url: 'https://impacthackerscommunity.com'
-    },
-    {
-      title: 'Techstars Startup Weekend',
-      description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
-      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos', 'Loulé', 'Madeira'],
-      date: '2023 - Present',
-      type: 'hackathon',
-      // image: '{base}/images/events/startup-weekend.jpg',
-      url: 'https://techstars.com'
-    },
-    {
-      title: 'Meetballs by Geek Sessions',
-      description: 'Weekly sessions where the community decides what to run.',
-      date: 'Weekly',
-      type: 'community',
-      image: '/images/events/meetballs.jpg',
-      url: 'https://meetballs.org'
     },
     {
       title: 'Geek Sessions',
@@ -95,18 +40,74 @@
       url: 'https://geeksessions.io'
     },
     {
-      title: 'Geek Girls Portugal',
-      description: 'Building a supportive community for women in tech through events and mentorship.',
-      date: '2018 - 2021',
+      title: 'Techstars Startup Weekend',
+      description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
+      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos', 'Loulé', 'Madeira'],
+      date: '2023 - Present',
+      type: 'hackathon',
+      // image: '{base}/images/events/startup-weekend.jpg',
+      url: 'https://techstars.com'
+    },
+    {
+      title: 'Impact Hackers - Social Hackathon',
+      description: 'A social impact hackathon focused on solving local community challenges through technology.',
+      locations: ['Faro'],
+      date: 'November 2024',
+      type: 'hackathon',
+      image: '/images/events/impact-hackers.jpg',
+      url: 'https://impacthackerscommunity.com'
+    },
+    {
+      title: 'Geek Sessions Conf',
+      description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
+      locations: ['Faro'],
+      date: 'February 2025, March 2026',
+      type: 'conference',
+      image: '/images/events/geek-sessions-conf.jpg',
+      url: 'https://geeksessionsconf.pt'
+    },
+    {
+      title: 'Meetballs by Geek Sessions',
+      description: 'Weekly sessions where the community decides what to run.',
+      date: 'Weekly',
       type: 'community',
-      // image: '{base}/images/events/geekgirls.jpg',
-      url: 'https://geekgirlsportugal.pt'
+      image: '/images/events/meetballs.jpg',
+      url: 'https://meetballs.org'
+    },
+    {
+      title: 'Eléctrico Pitch',
+      description: 'Startup pitch competition taking place in Lisbon\'s iconic trams.',
+      locations: ['Lisbon'],
+      date: 'November 2025',
+      type: 'conference'
+    },
+    {
+      title: 'Algarve Buildathon',
+      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
+      locations: ['Algarve'],
+      date: 'November 2025',
+      type: 'hackathon'
+    },
+    {
+      title: 'Geek Sessions x LOFT Summer Party',
+      description: 'Summer tech and networking party by Geek Sessions and LOFT.',
+      locations: ['Faro'],
+      date: 'August 2025',
+      type: 'community'
     },
     {
       title: 'Agile Connect',
       description: 'Online events connecting agile practitioners and enthusiasts.',
       date: '2020 - 2021',
       type: 'talk'
+    },
+    {
+      title: 'Geek Girls Portugal',
+      description: 'Building a supportive community for women in tech through events and mentorship.',
+      date: '2018 - 2021',
+      type: 'community',
+      // image: '{base}/images/events/geekgirls.jpg',
+      url: 'https://geekgirlsportugal.pt'
     },
     {
       title: 'Shift Faro',
@@ -152,8 +153,8 @@
 
 <div class="events-hero ct-hero">
   <div class="container">
-    <h1>Events</h1>
-    <p class="lead">Creating spaces for learning, connecting and building together</p>
+    <h1>Events I run</h1>
+    <p class="lead">Creative spaces for connecting and building together.</p>
   </div>
 </div>
 
