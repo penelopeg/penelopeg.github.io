@@ -5,15 +5,10 @@
 <div class="about-hero ct-hero">
   <div class="container">
     <h1 class="chaos-rotate-1">About Me</h1>
-    <div class="handwritten" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
-      that's me!
-    </div>
     <p class="lead chaos-spacing">Creative explorer on a mission to make the most with whatever we have.</p>
-    <div class="hero-actions" style="position: relative;">
+    <div class="hero-actions">
       <a href="{base}/portfolio" class="button button-secondary chaos-rotate-2">What?</a>
-      <div class="handwritten" style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); z-index: 100;">
-        see my stuff!
-      </div>
+      <span class="handwritten hero-note">← see my stuff!</span>
     </div>
   </div>
 </div>
@@ -115,24 +110,28 @@
   
   <style>
   .about-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
   
+  .hero-note {
+    align-self: center;
+    color: var(--on-hero);
+    font-size: 1.5rem;
+  }
+
   .about-hero h1 {
     margin-bottom: var(--spacing-4);
   }
   
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
     max-width: 48rem;
-    margin: 0 auto;
+    margin: 0;
   }
   
   .about-content {
     padding: var(--spacing-16) 0;
-    transform: rotate(-0.2deg);
-    transform-origin: center center;
+
     position: relative;
   }
   

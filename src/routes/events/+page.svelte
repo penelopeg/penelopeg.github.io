@@ -4,13 +4,13 @@
   import { getTagStyle } from '$lib/utils/tagStyles';
   
   const tagColors = {
-    'conference': { bg: '#ff66b3', text: 'white' },
-    'hackathon': { bg: '#7c3aed', text: 'white' },
-    'talk': { bg: '#06b6d4', text: 'white' },
-    'workshop': { bg: '#f59e0b', text: 'white' },
-    'community': { bg: '#10b981', text: 'white' },
-    'fireside chat': { bg: '#3b82f6', text: 'white' },
-    'lan party': { bg: '#ef4444', text: 'white' }
+    'conference': { bg: '#2a44e0', text: 'white' },
+    'hackathon': { bg: '#b4492b', text: 'white' },
+    'talk': { bg: '#8a5a0c', text: 'white' },
+    'workshop': { bg: '#4d5a2b', text: 'white' },
+    'community': { bg: '#3f6b57', text: 'white' },
+    'fireside chat': { bg: '#9b3a4a', text: 'white' },
+    'lan party': { bg: '#2f3236', text: 'white' }
   };
 
   const events = [
@@ -19,15 +19,60 @@
       description: 'Retreat for SheSapiens community leaders to work on the future of their community and on themselves, hosted and facilitated in collaboration between local.foundation and flourish mode.',
       locations: ['Fonte do Palheiro, Algarve'],
       date: 'September 11-13, 2026',
-      type: 'workshop'
+      type: 'workshop',
+      url: 'https://www.instagram.com/p/DdQ-dBWop0s/'
     },
     {
       title: 'Portugal Tech Week Palace',
       description: 'National tech event showcasing innovation and technology across Portugal.',
       locations: ['Lisbon'],
-      date: 'November 2025',
+      date: 'November 2025, November 2026',
       type: 'conference',
       url: 'https://portugaltechweek.com'
+    },
+    {
+      title: 'Geek Sessions',
+      description: '15 years of monthly tech meetups in Algarve, featuring talks, workshops and networking.',
+      locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
+      date: '2021 - Present',
+      type: ['talk', 'fireside chat', 'workshop'],
+      image: '/images/events/geek-sessions.jpg',
+      url: 'https://geeksessions.io'
+    },
+    {
+      title: 'Techstars Startup Weekend',
+      description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
+      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos', 'Loulé', 'Madeira'],
+      date: '2023 - Present',
+      type: 'hackathon',
+      image: '/images/events/startup-weekend.jpg',
+      url: 'https://techstars.com'
+    },
+    {
+      title: 'Impact Hackers - Social Hackathon',
+      description: 'A social impact hackathon focused on solving local community challenges through technology.',
+      locations: ['Faro'],
+      date: 'November 2024',
+      type: 'hackathon',
+      image: '/images/events/impact-hackers.jpg',
+      url: 'https://impacthackerscommunity.com'
+    },
+    {
+      title: 'Geek Sessions Conf',
+      description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
+      locations: ['Faro'],
+      date: 'February 2025, March 2026',
+      type: 'conference',
+      image: '/images/events/geek-sessions-conf.jpg',
+      url: 'https://geeksessionsconf.pt'
+    },
+    {
+      title: 'Meetballs by Geek Sessions',
+      description: 'Weekly sessions where the community decides what to run.',
+      date: 'Weekly',
+      type: 'community',
+      image: '/images/events/meetballs.jpg',
+      url: 'https://meetballs.org'
     },
     {
       title: 'Eléctrico Pitch',
@@ -37,6 +82,13 @@
       type: 'conference'
     },
     {
+      title: 'Algarve Buildathon',
+      description: 'Made with Algarve Evolution. Building solutions for the Algarve region using No-Code and AI technologies',
+      locations: ['Algarve'],
+      date: 'November 2025',
+      type: 'hackathon'
+    },
+    {
       title: 'Geek Sessions x LOFT Summer Party',
       description: 'Summer tech and networking party by Geek Sessions and LOFT.',
       locations: ['Faro'],
@@ -44,47 +96,10 @@
       type: 'community'
     },
     {
-      title: 'Algarve Buildathon',
-      description: 'Building solutions for the Algarve region using No-Code and AI technologies',
-      locations: ['Algarve'],
-      date: 'November 2025',
-      type: 'hackathon'
-    },
-    {
-      title: 'Geek Sessions Conf',
-      description: 'Tech conference in the Algarve region, bringing together developers, designers, and tech enthusiasts.',
-      locations: ['Faro'],
-      date: 'February 2025',
-      type: 'conference',
-      // image: '{base}/images/events/gsconf.jpg',
-      url: 'https://geeksessionsconf.pt'
-    },
-    {
-      title: 'Impact Hackers - Social Hackathon',
-      description: 'A social impact hackathon focused on solving local community challenges through technology.',
-      locations: ['Faro'],
-      date: 'November 2024',
-      type: 'hackathon',
-      // image: '{base}/images/events/impact-hackers.jpg',
-      url: 'https://impacthackerscommunity.com'
-    },
-    {
-      title: 'Techstars Startup Weekend',
-      description: 'Facilitated multiple Startup Weekend events across Portugal, helping entrepreneurs build their first MVP.',
-      locations: ['Faro', 'Coimbra', 'Albufeira', 'Évora', 'Lagos'],
-      date: '2023 - Present',
-      type: 'hackathon',
-      // image: '{base}/images/events/startup-weekend.jpg',
-      url: 'https://techstars.com'
-    },
-    {
-      title: 'Geek Sessions',
-      description: '15 years of monthly tech meetups in Algarve, featuring talks, workshops and networking.',
-      locations: ['Faro', 'Portimão', 'Albufeira', 'Loulé', 'Online'],
-      date: '2009 - Present',
-      type: ['talk', 'fireside chat', 'workshop'],
-      // image: '{base}/images/events/geeksessions.jpg',
-      url: 'https://geeksessions.io'
+      title: 'Agile Connect',
+      description: 'Online events connecting agile practitioners and enthusiasts.',
+      date: '2020 - 2021',
+      type: 'talk'
     },
     {
       title: 'Geek Girls Portugal',
@@ -93,12 +108,6 @@
       type: 'community',
       // image: '{base}/images/events/geekgirls.jpg',
       url: 'https://geekgirlsportugal.pt'
-    },
-    {
-      title: 'Agile Connect',
-      description: 'Online events connecting agile practitioners and enthusiasts.',
-      date: '2020 - 2021',
-      type: 'talk'
     },
     {
       title: 'Shift Faro',
@@ -144,8 +153,8 @@
 
 <div class="events-hero ct-hero">
   <div class="container">
-    <h1>Events</h1>
-    <p class="lead">Creating spaces for learning, connecting and building together</p>
+    <h1>Events I run</h1>
+    <p class="lead">Creative spaces for connecting and building together.</p>
   </div>
 </div>
 
@@ -159,10 +168,10 @@
 
     <div class="events-grid">
       {#each filteredEvents as event}
-        <div class="event-card card">
+        <div class="event-card card" class:has-link={event.url}>
           {#if event.image}
             <div class="event-image">
-              <img src={event.image} alt={event.title} />
+              <img src="{base}{event.image}" alt={event.title} loading="lazy" />
             </div>
           {:else}
             <div class="event-placeholder" style={getEventTagStyle(event.type)}>
@@ -173,7 +182,7 @@
             <div class="title-row">
               <h3>{event.title}</h3>
               {#if event.url}
-                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer">
+                <a href={event.url} class="external-link" target="_blank" rel="noopener noreferrer" aria-label="{event.title} (opens in a new tab)">
                   <svg width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
@@ -207,12 +216,11 @@
 
 <style>
   .events-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .lead {
     font-size: 1.25rem;
-    opacity: 0.9;
   }
 
   .events-content {
@@ -246,8 +254,33 @@
     transition: transform 0.3s ease;
   }
 
+  .event-card {
+    position: relative;
+  }
+
   .event-card:hover {
     transform: translateY(-4px);
+  }
+
+  .event-card.has-link:focus-within {
+    outline: 3px solid var(--cobalt);
+    outline-offset: 3px;
+  }
+
+  /* stretched link: the arrow link covers the whole card */
+  .external-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .external-link:focus-visible {
+    outline: none;
+  }
+
+  .event-card.has-link {
+    cursor: pointer;
   }
 
   .event-card:hover .external-link {

@@ -17,7 +17,7 @@
       id: 'cpo',
       title: 'Co-founder/CPO',
       icon: '🚀',
-      color: '#9333ea',
+      color: '#7a2a1c',
       tagline: 'Building products that solve real problems',
       experience: [
         {
@@ -73,7 +73,7 @@
       id: 'techLead',
       title: 'Tech Lead',
       icon: '💻',
-      color: '#0891b2',
+      color: '#2a44e0',
       tagline: 'Building scalable solutions with modern technology',
       experience: [
         {
@@ -159,7 +159,7 @@
       id: 'community',
       title: 'Community Builder',
       icon: '🎪',
-      color: '#10b981',
+      color: '#4d5a2b',
       tagline: 'Creating spaces where people connect and grow',
       experience: [
         {
@@ -234,7 +234,7 @@
       id: 'all',
       title: 'Full Picture',
       icon: '🌟',
-      color: '#f59e0b',
+      color: '#a36d12',
       tagline: 'The complete story - all roles, all expertise, all impact',
       experience: [
         {
@@ -740,7 +740,7 @@
 
 <style>
   .cv-hero {
-    /* cream hero via ct-hero class */
+    /* sunset hero via ct-hero class */
   }
 
   .cv-hero h1 {
@@ -852,9 +852,9 @@
   }
 
   .spoilers-button {
-    background: rgba(15, 23, 42, 0.05);
-    border: 2px dashed rgba(15, 23, 42, 0.5);
-    color: var(--color-text);
+    background: rgba(243, 235, 221, 0.08);
+    border: 2px dashed rgba(243, 235, 221, 0.7);
+    color: var(--on-hero);
     padding: var(--spacing-3) var(--spacing-5);
     border-radius: 0;
     font-size: 0.85rem;
@@ -889,10 +889,11 @@
   }
 
   .spoilers-button.active {
-    background: #f59e0b;
+    background: #d4962a;
+    color: var(--ink);
     border: 3px solid rgba(0, 0, 0, 0.8);
     box-shadow:
-      0 0 0 2px #f59e0b,
+      0 0 0 2px #d4962a,
       0 0 0 5px rgba(0, 0, 0, 0.8),
       6px 6px 0 5px rgba(0, 0, 0, 0.3);
     transform: rotate(0deg) translate(2px, 2px);
@@ -953,8 +954,8 @@
 
   .cv-actions .button-secondary {
     background: transparent;
-    color: var(--color-secondary);
-    border-color: var(--color-secondary);
+    color: var(--on-hero);
+    border-color: var(--on-hero);
   }
 
   .cv-actions .button:hover {
@@ -1018,7 +1019,7 @@
 
     .spoilers-button.active {
       box-shadow:
-        0 0 0 2px #f59e0b,
+        0 0 0 2px #d4962a,
         0 0 0 4px rgba(0, 0, 0, 0.8),
         4px 4px 0 4px rgba(0, 0, 0, 0.3);
     }
@@ -1228,7 +1229,7 @@
 
   .pdf-doc h1 {
     font-size: 24px;
-    color: #0891b2;
+    color: #b4492b;
     margin: 0 0 8px 0;
   }
 
