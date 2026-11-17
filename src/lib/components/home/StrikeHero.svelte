@@ -1,6 +1,6 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import { roles } from '$lib/data/roles.js';
   import { resolveUrl, isExternal } from '$lib/data/works.js';
 

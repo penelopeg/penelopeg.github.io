@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import FilterTags from '$lib/components/FilterTags.svelte';
   import { getTagStyle } from '$lib/utils/tagStyles';
   

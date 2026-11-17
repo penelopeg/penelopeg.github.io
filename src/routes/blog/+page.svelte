@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { base } from '$lib/paths';
   import { posts, formatDate } from '$lib/data/posts.js';
 </script>
 

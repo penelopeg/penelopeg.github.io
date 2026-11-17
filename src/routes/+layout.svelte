@@ -1,6 +1,7 @@
 <script>
-  import { base } from '$app/paths';
-  import { page } from '$app/stores';
+  import { base } from '$lib/paths';
+  import { page } from '$app/state';
+  import { afterNavigate } from '$app/navigation';
   import '../app.css';
   import Seo from '$lib/components/Seo.svelte';
 
@@ -25,7 +26,9 @@
   }
 
   // Close the mobile menu after navigating
-  $: $page.url.pathname, (isMenuOpen = false);
+  afterNavigate(() => {
+    isMenuOpen = false;
+  });
 </script>
 
 <Seo />
@@ -46,7 +49,7 @@
             <a
               href="{base}{link.href}"
               class="nav-link"
-              aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
+              aria-current={isCurrent(link.href, page.url.pathname) ? 'page' : undefined}
               >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg><span class="visually-hidden">{link.label}</span>{:else}{link.label}{/if}</a
             >
           </li>
@@ -77,7 +80,7 @@
             <a
               href="{base}{link.href}"
               class="mobile-nav-link"
-              aria-current={isCurrent(link.href, $page.url.pathname) ? 'page' : undefined}
+              aria-current={isCurrent(link.href, page.url.pathname) ? 'page' : undefined}
               >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg>{/if}{link.label}</a
             >
           </li>
