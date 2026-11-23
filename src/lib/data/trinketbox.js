@@ -257,6 +257,12 @@ export const drawers = [
         url: "https://youtube.com/@leenanorms",
         note: "gumption, sustainability, and life advice",
         tag: "lifestyle"
+      },
+      {
+        title: "jana pasabi",
+        url: "https://www.youtube.com/@janapasabi",
+        note: "worth a subscribe",
+        tag: "creator"
       }
     ]
   }

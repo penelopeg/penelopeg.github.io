@@ -96,7 +96,7 @@
   <footer class="footer">
     <div class="container">
       <p class="footer-statement">
-        Let’s build something <span class="serif-italic">together</span>, in a room full of people.
+        Let’s build rooms full of community, together.
       </p>
       <div class="footer-grid">
         <div>

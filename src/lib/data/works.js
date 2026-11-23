@@ -32,7 +32,7 @@ export const buckets = [
     works: [
       {
         title: "Geek Sessions",
-        role: "Community lead · 2021 → now",
+        role: "Community lead",
         description:
           "Tech meetups across the Algarve for 15+ years, which I've helped lead since 2021: talks, workshops, a conference and very good conversations.",
         image: "/images/portfolio/geeksessionsbanner.jpg",
@@ -42,7 +42,7 @@ export const buckets = [
       },
       {
         title: "Impact Hackers",
-        role: "Founder · hackathons",
+        role: "Founder",
         description:
           "A community for hackers who want to build positive impact with technology, solving local challenges together.",
         image: "/images/portfolio/impact-hackers.jpg",
@@ -62,7 +62,7 @@ export const buckets = [
       },
       {
         title: "Speaker & host",
-        role: "Stages & firesides",
+        role: "On stage",
         description:
           "Sharing what I learn with the next wave of impact builders, mostly by yapping a considerable amount.",
         image: "/images/portfolio/speaker.jpg",
@@ -77,7 +77,7 @@ export const buckets = [
     index: "02",
     title: "Founder & Tech Lead",
     blurb:
-      "The work I do as a founder building community tooling, and as a tech lead guiding an engineering team.",
+      "The work I do as a founder building community tooling, and as a tech lead guiding engineering teams.",
     color: "var(--slate)",
     works: [
       {
@@ -92,9 +92,9 @@ export const buckets = [
       },
       {
         title: "Centric Software",
-        role: "Tech team lead · day job",
+        role: "Tech team lead",
         description:
-          "Leading an engineering team building next-gen PIM/DAM software.",
+          "Leading engineering teams building next-gen PIM/DAM software.",
         image: "/images/portfolio/contentserv.jpg",
         url: "https://centricsoftware.com",
         note: "12 years of shipping software",
@@ -107,7 +107,7 @@ export const buckets = [
     index: "03",
     title: "Creative Tech & Visuals",
     blurb:
-      "Interactive tools, installations and digital painting. Systems thinking you can touch.",
+      "Interactive tools, art installations, digital painting, transforming systems thinking into vision.",
     color: "var(--cobalt)",
     works: [
       {
@@ -124,7 +124,7 @@ export const buckets = [
         title: "L'asthena",
         role: "Label design · Nova Vida",
         description:
-          "The label I designed for L'asthena, a beer by Nova Vida.",
+          "Label and character design for L'asthena, a beer by Nova Vida, inspired by the villain of a long D&D campaign I'm part of.",
         image: "/images/portfolio/lasthena-label.jpg",
         url: "https://www.instagram.com/p/DJJVpa5MTRm/",
         note: "a beer with my art on it",
@@ -132,7 +132,7 @@ export const buckets = [
       },
       {
         title: "Digital art",
-        role: "Painting & visual play",
+        role: "Digital & traditional painting, collages, etc",
         description:
           "Dabbling through the arts, mostly digitally. Messy, joyful and very much a practice.",
         image: "/images/portfolio/art.png",
@@ -154,7 +154,7 @@ export const buckets = [
         title: "Chaos Theory",
         role: "Personal essays · blog",
         description:
-          "Thoughts on life, community, culture and creative chaos. Published here and on Substack.",
+          "Thoughts on life, community, culture and creative chaos.",
         image: "/images/portfolio/blog.jpg",
         url: "/blog",
         note: "beware, contains thoughts",
@@ -164,7 +164,7 @@ export const buckets = [
         title: "Space opera (in progress)",
         role: "Fiction · first novel",
         description:
-          "My first fiction book. In the works for ten years now, currently finishing the first draft.",
+          "My first fiction book, in the works for ten years.",
         image: "/images/portfolio/writing-art.png",
         note: "ongoing… shhh",
         tags: ["writing"],

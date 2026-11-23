@@ -1,5 +1,7 @@
 <script>
   import { base } from '$lib/paths';
+
+  const BOOKING_URL = 'https://calendly.com/penelope-builds/';
 </script>
 
 <div class="about-hero ct-hero">
@@ -99,7 +101,10 @@
       <h3 class="scribble-underline">Get in Touch</h3>
       <div class="contact-links">
         <a href="https://zez.am/lepsies" class="button button-secondary chaos-rotate-1">
-        Connect Online
+        Check socials
+        </a>
+        <a href={BOOKING_URL} class="button button-primary chaos-rotate-1" target="_blank" rel="noopener noreferrer">
+        Schedule a call ↗<span class="visually-hidden"> (opens in a new tab)</span>
         </a>
       </div>
       </div>

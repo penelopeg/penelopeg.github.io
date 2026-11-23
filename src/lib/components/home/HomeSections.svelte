@@ -2,7 +2,7 @@
   import { base } from '$lib/paths';
   import SectionHeading from '$lib/components/SectionHeading.svelte';
   import OfflineTicket from '$lib/components/OfflineTicket.svelte';
-  import { experiments, statusLabel } from '$lib/data/lab.js';
+  import { experiments } from '$lib/data/lab.js';
   import { offlineConcepts } from '$lib/data/offline.js';
   import { posts, formatDate } from '$lib/data/posts.js';
 
@@ -14,10 +14,6 @@
 </script>
 
 <!-- Everything on the homepage below the hero: works link → lab → offline -->
-<p class="more">
-  <a href="{base}/portfolio" class="button button-ghost">Browse all works →</a>
-</p>
-
 <!-- ── CURRENT EXPERIMENTS ─────────────────────────────────────────────── -->
 <section id="lab" class="lab" aria-labelledby="lab-title">
   <div class="container lab-grid">
@@ -33,8 +29,6 @@
       {#each experiments as exp (exp.title)}
         <li class="entry">
           <div class="entry-meta">
-            <time datetime={exp.date}>{exp.date}</time>
-            <span class="status status--{exp.status}">{statusLabel[exp.status]}</span>
             <span class="kind">#{exp.kind}</span>
           </div>
           <h3>
@@ -54,10 +48,14 @@
     </ol>
   </div>
 
+  <p class="more what-i-do">
+    <a href="{base}/portfolio" class="button button-ghost">What I do →</a>
+  </p>
+
   <div class="container notebook">
     <div class="notebook-head">
       <h3 class="notebook-title">Fresh from the notebook</h3>
-      <a href="{base}/blog" class="notebook-all">All writing →</a>
+      <a href="{base}/blog" class="notebook-all">Read Chaos Theory →</a>
     </div>
     <ul class="notebook-list">
       {#each latestPosts as post (post.slug)}
@@ -99,6 +97,11 @@
   /* ── Works link ── */
   .more {
     text-align: center;
+    margin: 0;
+  }
+
+  .what-i-do {
+    padding: var(--spacing-12) 0 0;
   }
 
   /* ── Lab ── */

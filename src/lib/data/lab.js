@@ -25,6 +25,20 @@
 export const experiments = [
   {
     date: "2026-10",
+    title: "Impact & youth reports",
+    note: "Reports on social impact, youth and women in tech for local.foundation collaborations.",
+    status: "building",
+    kind: "research",
+  },
+  {
+    date: "2026-10",
+    title: "A format for future-led people",
+    note: "Prepping a brand-new gathering format. Not ready to say more. Soon.",
+    status: "brewing",
+    kind: "event",
+  },
+  {
+    date: "2026-10",
     title: "Task wheel & personal pokedex",
     note: "A spin-the-wheel task picker and a people-pokedex for neurodivergent brains. Prototype stage.",
     status: "building",
@@ -33,7 +47,7 @@ export const experiments = [
   {
     date: "2026-10",
     title: "Space opera, draft one",
-    note: "Finishing the first draft. The characters keep wandering off-outline. Letting them.",
+    note: "Finishing the first draft",
     status: "building",
     kind: "writing",
   },
@@ -50,21 +64,7 @@ export const experiments = [
     note: "Designing team-building exercises that make people argue (kindly) and think harder.",
     status: "testing",
     kind: "event",
-  },
-  {
-    date: "2026-10",
-    title: "Impact & youth reports",
-    note: "Reports on social impact, youth and women in tech for local.foundation collaborations.",
-    status: "building",
-    kind: "research",
-  },
-  {
-    date: "2026-10",
-    title: "A format for future-led people",
-    note: "Prepping a brand-new gathering format. Not ready to say more. Soon.",
-    status: "brewing",
-    kind: "event",
-  },
+  }
 ];
 
 export const statusLabel = {
