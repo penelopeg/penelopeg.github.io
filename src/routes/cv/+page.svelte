@@ -25,7 +25,7 @@
           company: 'local.foundation',
           period: '2024 - Present',
           achievements: [
-            'Tackle the growing problem of loneliness in Community builders',
+            'Mapping communities in the innovation ecosystems and researching impact on regional growth',
             'Build platform that connects community builders with the right resources',
             'Lead product strategy and vision from ideation to execution'
           ]
@@ -242,7 +242,7 @@
           company: 'local.foundation',
           period: '2024 - Present',
           achievements: [
-            'Tackle the growing problem of loneliness in Community builders',
+            'Mapping communities in the innovation ecosystems and researching impact on regional growth',
             'Build platform that connects community builders with the right resources',
             'Lead product strategy and vision from ideation to execution'
           ]
@@ -767,7 +767,7 @@
     border: 3px solid rgba(0, 0, 0, 0.8);
     color: white;
     padding: var(--spacing-4) var(--spacing-6);
-    border-radius: 0;
+    border-radius: var(--border-radius-sticker);
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
@@ -801,10 +801,12 @@
     bottom: -3px;
     left: -3px;
     border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: inherit;
     pointer-events: none;
   }
 
   .hat-button::after {
+    display: none;
     content: '';
     position: absolute;
     width: 8px;
@@ -856,7 +858,7 @@
     border: 2px dashed rgba(243, 235, 221, 0.7);
     color: var(--on-hero);
     padding: var(--spacing-3) var(--spacing-5);
-    border-radius: 0;
+    border-radius: var(--border-radius-sticker);
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
@@ -879,6 +881,7 @@
     right: -4px;
     bottom: -4px;
     border: 2px solid rgba(15, 23, 42, 0.2);
+    border-radius: inherit;
     pointer-events: none;
   }
 

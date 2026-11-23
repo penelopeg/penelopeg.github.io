@@ -169,7 +169,7 @@
       <div class="headline" bind:this={headline}>
         <div class="headline-copy">
           <h1 id="strike-title">
-            Building <span class="serif-italic">interactive spaces</span> and
+            Building interactive spaces and
             <span class="mark">impact communities</span> that <span class="nowrap">co-create</span> the future.
           </h1>
           <p class="roles-line">
@@ -180,7 +180,7 @@
                 ><span class="slash" aria-hidden="true">&nbsp;/</span><span class="visually-hidden">,</span></span
               >{' '}
             {/each}
-            <span class="truth">agent of <span class="serif-italic">(good)</span> chaos</span>
+            <span class="truth">Impact Leader</span>
           </p>
           <p class="handwritten hint" aria-hidden="true" bind:this={hint}>scroll to un-strike them ↓</p>
         </div>
@@ -225,6 +225,10 @@
           </li>
         {/each}
       </ul>
+
+      <p class="hero-cta">
+        <a href="{base}/about" class="button button-primary">Who I am →</a>
+      </p>
     </div>
   </div>
 </section>
@@ -321,6 +325,16 @@
   .slash {
     opacity: 0.7;
     font-weight: 300;
+  }
+
+  .hero-cta {
+    margin: var(--spacing-8) 0 0;
+    text-align: center;
+  }
+
+  .hero-cta .button {
+    background-color: var(--ink);
+    color: var(--paper);
   }
 
   .truth {
@@ -544,6 +558,12 @@
     margin-top: clamp(1.25rem, 3vh, 2.25rem);
     grid-template-rows: repeat(2, 1fr);
     gap: clamp(1rem, 2.5vh, 1.5rem) var(--spacing-6);
+  }
+
+  .animated .hero-cta {
+    flex: none;
+    margin-top: clamp(0.75rem, 2vh, 1.25rem);
+    text-align: center;
   }
 
   .animated .role-card {
