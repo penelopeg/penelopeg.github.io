@@ -112,7 +112,7 @@
     {
       title: 'Shift Faro',
       description: 'Shift Faro is an event consisting of a Hackathon, Workshops and Talks for beginners and experts alike created and sponsored by multiple entities of the Algarve region.',
-      date: '2019',
+      date: '2018',
       type: 'conference'
     },
     {

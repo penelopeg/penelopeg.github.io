@@ -1,7 +1,51 @@
 <script>
   import { base } from '$lib/paths';
+  import RoadTrip from '$lib/components/retreat/RoadTrip.svelte';
 
   const BOOKING_URL = 'https://calendly.com/penelope-builds/';
+
+  const stops = [
+    { when: '', title: 'Who is she?' },
+    { when: '', title: 'What I keep coming back to' },
+    { when: '', title: "What I'm focusing on" },
+    { when: '', title: 'The short version' }
+  ];
+
+  const principles = [
+    {
+      title: 'Always moving and connecting',
+      text: 'The world is a good place. Create spaces where different kinds of people can solve problems together and find their humanity in each other.'
+    },
+    {
+      title: 'Chaos Theory',
+      text: 'Proving that you can be organized in the chaos of a multi-passion life. Planning is essential, but magic happens in the spontaneous moments.'
+    },
+    {
+      title: 'The joy of trying',
+      text: "Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe."
+    },
+    {
+      title: 'Do it scared',
+      text: 'Being fearless is misunderstood. You need fear in order to be brave. You just need to do it while scared.'
+    }
+  ];
+
+  const focus = [
+    'Creating reports for social impact, youth and women in tech for local.foundation collaborations',
+    'Designing team building exercises that promote critical thinking',
+    'Developing a task wheel & personal pokedex app for neurodivergent folk',
+    'Brainstorming an RPG framework for Impact Hackers',
+    'Prepping a new format for future-led people',
+    'Finishing my first draft for a space opera book'
+  ];
+
+  const facts = [
+    ['Location', 'Algarve, Portugal'],
+    ['Tech experience', '12 years'],
+    ['Community experience', '8+ years'],
+    ['Languages', "English, Portuguese, Spanish if you're very patient"],
+    ['Education', 'Software Engineer, UALG, EPBJC']
+  ];
 </script>
 
 <div class="about-hero ct-hero">
@@ -10,120 +54,66 @@
     <p class="lead chaos-spacing">Creative explorer on a mission to make the most with whatever we have.</p>
     <div class="hero-actions">
       <a href="{base}/portfolio" class="button button-secondary chaos-rotate-2">What?</a>
-      <span class="handwritten hero-note">← see my stuff!</span>
     </div>
   </div>
 </div>
-  
-  <section class="about-content">
-  <div class="container">
-    <div class="about-grid">
-    <div class="about-text">
-      <h2 class="chaos-rotate-3">who is she? <span class="handwritten" style="font-size: 0.7em; margin-left: 10px;">...do i wanna know?</span></h2>
-      <p>My name is Penélope, and I am genuinely curious about what makes communities tick.</p>
-      <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. On my free time, I'm building local.foundation, a platform to map and develop communities and regional ecosystems from the ground up.</p>
-      <p>You'll find me jumping around the Algarve tech scene, mostly through Geek Sessions Faro, where we bring together people who love tech as much as they love good conversation (beer optional). After studying in different Portuguese cities and working with multicultural teams, I've learned that the magic happens when you throw different perspectives into a room and let them solve problems together.</p>
-      <p>I've got the brain of a software engineer but the restless heart of an artist and I can't stick to just one thing. And why should anyone? So I'm constantly juggling between writing, drawing, organizing events, and somehow accumulating an absolutely unreasonable number of music playlists (90+ and counting... it's a problem).</p>
-      <p>When I'm not accidentally starting new projects, you'll catch me organizing hackathons like Techstars Startup Weekend and Impact Hackers. I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired!</p>
-      
-      <h2 class="chaos-rotate-1">some core principles</h2>
-      <div class="values-grid">
-      <div class="wonky-border value-card chaos-rotate-2">
-        <h3 class="scribble-underline">Always moving and connecting</h3>
-        <p>The world is a good place. Create spaces where different kinds of people can solve problems together and find their humanity in each other</p>
+
+<section class="about-content">
+  <div class="container narrow">
+    <RoadTrip {stops} stopWidth="44rem" nextWhen="" nextTitle="Let's talk." nextText="Say hi, ask about a project, or just tell me what you're building.">
+      <svelte:fragment let:i>
+        {#if i === 0}
+          <figure class="portrait">
+            <img src="{base}/images/profile/me_alternative.jpg" alt="Penélope, smiling" />
+            <figcaption class="handwritten">that's me!</figcaption>
+          </figure>
+          <div class="story">
+            <p>I'm Penélope: a community builder, co-founder and engineering leader based in Faro, Portugal, working where tech, community and regional development meet. I'm genuinely curious about what makes communities tick.</p>
+            <p>Since 2021 I've been part of the team behind Geek Sessions Faro, a grassroots community that brings the Algarve's tech scene together through talks, workshops and meetups (beer optional), often hosted in cultural spaces to break the "nerds in the basement" stereotype.</p>
+            <p>In 2024 I co-founded local.foundation, where I'm Head of Signals. It's a research and tooling organisation studying how communities shape resilient regions.</p>
+            <p>By day, I lead a development team at Centric Software, building PIM software that actually brings something new to the field. I'm also Secretary of the General Assembly of 351 Portuguese Startup Association.</p>
+            <p>Over the years I've organised, facilitated and spoken at events like Techstars Startup Weekend, Geek Girls Portugal and Portugal Tech Week, and I was a TEDx Praça Gil Eanes speaker in 2025.</p>
+            <p>I've got the brain of a software engineer but the restless heart of an artist and I can't stick to just one thing. And why should anyone? So I write, draw, paint, and have accumulated an absolutely unreasonable number of music playlists (90+ and counting... it's a problem). I'm still working on that whole "sleep is important" concept, but hey: life's too interesting to waste time being tired. And being "the impostor" is just proof you're brave enough to try something new.</p>
+          </div>
+        {:else if i === 1}
+          <div class="values-grid">
+            {#each principles as p (p.title)}
+              <div class="value-card">
+                <h4 class="scribble-underline">{p.title}</h4>
+                <p>{p.text}</p>
+              </div>
+            {/each}
+          </div>
+        {:else if i === 2}
+          <ul class="focus-list">
+            {#each focus as item (item)}<li>{item}</li>{/each}
+          </ul>
+        {:else if i === 3}
+          <dl class="facts">
+            {#each facts as [label, value] (label)}
+              <div>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            {/each}
+          </dl>
+        {/if}
+      </svelte:fragment>
+      <div slot="next" class="contact-links">
+        <a href="https://zez.am/lepsies" class="button button-secondary">Check socials</a>
+        <a href={BOOKING_URL} class="button button-primary" target="_blank" rel="noopener noreferrer"
+          >Schedule a call ↗<span class="visually-hidden"> (opens in a new tab)</span></a
+        >
       </div>
-      <div class="wonky-border value-card chaos-rotate-3">
-        <h3 class="scribble-underline">Chaos Theory</h3>
-        <p>Proving that you can be organized in the chaos of a multi-passion life. Planning is an essential, but magic happens in the spontaneous moments</p>
-        <div class="handwritten" style="position: absolute; bottom: -20px; right: -25px; z-index: 100;">
-          this one!
-        </div>
-      </div>
-      <div class="wonky-border value-card chaos-rotate-4">
-        <h3 class="scribble-underline">The joy of trying</h3>
-        <p>Life's not that serious. I'd rather be remembered as someone who enjoyed trying than someone who played it safe</p>
-      </div>
-      <div class="wonky-border value-card chaos-rotate-1">
-        <h3 class="scribble-underline">Do it scared</h3>
-        <p>Being fearless is misunderstood. You need fear in order to be brave. You just need to do it while scared</p>
-      </div>
-      </div>
-  
-      <h2 class="chaos-rotate-2">current focus</h2>
-      <div class="handwritten" style="position: absolute; margin-top: -15px; margin-left: 180px; z-index: 100;">
-        what I'm up to
-      </div>
-      <ul class="focus-list chaos-spacing">
-      <li>Creating reports for social impact, youth and women in tech for local.foundation collaborations</li>
-      <li>Designing team building exercises that promote critical thinking</li>
-      <li>Developing a task wheel & personal pokedex app for neurodivergent folk</li>
-      <li>Brainstorming an RPG framework for Impact Hackers</li>
-      <li>Prepping a new format for future-led people</li>
-      <li>Finishing my first draft for a space opera book</li>
-      </ul>
-    </div>
-    <div class="about-sidebar chaos-spacing">
-      <div class="profile-card wonky-border chaos-rotate-1">
-      <div class="profile-image">
-        <img src="{base}/images/profile/me_alternative.jpg" alt="Penelope" />
-        </div>
-        <div class="handwritten" style="position: absolute; top: -20px; right: -25px; z-index: 100;">
-          that's me!
-        </div>			  
-      <div class="profile-info">
-        <h3 class="scribble-underline">Quick Facts</h3>
-        <ul class="quick-facts">
-        <li>
-          <strong>Location: </strong>
-          <span>Algarve, Portugal</span>
-        </li>
-        <li>
-          <strong>Tech Experience: </strong>
-          <span>12 years</span>
-        </li>
-        <li>
-          <strong>Community Experience: </strong>
-          <span>7 years</span>
-          </li>
-        <li>
-          <strong>Languages: </strong>
-          <span>English, Portuguese, spanish if you're very patient</span>
-        </li>
-        <li>
-          <strong>Education: </strong>
-          <span>Software Engineering, UALG, EPBJC</span>
-        </li>
-        </ul>
-      </div>
-      </div>
-  
-      <div class="contact-card wonky-border chaos-rotate-3">
-      <h3 class="scribble-underline">Get in Touch</h3>
-      <div class="contact-links">
-        <a href="https://zez.am/lepsies" class="button button-secondary chaos-rotate-1">
-        Check socials
-        </a>
-        <a href={BOOKING_URL} class="button button-primary chaos-rotate-1" target="_blank" rel="noopener noreferrer">
-        Schedule a call ↗<span class="visually-hidden"> (opens in a new tab)</span>
-        </a>
-      </div>
-      </div>
-    </div>
-    </div>
+    </RoadTrip>
   </div>
-  </section>
-  
+</section>
+
   <style>
   .about-hero {
     /* sunset hero via ct-hero class */
   }
   
-  .hero-note {
-    align-self: center;
-    color: var(--on-hero);
-    font-size: 1.5rem;
-  }
-
   .about-hero h1 {
     margin-bottom: var(--spacing-4);
   }
@@ -136,156 +126,133 @@
   
   .about-content {
     padding: var(--spacing-16) 0;
+  }
 
+  .narrow {
+    max-width: 60rem;
+  }
+
+  .portrait {
     position: relative;
+    width: 9rem;
+    margin: var(--spacing-4) 0;
   }
-  
-  .about-grid {
-    display: grid;
-    gap: var(--spacing-8);
-    grid-template-columns: 1fr;
+
+  .portrait img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sticker);
   }
-  
-  @media (min-width: 1024px) {
-    .about-grid {
-    grid-template-columns: 2fr 1fr;
-    }
+
+  .portrait figcaption {
+    position: absolute;
+    right: -3.5rem;
+    top: -0.75rem;
+    font-size: 1.3rem;
+    transform: rotate(6deg);
   }
-  
-  .about-text h2 {
-    margin-top: var(--spacing-8);
+
+  .story p {
+    margin: 0 0 var(--spacing-4);
+    color: var(--ink-soft);
   }
-  
-  .about-text h2:first-child {
-    margin-top: 0;
-  }
-  
+
   .values-grid {
     display: grid;
     gap: var(--spacing-4);
-    grid-template-columns: repeat(1, 1fr);
-    margin: var(--spacing-6) 0;
+    margin-top: var(--spacing-4);
   }
-  
+
   @media (min-width: 640px) {
     .values-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
     }
-    
-    .values-grid .value-card:nth-child(1) { grid-column: 1; grid-row: 1; }
-    .values-grid .value-card:nth-child(2) { grid-column: 2; grid-row: 1; }
-    .values-grid .value-card:nth-child(3) { grid-column: 1; grid-row: 2; }
-    .values-grid .value-card:nth-child(4) { grid-column: 2; grid-row: 2; }
   }
-  
+
   .value-card {
-    padding: var(--spacing-4);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--border-radius);
-  }
-  
-  .value-card h3 {
-    color: var(--color-primary);
-    margin-bottom: var(--spacing-2);
-    font-size: 1.125rem;
-  }
-  
-  .value-card p {
-    color: var(--color-text-light);
-    font-size: 0.875rem;
-    margin: 0;
-  }
-  
-  .focus-list {
-    list-style-type: none;
-    padding: 0;
-    margin: var(--spacing-4) 0;
-  }
-  
-  .focus-list li {
-    padding: var(--spacing-2) 0;
-    padding-left: var(--spacing-8);
     position: relative;
+    padding: var(--spacing-4);
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft, 0 6px 18px rgba(38, 33, 28, 0.08));
   }
-  
+
+  .value-card h4 {
+    margin: 0 0 var(--spacing-2);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+  }
+
+  .value-card p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  .focus-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-2) 0 0;
+  }
+
+  .focus-list li {
+    position: relative;
+    padding: var(--spacing-2) 0 var(--spacing-2) var(--spacing-8);
+    color: var(--ink-soft);
+  }
+
   .focus-list li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 1rem;
+    top: 1.05rem;
     width: var(--spacing-4);
     height: 3px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 4'%3E%3Cpath d='M0,2 Q4,0 8,2 T16,2' stroke='%230891b2' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat;
-    background-size: 100% 100%;
-  }
-  
-  .profile-card {
-    text-align: center;
-    margin-bottom: var(--spacing-6);
-  }
-  
-  .profile-image {
-    width: 8rem;
-    height: 8rem;
-    margin: 0 auto var(--spacing-4);
-    border-radius: 9999px;
-    overflow: hidden; /* This ensures the image stays within the rounded border */
+    background: var(--terracotta);
+    border-radius: 2px;
   }
 
-  .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* This ensures the image fills the circular container */
+  .facts {
+    margin: var(--spacing-2) 0 0;
+    padding: var(--spacing-4) var(--spacing-6);
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft, 0 6px 18px rgba(38, 33, 28, 0.08));
   }
-  
-  .quick-facts {
-    list-style-type: none;
-    padding: 0;
-    margin: var(--spacing-4) 0 0;
-    text-align: left;
-  }
-  
-  .quick-facts li {
+
+  .facts div {
     display: flex;
     justify-content: space-between;
+    gap: var(--spacing-4);
     padding: var(--spacing-2) 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--line);
   }
-  
-  .quick-facts li:last-child {
+
+  .facts div:last-child {
     border-bottom: none;
   }
-  
-  .contact-card {
-    text-align: center;
+
+  .facts dt {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
   }
-  
+
+  .facts dd {
+    margin: 0;
+    text-align: right;
+    font-weight: 600;
+  }
+
   .contact-links {
     display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2);
-    margin-top: var(--spacing-4);
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
   }
-
-  /* Sticker-style Button Overrides */
-  .hero-actions .button,
-  .contact-links .button {
-    font-size: 1rem;
-    transform: rotate(-1.5deg);
-    --hover-rotate: -1.5deg;
-  }
-
-  .hero-actions .button:hover,
-  .contact-links .button:hover {
-    transform: translateY(-4px) rotate(calc(var(--hover-rotate) * 1.5));
-  }
-
-  .contact-links .button:nth-child(odd) {
-    transform: rotate(-2deg);
-  }
-
-  .contact-links .button:nth-child(even) {
-    transform: rotate(2deg);
-  }
-  </style>
+</style>

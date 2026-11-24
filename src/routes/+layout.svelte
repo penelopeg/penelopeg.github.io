@@ -11,6 +11,8 @@
     { href: '/portfolio', label: 'Do' },
     { href: '/events', label: 'Gather' },
     { href: '/blog', label: 'Reflect' }
+    // Community Lab isn't part of the nav yet. Re-enable when it's ready:
+    // { href: '/communitylab', label: 'Experiment', bolt: true }
   ];
 
   let isMenuOpen = false;
@@ -50,7 +52,7 @@
               href="{base}{link.href}"
               class="nav-link"
               aria-current={isCurrent(link.href, page.url.pathname) ? 'page' : undefined}
-              >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg><span class="visually-hidden">{link.label}</span>{:else}{link.label}{/if}</a
+              >{#if link.icon}<svg class="home-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 11.5 12 4l9 7.5" /><path d="M5.5 10v9.5h13V10" /><path d="M10 19.5v-5h4v5" /></svg><span class="visually-hidden">{link.label}</span>{:else}{link.label}{#if link.bolt}<svg class="bolt" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path d="M13.5 1.5 4 13.5h6.2L8.8 22.5 20 9.5h-6.6z" /></svg>{/if}{/if}</a
             >
           </li>
         {/each}
@@ -241,6 +243,59 @@
 
   .mobile-nav-link .home-icon {
     align-self: center;
+  }
+
+  /* the storm ray: a little bolt that zaps in beside "Experiment" on hover or focus */
+  .nav-link:has(.bolt) {
+    position: relative;
+  }
+
+  .bolt {
+    position: absolute;
+    top: -0.55rem;
+    right: -1rem;
+    fill: var(--ochre-light);
+    stroke: var(--ink);
+    stroke-width: 1.2;
+    stroke-linejoin: round;
+    opacity: 0;
+    transform: translateY(4px) rotate(8deg) scale(0.6);
+    transform-origin: 50% 100%;
+    pointer-events: none;
+    transition:
+      opacity 0.15s var(--ease-out),
+      transform 0.25s var(--ease-out);
+  }
+
+  .nav-link:hover .bolt,
+  .nav-link:focus-visible .bolt {
+    opacity: 1;
+    transform: translateY(0) rotate(8deg) scale(1);
+    animation: zap 0.5s steps(2, end) 1;
+  }
+
+  @keyframes zap {
+    0%,
+    40% {
+      filter: brightness(1.6);
+    }
+    20%,
+    60%,
+    100% {
+      filter: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bolt {
+      transition: opacity 0.15s linear;
+      transform: rotate(8deg);
+    }
+
+    .nav-link:hover .bolt,
+    .nav-link:focus-visible .bolt {
+      animation: none;
+    }
   }
 
   .mobile-nav-link[aria-current='page'] {
