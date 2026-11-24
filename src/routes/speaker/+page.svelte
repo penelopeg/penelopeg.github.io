@@ -79,6 +79,25 @@
     return Array.isArray(talk.type) ? talk.type : [talk.type];
   }
 
+  const bio = [
+    "Penélope Gonçalves is a community builder, co-founder and engineering leader based in Faro, Portugal, working where tech, community and regional development meet.",
+    "Since 2021 she has been part of the team behind Geek Sessions Faro, a grassroots community that brings the Algarve's tech scene together through talks, workshops and meetups. In 2024 she co-founded local.foundation, where she is Head of Signals, researching how communities shape resilient regions and building tools for ecosystem builders. She also leads a development team at Centric Software and is Secretary of the General Assembly of 351 Portuguese Startup Association.",
+    "She has organised, facilitated and spoken at events including Techstars Startup Weekend, Impact Hackers, Shift Faro, Geek Girls Portugal, Agile Connect, Portugal Tech Week and Algarve Buildathon, and was a TEDx Praça Gil Eanes speaker in 2025. Her work has been recognised with a Top 3 Developers distinction at the Portuguese Women in Tech Awards (2018), a Top 5 Best Community Leads ranking, and a Top 10 finalist place at the Rising Female Awards.",
+    "A software engineer by training, she also writes, draws and paints, and believes being \"the impostor\" is just proof you're brave enough to try something new."
+  ];
+
+  let copied = false;
+
+  async function copyBio() {
+    try {
+      await navigator.clipboard.writeText(bio.join('\n\n'));
+      copied = true;
+      setTimeout(() => (copied = false), 2000);
+    } catch {
+      copied = false;
+    }
+  }
+
   function getTalkTagStyle(tag) {
     return getTagStyle(tag, tagColors);
   }
@@ -99,6 +118,20 @@
     </div>
   </div>
 </div>
+
+<section class="speaker-bio" aria-labelledby="bio-title">
+  <div class="container">
+    <div class="bio-card wonky-border">
+      <div class="bio-head">
+        <h2 id="bio-title">Bio</h2>
+        <button type="button" class="button" on:click={copyBio}>{copied ? 'Copied' : 'Copy bio'}</button>
+      </div>
+      {#each bio as paragraph}
+        <p>{paragraph}</p>
+      {/each}
+    </div>
+  </div>
+</section>
 
 <div class="speaker-content">
   <div class="container">
@@ -332,5 +365,35 @@
 
   .hero-actions .button:hover {
     transform: translateY(-4px) rotate(calc(var(--hover-rotate) * 1.5));
+  }
+
+  .speaker-bio {
+    padding: var(--spacing-12) 0 0;
+  }
+
+  .bio-card {
+    max-width: 52rem;
+    padding: var(--spacing-6);
+    background: var(--paper-card);
+  }
+
+  .bio-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-4);
+  }
+
+  .bio-head h2 {
+    margin: 0;
+  }
+
+  .bio-card p {
+    color: var(--ink-soft);
+  }
+
+  .bio-card p:last-child {
+    margin-bottom: 0;
   }
 </style>
