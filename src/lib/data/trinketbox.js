@@ -280,7 +280,7 @@ export const drawers = [
         tag: "community"
       },
       {
-        title: "Lenz Gshwendtner",
+        title: "Lenz Gschwendtner",
         url: "https://lnz.me/",
         note: "friend, mentor, co-founder and serial ecosystem builder. truly a person of the future",
         tag: "mentor"
