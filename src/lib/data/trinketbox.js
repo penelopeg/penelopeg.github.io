@@ -265,5 +265,32 @@ export const drawers = [
         tag: "creator"
       }
     ]
+  },
+  {
+    id: "people",
+    name: "People",
+    subtitle: "community leads & blogs i like",
+    bg: "var(--slate)",
+    fg: "var(--paper)",
+    items: [
+      {
+        title: "Flor dos Reis",
+        url: "https://flourishmode.co/",
+        note: "community leader and creative agency i love working with. also a friend and the algarve social queen",
+        tag: "community"
+      },
+      {
+        title: "Lenz Gshwendtner",
+        url: "https://lnz.me/",
+        note: "friend, mentor, co-founder and serial ecosystem builder. truly a person of the future",
+        tag: "mentor"
+      },
+      {
+        title: "Rafael Reis",
+        url: "https://controlledchaos.pt",
+        note: "my mentor for figuring out systems",
+        tag: "mentor"
+      }
+    ]
   }
 ];

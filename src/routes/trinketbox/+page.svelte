@@ -110,7 +110,7 @@
 
 <svelte:head>
   <title>Trinketbox — Penélope Gonçalves</title>
-  <meta name="description" content="Penélope's box of favourite websites, books, movies, music, shows and channels." />
+  <meta name="description" content="Penélope's box of favourite websites, books, movies, music, shows, channels and people." />
 </svelte:head>
 
 <div class="ct-hero">
